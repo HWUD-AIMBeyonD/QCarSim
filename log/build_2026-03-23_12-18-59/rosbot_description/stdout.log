@@ -1,0 +1,82 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/g16/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_cmake_pytest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/g16/Documents/qcarSim/build/rosbot_description
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot/basic.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot/custom.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot_xl/autonomy.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot_xl/basic.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot_xl/custom.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot_xl/manipulation.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot_xl/manipulation_pro.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/config/rosbot_xl/telepresence.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/launch/rosbot.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/launch/rosbot_xl.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/launch/rviz.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot/body.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot/cover.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot/mecanum_a.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot/mecanum_b.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot/wheel_a.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot/wheel_b.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/body.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/body_colision.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/components/antenna.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/components/antenna_connector.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/components/camera_mount_bot.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/components/camera_mount_mid.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/components/camera_mount_top.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/mecanum_a.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/mecanum_b.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/wheel_a.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/meshes/rosbot_xl/wheel_b.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/rviz/rosbot.rviz
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/common/gazebo.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/common/ros2_control.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/common/webots.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/open_manipulator/body.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/open_manipulator/open_manipulator_x_macro.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot/body.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot/components/vl53lox.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot/rosbot_macro.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot/wheel.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot_xl.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot_xl/body.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot_xl/components/antenna.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot_xl/components/camera_mount.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot_xl/rosbot_xl_macro.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/urdf/rosbot_xl/wheel.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/environment/setup_envs.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/ament_index/resource_index/package_run_dependencies/rosbot_description
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/ament_index/resource_index/parent_prefix_path/rosbot_description
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/environment/path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/environment/path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/local_setup.bash
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/local_setup.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/local_setup.zsh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/local_setup.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/package.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/ament_index/resource_index/packages/rosbot_description
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/cmake/rosbot_descriptionConfig.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/cmake/rosbot_descriptionConfig-version.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/package.xml

@@ -1,0 +1,44 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/g16/Documents/qcarSim/build/qcar_description
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/config/qcar/basic.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/launch/qcar.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/launch/rviz.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarBody.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarBody.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarLidar.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarLidar.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubL.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubL.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubR.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubR.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarWheel.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarWheel.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/d415.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/d435.dae
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/model.config
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/t265.stl
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/rviz/qcar.rviz
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar_body.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar_gz.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar_wheels.urdf.xacro
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/ament_index/resource_index/package_run_dependencies/qcar_description
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/ament_index/resource_index/parent_prefix_path/qcar_description
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.bash
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.zsh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/package.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/ament_index/resource_index/packages/qcar_description
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/cmake/qcar_descriptionConfig.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/cmake/qcar_descriptionConfig-version.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/package.xml

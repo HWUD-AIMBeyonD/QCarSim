@@ -1,0 +1,79 @@
+[0.014s] Invoking command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces
+[0.029s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.128s] -- Found Python3: /home/g16/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.181s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.217s] -- Found hardware_interface: 4.39.2 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.264s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.277s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.295s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.319s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.499s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.535s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.537s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.557s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.600s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.602s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.616s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.618s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.626s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.635s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.942s] -- Configuring done (0.9s)
+[0.969s] -- Generating done (0.0s)
+[0.972s] -- Build files have been written to: /home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces
+[0.979s] Invoked command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces
+[0.979s] Invoking command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces -- -j32 -l32
+[1.015s] [ 33%] [32mBuilding CXX object CMakeFiles/rosbot_hardware_interfaces.dir/src/rosbot_system.cpp.o[0m
+[1.015s] [ 66%] [32mBuilding CXX object CMakeFiles/rosbot_hardware_interfaces.dir/src/rosbot_imu_sensor.cpp.o[0m
+[8.805s] [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/src/rosbot_imu_sensor.cpp:[m[K In member function ‘[01m[Kvirtual rosbot_hardware_interfaces::CallbackReturn rosbot_hardware_interfaces::RosbotImuSensor::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[8.805s] [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/src/rosbot_imu_sensor.cpp:29:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[8.805s]    29 |   if ([01;35m[Khardware_interface::SensorInterface::on_init(hardware_info)[m[K !=
+[8.805s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[8.805s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/sensor_interface.hpp:20[m[K,
+[8.805s]                  from [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/include/rosbot_hardware_interfaces/rosbot_imu_sensor.hpp:25[m[K,
+[8.805s]                  from [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/src/rosbot_imu_sensor.cpp:15[m[K:
+[8.805s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:235:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[8.805s]   235 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[8.805s]       |                          [01;36m[K^~~~~~~[m[K
+[10.216s] [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/src/rosbot_system.cpp:[m[K In member function ‘[01m[Kvirtual rosbot_hardware_interfaces::CallbackReturn rosbot_hardware_interfaces::RosbotSystem::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[10.216s] [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/src/rosbot_system.cpp:30:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.216s]    30 |   if ([01;35m[Khardware_interface::SystemInterface::on_init(hardware_info)[m[K !=
+[10.216s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[10.216s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[10.216s]                  from [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/include/rosbot_hardware_interfaces/rosbot_system.hpp:25[m[K,
+[10.216s]                  from [01m[K/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces/src/rosbot_system.cpp:15[m[K:
+[10.216s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:235:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.216s]   235 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[10.216s]       |                          [01;36m[K^~~~~~~[m[K
+[10.225s] [100%] [32m[1mLinking CXX shared library librosbot_hardware_interfaces.so[0m
+[10.349s] [100%] Built target rosbot_hardware_interfaces
+[10.355s] Invoked command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces -- -j32 -l32
+[10.355s] Invoking command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces
+[10.360s] -- Install configuration: "Release"
+[10.361s] -- Execute custom install script
+[10.361s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces//rosbot_hardware_interfaces.xml
+[10.366s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/include/rosbot_hardware_interfaces/rosbot_imu_sensor.hpp
+[10.371s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/include/rosbot_hardware_interfaces/rosbot_system.hpp
+[10.376s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/include/rosbot_hardware_interfaces/visibility_control.hpp
+[10.381s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/lib/librosbot_hardware_interfaces.so
+[10.386s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/environment/library_path.sh
+[10.392s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/environment/library_path.dsv
+[10.399s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/ament_index/resource_index/package_run_dependencies/rosbot_hardware_interfaces
+[10.405s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/ament_index/resource_index/parent_prefix_path/rosbot_hardware_interfaces
+[10.410s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/environment/ament_prefix_path.sh
+[10.416s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/environment/ament_prefix_path.dsv
+[10.421s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/environment/path.sh
+[10.427s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/environment/path.dsv
+[10.432s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/local_setup.bash
+[10.437s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/local_setup.sh
+[10.442s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/local_setup.zsh
+[10.447s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/local_setup.dsv
+[10.452s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/package.dsv
+[10.457s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/ament_index/resource_index/packages/rosbot_hardware_interfaces
+[10.462s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rosbot_hardware_interfaces
+[10.467s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.473s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[10.478s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.483s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/cmake/rosbot_hardware_interfacesConfig.cmake
+[10.489s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/cmake/rosbot_hardware_interfacesConfig-version.cmake
+[10.494s] -- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/package.xml
+[10.501s] Invoked command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces

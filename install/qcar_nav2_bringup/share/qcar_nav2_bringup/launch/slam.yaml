@@ -1,0 +1,45 @@
+---
+launch:
+
+  - arg:
+      name: use_sim_time
+      default: 'True'
+      description: Use simulation clock.
+      choice:
+        - value: 'True'
+        - value: 'False'
+
+  - arg:
+      name: slam_config
+      default: $(find-pkg-share qcar_nav2_bringup)/config/slam_online_async.yaml
+      description: Path to slam_toolbox config file.
+
+  - set_parameter:
+      name: use_sim_time
+      value: $(var use_sim_time)
+
+  - set_remap:
+      from: /tf
+      to: tf
+  - set_remap:
+      from: /tf_static
+      to: tf_static
+
+  - node:
+      pkg: slam_toolbox
+      exec: async_slam_toolbox_node
+      name: slam_toolbox
+      param:
+        - from: $(var slam_config)
+
+  - node:
+      pkg: nav2_lifecycle_manager
+      exec: lifecycle_manager
+      name: lifecycle_manager_slam
+      param:
+        - name: use_sim_time
+          value: $(var use_sim_time)
+        - name: autostart
+          value: true
+        - name: node_names
+          value: ['slam_toolbox']

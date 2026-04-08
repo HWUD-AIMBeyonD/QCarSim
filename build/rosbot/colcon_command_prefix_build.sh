@@ -1,0 +1,10 @@
+# generated from colcon_core/shell/template/command_prefix.sh.em
+. "/home/g16/Documents/qcarSim/install/husarion_components_description/share/husarion_components_description/package.sh"
+. "/home/g16/Documents/qcarSim/install/husarion_mecanum_drive_controller/share/husarion_mecanum_drive_controller/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces/share/rosbot_hardware_interfaces/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_joy/share/rosbot_joy/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_localization/share/rosbot_localization/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_utils/share/rosbot_utils/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_description/share/rosbot_description/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/package.sh"
+. "/home/g16/Documents/qcarSim/install/rosbot_controller/share/rosbot_controller/package.sh"

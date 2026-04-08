@@ -1,0 +1,11 @@
+source;share/low_pass_filter/hook/cmake_prefix_path.ps1
+source;share/low_pass_filter/hook/cmake_prefix_path.dsv
+source;share/low_pass_filter/hook/cmake_prefix_path.sh
+source;share/low_pass_filter/hook/ld_library_path_lib.ps1
+source;share/low_pass_filter/hook/ld_library_path_lib.dsv
+source;share/low_pass_filter/hook/ld_library_path_lib.sh
+source;share/low_pass_filter/local_setup.bash
+source;share/low_pass_filter/local_setup.dsv
+source;share/low_pass_filter/local_setup.ps1
+source;share/low_pass_filter/local_setup.sh
+source;share/low_pass_filter/local_setup.zsh

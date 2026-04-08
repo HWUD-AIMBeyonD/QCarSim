@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-161ce0ec89542ad484cd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rosbot_hardware_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rosbot_hardware_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rosbot_hardware_interfaces-Release-9b06ae27af6985110621.json",
+					"name" : "rosbot_hardware_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rosbot_hardware_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rosbot_hardware_interfaces_uninstall-Release-6ec0c129d7b083a8a47d.json",
+					"name" : "rosbot_hardware_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-43a13f52ecad992571f6.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces",
+		"source" : "/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

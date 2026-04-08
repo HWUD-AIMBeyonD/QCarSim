@@ -1,0 +1,79 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/g16/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found moveit_ros_planning: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+-- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_lifecycle: 28.1.11 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+-- Configuring done (1.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/g16/Documents/qcarSim/build/rosbot_moveit
+[ 25%] [32mBuilding CXX object CMakeFiles/dock.dir/src/dock.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/home.dir/src/home.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable home[0m
+[100%] [32m[1mLinking CXX executable dock[0m
+[100%] Built target home
+[100%] Built target dock
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/lib/rosbot_moveit/dock
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/lib/rosbot_moveit/home
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/initial_positions.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/joint_limits.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/kinematics.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/moveit.rviz
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/moveit_controllers.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/moveit_servo.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/ompl_planning.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/pilz_cartesian_limits.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/config/rosbot_xl.srdf
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/launch/move_group.launch.py
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/launch/rviz.launch.py
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/launch/servo.launch.py
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/launch/setup_assistant.launch.py
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/.setup_assistant
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/ament_index/resource_index/package_run_dependencies/rosbot_moveit
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/ament_index/resource_index/parent_prefix_path/rosbot_moveit
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/environment/ament_prefix_path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/environment/ament_prefix_path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/environment/path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/environment/path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/local_setup.bash
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/local_setup.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/local_setup.zsh
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/local_setup.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/package.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/ament_index/resource_index/packages/rosbot_moveit
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/cmake/rosbot_moveitConfig.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/cmake/rosbot_moveitConfig-version.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/rosbot_moveit/share/rosbot_moveit/package.xml

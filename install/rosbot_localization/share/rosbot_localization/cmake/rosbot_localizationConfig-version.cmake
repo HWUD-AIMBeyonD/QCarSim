@@ -1,0 +1,1 @@
+/home/g16/Documents/qcarSim/build/rosbot_localization/ament_cmake_core/rosbot_localizationConfig-version.cmake

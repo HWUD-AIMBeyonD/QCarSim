@@ -1,0 +1,1 @@
+/home/g16/Documents/qcarSim/build/qcar_gazebo/ament_cmake_environment_hooks/local_setup.bash

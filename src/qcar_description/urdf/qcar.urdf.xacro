@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<robot name="qcar" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:arg name="components_config" default="$(find qcar_description)/config/qcar/basic.yaml" />
+  <xacro:arg name="configuration" default="basic" />
+  <xacro:arg name="controller_config" default="" />
+  <xacro:arg name="namespace" default="" />
+  <xacro:arg name="use_sim" default="False" />
+
+  <xacro:include filename="$(find qcar_description)/urdf/qcar_body.urdf.xacro" ns="body" />
+  <xacro:include filename="$(find qcar_description)/urdf/qcar_wheels.urdf.xacro" ns="wheel" />
+  <xacro:include filename="$(find qcar_description)/urdf/qcar_gz.urdf.xacro" ns="gz" />
+  <xacro:include filename="$(find husarion_components_description)/urdf/components.urdf.xacro" ns="components" />
+
+  <!-- PROPERTIES -->
+  <xacro:property name="wheel_radius" value="0.033" />
+
+  <!-- BODY -->
+  <xacro:body.body wheel_radius="${wheel_radius}" namespace="$(arg namespace)" />
+
+  <!-- STEERING + WHEELS -->
+  <xacro:wheel.steering_hub side="fl" />
+  <xacro:wheel.steering_hub side="fr" />
+  <xacro:wheel.wheel side="fl" parent="fl_steering_hub_link" />
+  <xacro:wheel.wheel side="fr" parent="fr_steering_hub_link" />
+  <xacro:wheel.wheel side="rl" parent="body_link" />
+  <xacro:wheel.wheel side="rr" parent="body_link" />
+
+  <!-- GAZEBO PLUGINS (sim only) -->
+  <xacro:if value="$(arg use_sim)">
+    <!-- Drive and state publishing via native Gazebo plugins -->
+    <xacro:gz.ackermann_steering namespace="$(arg namespace)" />
+    <xacro:gz.joint_state_publisher namespace="$(arg namespace)" />
+
+    <!-- Sensors -->
+    <xacro:gz.imu reference_frame="imu_link" namespace="$(arg namespace)" />
+    <xacro:gz.rplidar reference_frame="laser" namespace="$(arg namespace)" />
+    <xacro:gz.realsense_d435 reference_frame="realsense_link" namespace="$(arg namespace)" />
+    <xacro:gz.csi_camera name="csi_front" reference_frame="csi_front_link" namespace="$(arg namespace)" />
+    <xacro:gz.csi_camera name="csi_right" reference_frame="csi_right_link" namespace="$(arg namespace)" />
+    <xacro:gz.csi_camera name="csi_back"  reference_frame="csi_back_link"  namespace="$(arg namespace)" />
+    <xacro:gz.csi_camera name="csi_left"  reference_frame="csi_left_link"  namespace="$(arg namespace)" />
+  </xacro:if>
+
+  <!-- EXTERNAL COMPONENTS (from husarion_components_description) -->
+  <xacro:components.create_components
+    components_config_path="$(arg components_config)"
+    namespace="$(arg namespace)"
+    use_sim="$(arg use_sim)"
+    use_tf_prefix="False" />
+
+</robot>

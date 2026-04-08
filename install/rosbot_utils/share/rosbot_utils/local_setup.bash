@@ -1,0 +1,1 @@
+/home/g16/Documents/qcarSim/build/rosbot_utils/ament_cmake_environment_hooks/local_setup.bash

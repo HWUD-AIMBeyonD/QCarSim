@@ -1,0 +1,65 @@
+[0.014s] Invoking command in '/home/g16/Documents/qcarSim/build/twist_mux_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/husarion_controllers/twist_mux_controller -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/twist_mux_controller
+[0.025s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.118s] -- Found Python3: /home/g16/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.171s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.208s] -- Found controller_interface: 4.39.2 (/opt/ros/jazzy/share/controller_interface/cmake)
+[0.253s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.269s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.291s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.312s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.492s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.527s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.530s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.549s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.595s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.598s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.619s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.623s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.629s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.641s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.874s] -- Found generate_parameter_library: 0.5.0 (/opt/ros/jazzy/share/generate_parameter_library/cmake)
+[0.878s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.991s] -- Configuring done (1.0s)
+[1.005s] -- Generating done (0.0s)
+[1.008s] -- Build files have been written to: /home/g16/Documents/qcarSim/build/twist_mux_controller
+[1.017s] Invoked command in '/home/g16/Documents/qcarSim/build/twist_mux_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/husarion_controllers/twist_mux_controller -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/twist_mux_controller
+[1.017s] Invoking command in '/home/g16/Documents/qcarSim/build/twist_mux_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/twist_mux_controller -- -j32 -l32
+[1.052s] [ 25%] [34m[1mRunning `/opt/ros/jazzy/bin/generate_parameter_library_cpp /home/g16/Documents/qcarSim/build/twist_mux_controller/include/twist_mux_controller/twist_mux_controller_parameters.hpp /home/g16/Documents/qcarSim/src/husarion_controllers/twist_mux_controller/src/twist_mux_controller_parameters.yaml `[0m
+[1.428s] [ 50%] [34m[1mCreating deprecated header file /home/g16/Documents/qcarSim/build/twist_mux_controller/include/twist_mux_controller_parameters.hpp[0m
+[1.444s] [ 50%] Built target twist_mux_controller_parameters
+[1.464s] [ 75%] [32mBuilding CXX object CMakeFiles/twist_mux_controller.dir/src/twist_mux_controller.cpp.o[0m
+[9.583s] [100%] [32m[1mLinking CXX shared library libtwist_mux_controller.so[0m
+[9.714s] [100%] Built target twist_mux_controller
+[9.722s] Invoked command in '/home/g16/Documents/qcarSim/build/twist_mux_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/twist_mux_controller -- -j32 -l32
+[9.722s] Invoking command in '/home/g16/Documents/qcarSim/build/twist_mux_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/twist_mux_controller
+[9.729s] -- Install configuration: "Release"
+[9.729s] -- Execute custom install script
+[9.729s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/include/twist_mux_controller/twist_mux_controller_parameters.hpp
+[9.737s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller//velocity_input_plugin.xml
+[9.744s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/include/twist_mux_controller/twist_mux_controller/twist_msg_subscriber.hpp
+[9.750s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/include/twist_mux_controller/twist_mux_controller/twist_mux_controller.hpp
+[9.757s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/environment/library_path.sh
+[9.763s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/environment/library_path.dsv
+[9.771s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/ament_index/resource_index/package_run_dependencies/twist_mux_controller
+[9.778s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/ament_index/resource_index/parent_prefix_path/twist_mux_controller
+[9.784s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/environment/ament_prefix_path.sh
+[9.790s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/environment/ament_prefix_path.dsv
+[9.796s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/environment/path.sh
+[9.802s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/environment/path.dsv
+[9.808s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/local_setup.bash
+[9.816s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/local_setup.sh
+[9.822s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/local_setup.zsh
+[9.828s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/local_setup.dsv
+[9.833s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/package.dsv
+[9.839s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/ament_index/resource_index/packages/twist_mux_controller
+[9.847s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/twist_mux_controller
+[9.852s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.858s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/ament_cmake_export_targets-extras.cmake
+[9.864s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/twist_mux_controllerConfig.cmake
+[9.871s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/twist_mux_controllerConfig-version.cmake
+[9.876s] -- Symlinking: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/package.xml
+[9.881s] -- Installing: /home/g16/Documents/qcarSim/install/twist_mux_controller/lib/libtwist_mux_controller.so
+[9.882s] -- Set non-toolchain portion of runtime path of "/home/g16/Documents/qcarSim/install/twist_mux_controller/lib/libtwist_mux_controller.so" to ""
+[9.882s] -- Installing: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/export_twist_mux_controllerExport.cmake
+[9.882s] -- Installing: /home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/export_twist_mux_controllerExport-release.cmake
+[9.883s] Invoked command in '/home/g16/Documents/qcarSim/build/twist_mux_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/twist_mux_controller

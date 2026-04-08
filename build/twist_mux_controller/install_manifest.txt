@@ -1,0 +1,3 @@
+/home/g16/Documents/qcarSim/install/twist_mux_controller/lib/libtwist_mux_controller.so
+/home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/export_twist_mux_controllerExport.cmake
+/home/g16/Documents/qcarSim/install/twist_mux_controller/share/twist_mux_controller/cmake/export_twist_mux_controllerExport-release.cmake

@@ -1,0 +1,22 @@
+---
+launch:
+
+  - arg:
+      name: map_name
+      default: qcar_map
+      description: Name for the saved map files (without extension).
+
+  - arg:
+      name: map_dir
+      default: .
+      description: Directory to save the map in.
+
+  - set_parameter:
+      name: use_sim_time
+      value: 'True'
+
+  - node:
+      pkg: nav2_map_server
+      exec: map_saver_cli
+      name: map_saver
+      args: -f $(var map_dir)/$(var map_name) --ros-args -p use_sim_time:=true

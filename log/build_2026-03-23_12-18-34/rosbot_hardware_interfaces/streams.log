@@ -1,0 +1,32 @@
+[0.015s] Invoking command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces
+[0.109s] -- The C compiler identification is GNU 13.3.0
+[0.172s] -- The CXX compiler identification is GNU 13.3.0
+[0.190s] -- Detecting C compiler ABI info
+[0.247s] -- Detecting C compiler ABI info - done
+[0.254s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.254s] -- Detecting C compile features
+[0.255s] -- Detecting C compile features - done
+[0.263s] -- Detecting CXX compiler ABI info
+[0.322s] -- Detecting CXX compiler ABI info - done
+[0.328s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.328s] -- Detecting CXX compile features
+[0.329s] -- Detecting CXX compile features - done
+[0.337s] [31mCMake Error at CMakeLists.txt:14 (find_package):
+[0.338s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.338s]   has asked CMake to find a package configuration file provided by
+[0.338s]   "ament_cmake", but CMake did not find one.
+[0.338s] 
+[0.338s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.338s]   any of the following names:
+[0.338s] 
+[0.338s]     ament_cmakeConfig.cmake
+[0.338s]     ament_cmake-config.cmake
+[0.338s] 
+[0.338s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.338s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.338s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.338s]   has been installed.
+[0.338s] 
+[0.338s] [0m
+[0.338s] -- Configuring incomplete, errors occurred!
+[0.355s] Invoked command in '/home/g16/Documents/qcarSim/build/rosbot_hardware_interfaces' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_hardware_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/rosbot_hardware_interfaces

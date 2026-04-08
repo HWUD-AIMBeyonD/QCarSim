@@ -1,0 +1,26 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/g16/Documents/qcarSim/build/qcar_gazebo
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/config/gz_bridge.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/config/qcar_bridge.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/launch/simulation.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/launch/spawn_qcar.yaml
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/ament_index/resource_index/package_run_dependencies/qcar_gazebo
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/ament_index/resource_index/parent_prefix_path/qcar_gazebo
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/environment/ament_prefix_path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/environment/ament_prefix_path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/environment/path.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/environment/path.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/local_setup.bash
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/local_setup.sh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/local_setup.zsh
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/local_setup.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/package.dsv
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/ament_index/resource_index/packages/qcar_gazebo
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/cmake/qcar_gazeboConfig.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/cmake/qcar_gazeboConfig-version.cmake
+-- Symlinking: /home/g16/Documents/qcarSim/install/qcar_gazebo/share/qcar_gazebo/package.xml

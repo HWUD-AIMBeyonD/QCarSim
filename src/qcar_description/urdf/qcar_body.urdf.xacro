@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="body" params="wheel_radius namespace">
+
+    <!-- ==================== BASE LINK ==================== -->
+    <link name="base_link" />
+
+    <joint name="base_to_body_joint" type="fixed">
+      <origin xyz="0.0 0.0 ${wheel_radius}" rpy="0.0 0.0 0.0" />
+      <parent link="base_link" />
+      <child link="body_link" />
+    </joint>
+
+    <!-- ==================== BODY LINK ==================== -->
+    <link name="body_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://qcar_description/meshes/QCarBody.dae" scale="0.1 0.1 0.1" />
+        </geometry>
+        <material name="White">
+          <color rgba="1.0 1.0 1.0 1.0" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <box size="0.38 0.12 0.10" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" />
+      </collision>
+
+      <inertial>
+        <mass value="2.0" />
+        <inertia ixx="0.00387" ixy="0.0"     ixz="0.0"
+                               iyy="0.01277" iyz="0.0"
+                                             izz="0.01387" />
+        <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" />
+      </inertial>
+    </link>
+
+    <!-- ==================== IMU ==================== -->
+    <joint name="body_to_imu_joint" type="fixed">
+      <origin xyz="0.1278 0.0223 0.0792" rpy="0.0 0.0 0.0" />
+      <parent link="body_link" />
+      <child link="imu_link" />
+    </joint>
+
+    <link name="imu_link" />
+
+    <!-- ==================== RPLiDAR ==================== -->
+    <joint name="body_to_rplidar_joint" type="fixed">
+      <origin xyz="-0.0108 0.0 0.1696" rpy="0.0 0.0 0.0" />
+      <parent link="body_link" />
+      <child link="rplidar_link" />
+    </joint>
+
+    <link name="rplidar_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://qcar_description/meshes/QCarLidar.dae" scale="0.1 0.1 0.1" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 1.54" />
+        <material name="Blue">
+          <color rgba="0.2 0.2 0.8 1.0" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <cylinder radius="0.035" length="0.04" />
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass value="0.1" />
+        <inertia ixx="0.0000418" ixy="0.0"       ixz="0.0"
+                                 iyy="0.0000418" iyz="0.0"
+                                                  izz="0.0000613" />
+      </inertial>
+    </link>
+
+    <!-- Laser frame (sensor reference point) -->
+    <joint name="rplidar_to_laser_joint" type="fixed">
+      <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0" />
+      <parent link="rplidar_link" />
+      <child link="laser" />
+    </joint>
+
+    <link name="laser" />
+
+    <!-- ==================== REALSENSE D435 ==================== -->
+    <!-- Original d435.dae visual mesh was removed because the QCar body mesh
+         already includes the RealSense camera visually. The separate mesh
+         (models/realsense/d435.dae, no scale — already in meters) was causing
+         a duplicate camera to render on top of the body.
+         The realsense_link frame is still needed for the Gazebo depth/color
+         sensor plugins defined in qcar_gz.urdf.xacro.
+         Position from original qcar_model.xacro is xyz 0.081686 0.0 0.15445
+         relative to body_link (which sits at wheel_radius above base_link). -->
+    <joint name="body_to_realsense_joint" type="fixed">
+      <origin xyz="0.081686 0.0 0.15445" rpy="0.0 0.0 0.0" />
+      <parent link="body_link" />
+      <child link="realsense_link" />
+    </joint>
+
+    <link name="realsense_link" />
+
+    <!-- Optical frame convention Z-forward, X-right, Y-down.
+         The rpy="${-pi/2} 0 ${-pi/2}" rotates from the ROS body convention
+         (X-forward, Y-left, Z-up) into the camera optical convention.
+         If depth/color images appear flipped or rotated, check this transform. -->
+    <joint name="realsense_optical_joint" type="fixed">
+      <origin xyz="0.0 0.0 0.0" rpy="${-pi/2} 0.0 ${-pi/2}" />
+      <parent link="realsense_link" />
+      <child link="realsense_optical_frame" />
+    </joint>
+
+    <link name="realsense_optical_frame" />
+
+    <!-- ==================== CSI CAMERAS ==================== -->
+    <xacro:macro name="csi_camera_frame" params="name xyz rpy">
+      <joint name="body_to_${name}_joint" type="fixed">
+        <origin xyz="${xyz}" rpy="${rpy}" />
+        <parent link="body_link" />
+        <child link="${name}_link" />
+      </joint>
+
+      <link name="${name}_link" />
+
+      <joint name="${name}_optical_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="${-pi/2} 0.0 ${-pi/2}" />
+        <parent link="${name}_link" />
+        <child link="${name}_optical_frame" />
+      </joint>
+
+      <link name="${name}_optical_frame" />
+    </xacro:macro>
+
+    <xacro:csi_camera_frame name="csi_front" xyz="0.19236 -0.000475 0.093029" rpy="0.0 0.0 0.0" />
+    <xacro:csi_camera_frame name="csi_right" xyz="0.12887 -0.06755 0.093029"  rpy="0.0 0.0 ${-pi/2}" />
+    <xacro:csi_camera_frame name="csi_back"  xyz="-0.16669 -0.000578 0.093029" rpy="0.0 0.0 ${pi}" />
+    <xacro:csi_camera_frame name="csi_left"  xyz="0.12784 0.052497 0.093029"  rpy="0.0 0.0 ${pi/2}" />
+
+  </xacro:macro>
+</robot>

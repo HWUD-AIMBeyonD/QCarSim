@@ -1,0 +1,1 @@
+/home/g16/Documents/qcarSim/build/husarion_gz_worlds/ament_cmake_environment_hooks/husarion_gz_worlds.sh
