@@ -1,1 +1,150 @@
-/home/g16/Documents/qcarSim/src/qcar_description/urdf/qcar_wheels.urdf.xacro
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ==================== GEOMETRY CONSTANTS ==================== -->
+  <xacro:property name="wheel_radius"    value="0.033" />
+  <xacro:property name="wheel_thickness" value="0.025" />
+  <xacro:property name="wheel_mass"      value="0.05" />
+
+  <!-- Wheel inertia (solid cylinder: Ixx=Iyy=m(3r^2+h^2)/12, Izz=mr^2/2) -->
+  <xacro:property name="wheel_ixx" value="0.0000162" />
+  <xacro:property name="wheel_iyy" value="0.0000162" />
+  <xacro:property name="wheel_izz" value="0.0000272" />
+
+  <xacro:property name="hub_mass" value="0.02" />
+
+  <!-- Axle positions (relative to body_link) -->
+  <xacro:property name="front_axle_x" value="0.1296" />
+  <xacro:property name="rear_axle_x"  value="-0.12765" />
+  <xacro:property name="half_track"   value="0.056" />
+
+  <xacro:property name="steering_limit" value="0.5236" />
+
+  <!-- ==================== STEERING HUB MACRO ==================== -->
+  <xacro:macro name="steering_hub" params="side">
+
+    <xacro:if value="${side == 'fl'}">
+      <xacro:property name="y_sign" value="1.0" />
+      <xacro:property name="hub_mesh" value="package://qcar_description/meshes/QCarSteeringHubL.dae" />
+    </xacro:if>
+    <xacro:if value="${side == 'fr'}">
+      <xacro:property name="y_sign" value="-1.0" />
+      <xacro:property name="hub_mesh" value="package://qcar_description/meshes/QCarSteeringHubR.dae" />
+    </xacro:if>
+
+    <joint name="${side}_steering_joint" type="revolute">
+      <parent link="body_link" />
+      <child link="${side}_steering_hub_link" />
+      <origin xyz="${front_axle_x} ${y_sign * half_track} 0.0" rpy="0.0 0.0 0.0" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="${-steering_limit}" upper="${steering_limit}" effort="10.0" velocity="3.0" />
+      <dynamics damping="0.1" friction="0.0" />
+    </joint>
+
+    <link name="${side}_steering_hub_link">
+      <visual>
+        <geometry>
+          <mesh filename="${hub_mesh}" scale="0.1 0.1 0.1" />
+        </geometry>
+        <material name="Orange">
+          <color rgba="1.0 0.42 0.04 1.0" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <sphere radius="0.01" />
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass value="${hub_mass}" />
+        <inertia ixx="0.0000008" ixy="0.0"       ixz="0.0"
+                                 iyy="0.0000008" iyz="0.0"
+                                                  izz="0.0000008" />
+      </inertial>
+    </link>
+  </xacro:macro>
+
+  <!-- ==================== WHEEL MACRO ==================== -->
+  <xacro:macro name="wheel" params="side parent">
+
+    <!-- Determine position and mesh orientation per side -->
+    <xacro:if value="${side == 'fl'}">
+      <xacro:property name="wheel_x" value="0.0" />
+      <xacro:property name="wheel_y" value="0.0" />
+      <xacro:property name="wheel_rpy" value="0.0 0.0 ${pi}" />
+      <xacro:property name="wheel_color" value="1.0 0.0 0.0 1.0" />
+    </xacro:if>
+    <xacro:if value="${side == 'fr'}">
+      <xacro:property name="wheel_x" value="0.0" />
+      <xacro:property name="wheel_y" value="0.0" />
+      <xacro:property name="wheel_rpy" value="0.0 0.0 0.0" />
+      <xacro:property name="wheel_color" value="1.0 0.42 0.04 1.0" />
+    </xacro:if>
+    <xacro:if value="${side == 'rl'}">
+      <xacro:property name="wheel_x" value="${rear_axle_x}" />
+      <xacro:property name="wheel_y" value="${half_track}" />
+      <xacro:property name="wheel_rpy" value="0.0 0.0 ${pi}" />
+      <xacro:property name="wheel_color" value="1.0 0.42 0.04 1.0" />
+    </xacro:if>
+    <xacro:if value="${side == 'rr'}">
+      <xacro:property name="wheel_x" value="${rear_axle_x}" />
+      <xacro:property name="wheel_y" value="${-half_track}" />
+      <xacro:property name="wheel_rpy" value="0.0 0.0 0.0" />
+      <xacro:property name="wheel_color" value="1.0 0.0 0.0 1.0" />
+    </xacro:if>
+
+    <joint name="${side}_wheel_joint" type="continuous">
+      <parent link="${parent}" />
+      <child link="${side}_wheel_link" />
+      <origin xyz="${wheel_x} ${wheel_y} 0.0" rpy="0.0 0.0 0.0" />
+      <axis xyz="0.0 1.0 0.0" />
+      <limit effort="1.5" velocity="30.0" />
+      <dynamics damping="0.001" friction="0.005" />
+    </joint>
+
+    <link name="${side}_wheel_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://qcar_description/meshes/QCarWheel.dae" scale="0.1 0.1 0.1" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="${wheel_rpy}" />
+        <material name="${side}_wheel_mat">
+          <color rgba="${wheel_color}" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_thickness}" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="${pi/2} 0.0 0.0" />
+      </collision>
+
+      <inertial>
+        <mass value="${wheel_mass}" />
+        <inertia ixx="${wheel_ixx}" ixy="0.0"          ixz="0.0"
+                                    iyy="${wheel_iyy}" iyz="0.0"
+                                                       izz="${wheel_izz}" />
+      </inertial>
+    </link>
+
+    <gazebo reference="${side}_wheel_link">
+      <collision>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>0.8</mu2>
+              <slip1>0.002</slip1>
+              <slip2>0.0</slip2>
+              <fdir1>0 0 1</fdir1>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </gazebo>
+
+  </xacro:macro>
+</robot>

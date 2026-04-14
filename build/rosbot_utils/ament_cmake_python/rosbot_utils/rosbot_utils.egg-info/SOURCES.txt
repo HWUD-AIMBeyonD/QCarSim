@@ -1,9 +1,0 @@
-setup.py
-rosbot_utils/__init__.py
-rosbot_utils/flash_firmware_uart.py
-rosbot_utils/flash_firmware_usb.py
-rosbot_utils/utils.py
-rosbot_utils.egg-info/PKG-INFO
-rosbot_utils.egg-info/SOURCES.txt
-rosbot_utils.egg-info/dependency_links.txt
-rosbot_utils.egg-info/top_level.txt

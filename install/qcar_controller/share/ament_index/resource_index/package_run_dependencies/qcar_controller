@@ -1,1 +1,1 @@
-/home/g16/Documents/qcarSim/build/qcar_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/qcar_controller
+joint_state_broadcaster;imu_sensor_broadcaster;launch;launch_ros;qcar_description;robot_localization;xacro

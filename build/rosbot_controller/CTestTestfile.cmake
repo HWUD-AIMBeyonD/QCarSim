@@ -1,8 +1,0 @@
-# CMake generated Testfile for 
-# Source directory: /home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_controller
-# Build directory: /home/g16/Documents/qcarSim/build/rosbot_controller
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.
-add_test(test_xacro "/home/g16/venv-ardupilot/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/g16/Documents/qcarSim/build/rosbot_controller/test_results/rosbot_controller/test_xacro.xunit.xml" "--package-name" "rosbot_controller" "--output-file" "/home/g16/Documents/qcarSim/build/rosbot_controller/ament_cmake_pytest/test_xacro.txt" "--append-env" "PYTHONPATH=/home/g16/Documents/qcarSim/build/rosbot_controller" "--command" "/home/g16/venv-ardupilot/bin/python3" "-u" "-m" "pytest" "/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_controller/test/test_xacro.py" "-o" "cache_dir=/home/g16/Documents/qcarSim/build/rosbot_controller/ament_cmake_pytest/test_xacro/.cache" "--junit-xml=/home/g16/Documents/qcarSim/build/rosbot_controller/test_results/rosbot_controller/test_xacro.xunit.xml" "--junit-prefix=rosbot_controller")
-set_tests_properties(test_xacro PROPERTIES  LABELS "pytest" TIMEOUT "60" WORKING_DIRECTORY "/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_controller" _BACKTRACE_TRIPLES "/opt/ros/jazzy/share/ament_cmake_test/cmake/ament_add_test.cmake;125;add_test;/opt/ros/jazzy/share/ament_cmake_pytest/cmake/ament_add_pytest_test.cmake;177;ament_add_test;/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_controller/CMakeLists.txt;15;ament_add_pytest_test;/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_controller/CMakeLists.txt;0;")

@@ -26,7 +26,7 @@ launch:
 
   - arg:
       name: x
-      default: '0.0'
+      default: '-1.0'
       description: Initial robot x position.
   - arg:
       name: y
@@ -127,30 +127,43 @@ launch:
             - name: use_sim
               value: 'True'
 
-      # Sensor component bridges (from husarion_components_description)
-      - include:
-          file: $(find-pkg-share husarion_components_description)/launch/gz_components.launch.py
-          let:
-            - name: components_config_path
-              value: $(find-pkg-share qcar_description)/config/qcar/$(var configuration).yaml
+      # DISABLED - using Gazebo ground truth odom instead
+      # - node:
+      #     pkg: robot_localization
+      #     exec: ekf_node
+      #     name: ekf
+      #     param:
+      #       - from: $(find-pkg-share qcar_controller)/config/qcar_localization/ekf.yaml
+      #     remap:
+      #       - from: /diagnostics
+      #         to: diagnostics
 
-      # EKF localization (QCar-specific config fusing /odom + /imu/data_raw)
+      # Relay /odom to /odometry/filtered so downstream nodes (Nav2, SLAM) work unchanged
       - node:
-          pkg: robot_localization
-          exec: ekf_node
-          name: ekf
-          param:
-            - from: $(find-pkg-share qcar_controller)/config/qcar_localization/ekf.yaml
-          remap:
-            - from: /diagnostics
-              to: diagnostics
+          pkg: topic_tools
+          exec: relay
+          name: odom_relay
+          args: odom odometry/filtered
 
-      # Laser filter (filters self-hits from scan)
-      - include:
-          file: $(find-pkg-share rosbot_utils)/launch/laser_filter.yaml
-          let:
-            - name: robot_model
-              value: rosbot
+      # Static identity transform: map → odom (ground truth, no AMCL needed)
+      - node:
+          pkg: tf2_ros
+          exec: static_transform_publisher
+          name: map_to_odom
+          args: --x 0 --y 0 --z 0 --roll 0 --pitch 0 --yaw 0 --frame-id map --child-frame-id odom
+
+      # Laser filter (filters self-hits from scan, QCar-specific dimensions)
+      - node:
+          pkg: laser_filters
+          exec: scan_to_scan_filter_chain
+          name: laser_filter
+          param:
+            - from: $(find-pkg-share qcar_gazebo)/config/laser_filter.yaml
+          remap:
+            - from: scan
+              to: scan
+            - from: scan_filtered
+              to: scan_filtered
 
       # RViz
       - include:

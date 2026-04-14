@@ -1,1 +1,69 @@
-/home/g16/Documents/qcarSim/src/qcar_controller/config/qcar_localization/ekf.yaml
+---
+/**:
+
+  # EKF config for QCar - fuses Gazebo AckermannSteering /odom and /imu/data_raw
+  # Ref: http://docs.ros.org/en/noetic/api/robot_localization/html/state_estimation_nodes.html
+  ekf:
+    ros__parameters:
+      frequency: 20.0
+      sensor_timeout: 0.05
+      two_d_mode: true
+
+      transform_time_offset: 0.0
+      transform_timeout: 0.05
+
+      map_frame: map
+      odom_frame: odom
+      base_link_frame: base_link
+      world_frame: odom
+      publish_tf: true
+      publish_acceleration: false
+
+      # Odom from Gazebo AckermannSteering plugin (publishes on /odom)
+      # Fuse: x, y, yaw (differential mode — uses relative pose changes, not absolute)
+      # and vx from velocity
+      odom0: odom
+      odom0_config: [true,  true,  false, # X , Y , Z
+                     false, false, true,  # roll , pitch , yaw
+                     true,  false, false, # dX , dY , dZ
+                     false, false, false, # droll , dpitch , dyaw
+                     false, false, false] # ddX , ddY , ddZ
+      odom0_queue_size: 2
+      odom0_nodelay: true
+      odom0_differential: true
+      odom0_relative: false
+
+      # IMU from Gazebo sensor (publishes on /imu/data_raw)
+      # Fuse: dyaw from gyro only (no accelerations — reduces position drift noise)
+      imu0: imu/data_raw
+      imu0_config: [false, false, false, # X , Y , Z
+                    false, false, false, # roll , pitch , yaw
+                    false, false, false, # dX , dY , dZ
+                    false, false, true,  # droll , dpitch , dyaw
+                    false, false, false] # ddX , ddY , ddZ
+      imu0_queue_size: 5
+      imu0_nodelay: true
+      imu0_differential: false
+      imu0_relative: false
+      imu0_remove_gravitational_acceleration: true
+
+      reset_on_time_jump: false
+      predict_to_current_time: false
+      print_diagnostics: false
+
+      dynamic_process_noise_covariance: true
+      process_noise_covariance: [5e-3,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   5e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   5e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   1e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   1e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   1e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   3e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   3e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   3e-3,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   4e-2,  0.0,   0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   4e-2,  0.0,   0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   4e-2,  0.0,   0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   1e-5,  0.0,   0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   1e-5,  0.0,
+                                  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   1e-5]

@@ -1,1 +1,5 @@
-/home/g16/Documents/qcarSim/src/qcar_gazebo/config/gz_bridge.yaml
+---
+  - topic_name: /clock
+    ros_type_name: rosgraph_msgs/msg/Clock
+    gz_type_name: gz.msgs.Clock
+    direction: GZ_TO_ROS

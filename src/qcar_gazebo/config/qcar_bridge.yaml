@@ -25,7 +25,7 @@
     direction: GZ_TO_ROS
 
   - ros_topic_name: /<namespace>/tf
-    gz_topic_name: /<namespace>/odom/tf
+    gz_topic_name: /<namespace>/tf
     ros_type_name: tf2_msgs/msg/TFMessage
     gz_type_name: gz.msgs.Pose_V
     direction: GZ_TO_ROS

@@ -1,0 +1,65 @@
+[0.007s] Invoking command in '/home/g16/Documents/qcarSim/build/stanley_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/stanley_controller -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/stanley_controller
+[0.048s] -- The C compiler identification is GNU 13.3.0
+[0.089s] -- The CXX compiler identification is GNU 13.3.0
+[0.108s] -- Detecting C compiler ABI info
+[0.205s] -- Detecting C compiler ABI info - done
+[0.213s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.213s] -- Detecting C compile features
+[0.213s] -- Detecting C compile features - done
+[0.220s] -- Detecting CXX compiler ABI info
+[0.298s] -- Detecting CXX compiler ABI info - done
+[0.303s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.303s] -- Detecting CXX compile features
+[0.303s] -- Detecting CXX compile features - done
+[0.306s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.401s] -- Found Python3: /home/g16/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.468s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.497s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.507s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.518s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.530s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.581s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.583s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.668s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.688s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.705s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.751s] -- Found rclcpp_lifecycle: 28.1.16 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[0.771s] -- Found nav2_core: 1.3.10 (/opt/ros/jazzy/share/nav2_core/cmake)
+[0.985s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.985s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.985s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.170s] -- Configuring done (1.2s)
+[1.193s] -- Generating done (0.0s)
+[1.196s] -- Build files have been written to: /home/g16/Documents/qcarSim/build/stanley_controller
+[1.205s] Invoked command in '/home/g16/Documents/qcarSim/build/stanley_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake /home/g16/Documents/qcarSim/src/stanley_controller -DCMAKE_INSTALL_PREFIX=/home/g16/Documents/qcarSim/install/stanley_controller
+[1.205s] Invoking command in '/home/g16/Documents/qcarSim/build/stanley_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/stanley_controller -- -j32 -l32
+[1.261s] [ 50%] [32mBuilding CXX object CMakeFiles/stanley_controller.dir/src/stanley_controller.cpp.o[0m
+[1.287s] [100%] [32m[1mLinking CXX shared library libstanley_controller.so[0m
+[1.484s] [100%] Built target stanley_controller
+[1.491s] Invoked command in '/home/g16/Documents/qcarSim/build/stanley_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/stanley_controller -- -j32 -l32
+[1.492s] Invoking command in '/home/g16/Documents/qcarSim/build/stanley_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/stanley_controller
+[1.499s] -- Install configuration: ""
+[1.499s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/stanley_controller_plugin.xml
+[1.499s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/lib/libstanley_controller.so
+[1.500s] -- Set non-toolchain portion of runtime path of "/home/g16/Documents/qcarSim/install/stanley_controller/lib/libstanley_controller.so" to ""
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/include
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/include/stanley_controller
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/include/stanley_controller/stanley_controller.hpp
+[1.500s] -- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/stanley_controller_plugin.xml
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/package_run_dependencies/stanley_controller
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/parent_prefix_path/stanley_controller
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/ament_prefix_path.sh
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/ament_prefix_path.dsv
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/path.sh
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/path.dsv
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.bash
+[1.500s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.sh
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.zsh
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.dsv
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/package.dsv
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/packages/stanley_controller
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/stanley_controller
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/cmake/stanley_controllerConfig.cmake
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/cmake/stanley_controllerConfig-version.cmake
+[1.501s] -- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/package.xml
+[1.502s] Invoked command in '/home/g16/Documents/qcarSim/build/stanley_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/stanley_controller

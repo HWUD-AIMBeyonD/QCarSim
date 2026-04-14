@@ -1,9 +1,0 @@
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/uninstall.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/rosbot_gazebo_uninstall.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/test.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/edit_cache.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/rebuild_cache.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/list_install_components.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/install.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/install/local.dir
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/CMakeFiles/install/strip.dir

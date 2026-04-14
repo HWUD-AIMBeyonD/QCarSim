@@ -1,1 +1,0 @@
-/home/g16/Documents/qcarSim/build/rosbot_gazebo/ament_cmake_environment_hooks/local_setup.zsh

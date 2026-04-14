@@ -1,3 +1,0 @@
-/home/g16/Documents/qcarSim/install/husarion_mecanum_drive_controller/lib/libhusarion_mecanum_drive_controller.so
-/home/g16/Documents/qcarSim/install/husarion_mecanum_drive_controller/share/husarion_mecanum_drive_controller/cmake/export_husarion_mecanum_drive_controllerExport.cmake
-/home/g16/Documents/qcarSim/install/husarion_mecanum_drive_controller/share/husarion_mecanum_drive_controller/cmake/export_husarion_mecanum_drive_controllerExport-release.cmake

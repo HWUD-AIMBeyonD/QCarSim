@@ -295,7 +295,7 @@ Visualization Manager:
           Covariance:
             Orientation:
               Alpha: 0.05000000074505806
-              Color: 255; 25; 0
+              Color: 0; 0; 255
               Color Style: Unique
               Frame: Local
               Offset: 1
@@ -303,11 +303,11 @@ Visualization Manager:
               Value: true
             Position:
               Alpha: 0.05000000074505806
-              Color: 255; 25; 0
+              Color: 0; 0; 255
               Scale: 1
               Value: true
             Value: true
-          Enabled: false
+          Enabled: true
           Keep: 1000
           Name: Odometry
           Position Tolerance: 0.10000000149011612
@@ -315,7 +315,7 @@ Visualization Manager:
             Alpha: 1
             Axes Length: 1
             Axes Radius: 0.10000000149011612
-            Color: 255; 25; 0
+            Color: 0; 0; 255
             Head Length: 0.20000000298023224
             Head Radius: 0.10000000149011612
             Shaft Length: 0.5
@@ -328,7 +328,7 @@ Visualization Manager:
             History Policy: Keep Last
             Reliability Policy: Reliable
             Value: odometry/filtered
-          Value: false
+          Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:

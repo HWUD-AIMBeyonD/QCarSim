@@ -20,31 +20,31 @@
       publish_acceleration: false
 
       # Odom from Gazebo AckermannSteering plugin (publishes on /odom)
-      # Fuse: vx (dX), vyaw (dyaw) from velocity, plus x, y, yaw from pose
+      # Fuse: x, y, yaw (differential mode — uses relative pose changes, not absolute)
+      # and vx from velocity
       odom0: odom
       odom0_config: [true,  true,  false, # X , Y , Z
                      false, false, true,  # roll , pitch , yaw
                      true,  false, false, # dX , dY , dZ
-                     false, false, true,  # droll , dpitch , dyaw
+                     false, false, false, # droll , dpitch , dyaw
                      false, false, false] # ddX , ddY , ddZ
-
       odom0_queue_size: 2
       odom0_nodelay: true
-      odom0_differential: false
-      odom0_relative: true
+      odom0_differential: true
+      odom0_relative: false
 
       # IMU from Gazebo sensor (publishes on /imu/data_raw)
-      # Fuse: angular velocity z (dyaw) and linear acceleration x/y (ddX, ddY)
+      # Fuse: dyaw from gyro only (no accelerations — reduces position drift noise)
       imu0: imu/data_raw
       imu0_config: [false, false, false, # X , Y , Z
                     false, false, false, # roll , pitch , yaw
                     false, false, false, # dX , dY , dZ
                     false, false, true,  # droll , dpitch , dyaw
-                    true,  true,  false] # ddX , ddY , ddZ
+                    false, false, false] # ddX , ddY , ddZ
       imu0_queue_size: 5
       imu0_nodelay: true
       imu0_differential: false
-      imu0_relative: true
+      imu0_relative: false
       imu0_remove_gravitational_acceleration: true
 
       reset_on_time_jump: false

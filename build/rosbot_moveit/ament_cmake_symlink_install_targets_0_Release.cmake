@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/g16/Documents/qcarSim/build/rosbot_moveit/dock" "/home/g16/Documents/qcarSim/build/rosbot_moveit/home" "TARGETS" "dock" "home" "DESTINATION" "lib/rosbot_moveit")

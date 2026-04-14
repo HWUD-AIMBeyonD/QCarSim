@@ -1,1 +1,0 @@
-/home/g16/Documents/qcarSim/src/husarion_components_description/launch/gz_stereolabs_zed.launch.py

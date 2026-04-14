@@ -1,0 +1,6 @@
+<library path="vector_pursuit_controller">
+  <class type="vector_pursuit_controller::VectorPursuitController"
+         base_class_type="nav2_core::Controller">
+    <description>Vector Pursuit path-tracking controller for Ackermann vehicles</description>
+  </class>
+</library>

@@ -1,1 +1,4 @@
-/home/g16/Documents/qcarSim/src/qcar_description/config/qcar/basic.yaml
+---
+# QCar basic configuration.
+# Sensors (RPLiDAR, IMU, RealSense, CSI cameras) are built into qcar_body.urdf.xacro.
+components: []

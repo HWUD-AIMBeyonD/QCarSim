@@ -1,1 +1,0 @@
-/home/g16/Documents/qcarSim/src/rosbot_ros/rosbot_moveit/launch/setup_assistant.launch.py

@@ -1,0 +1,27 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/stanley_controller.dir/src/stanley_controller.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libstanley_controller.so[0m
+[100%] Built target stanley_controller
+-- Install configuration: ""
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/stanley_controller_plugin.xml
+-- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/lib/libstanley_controller.so
+-- Set non-toolchain portion of runtime path of "/home/g16/Documents/qcarSim/install/stanley_controller/lib/libstanley_controller.so" to ""
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/include
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/include/stanley_controller
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/include/stanley_controller/stanley_controller.hpp
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/stanley_controller_plugin.xml
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/package_run_dependencies/stanley_controller
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/parent_prefix_path/stanley_controller
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/ament_prefix_path.sh
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/path.sh
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/environment/path.dsv
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.bash
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.sh
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.zsh
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/local_setup.dsv
+-- Installing: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/package.dsv
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/packages/stanley_controller
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/stanley_controller
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/cmake/stanley_controllerConfig.cmake
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/cmake/stanley_controllerConfig-version.cmake
+-- Up-to-date: /home/g16/Documents/qcarSim/install/stanley_controller/share/stanley_controller/package.xml

@@ -1,1 +1,54 @@
-/home/g16/Documents/qcarSim/src/qcar_controller/launch/controller.yaml
+---
+launch:
+
+  # =======================
+  # Launch arguments
+  # =======================
+
+  - arg:
+      name: config_dir
+      default: ''
+      description: Path to the common configuration directory.
+
+  - arg:
+      name: configuration
+      default: basic
+      description: Specify configuration package.
+      choice:
+        - value: basic
+        - value: custom
+
+  - arg:
+      name: namespace
+      default: $(env ROBOT_NAMESPACE '')
+      description: Add namespace to all launched nodes.
+
+  - arg:
+      name: use_sim
+      default: 'False'
+      description: Use simulation
+
+  # =======================
+  # Derived values
+  # =======================
+
+  - let:
+      name: controller_config
+      value: $(eval "('$(var config_dir)/qcar_controller' if '$(var config_dir)' else '$(find-pkg-share
+        qcar_controller)') + '/config/qcar/controllers.yaml'")
+
+  # =======================
+  # Load URDF (via qcar_description)
+  # =======================
+
+  - include:
+      file: $(find-pkg-share qcar_description)/launch/qcar.yaml
+      let:
+        - name: configuration
+          value: $(var configuration)
+        - name: controller_config
+          value: $(var controller_config)
+        - name: mock_joints
+          value: 'False'
+        - name: use_sim
+          value: $(var use_sim)

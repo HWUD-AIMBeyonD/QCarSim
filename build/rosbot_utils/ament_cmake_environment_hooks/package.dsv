@@ -1,4 +1,0 @@
-source;share/rosbot_utils/local_setup.bash
-source;share/rosbot_utils/local_setup.dsv
-source;share/rosbot_utils/local_setup.sh
-source;share/rosbot_utils/local_setup.zsh

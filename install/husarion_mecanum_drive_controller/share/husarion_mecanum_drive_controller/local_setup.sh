@@ -1,1 +1,0 @@
-/home/g16/Documents/qcarSim/build/husarion_mecanum_drive_controller/ament_cmake_environment_hooks/local_setup.sh

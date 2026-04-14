@@ -1,0 +1,30 @@
+[0.015s] Invoking command in '/home/g16/Documents/qcarSim/build/qcar_nav2_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/qcar_nav2_bringup -- -j32 -l32
+[0.043s] Invoked command in '/home/g16/Documents/qcarSim/build/qcar_nav2_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/qcar_nav2_bringup -- -j32 -l32
+[0.050s] Invoking command in '/home/g16/Documents/qcarSim/build/qcar_nav2_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/qcar_nav2_bringup
+[0.055s] -- Install configuration: ""
+[0.055s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config
+[0.055s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/qcar_cartographer.lua
+[0.055s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/slam_online_async.yaml
+[0.055s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/nav2_params.yaml
+[0.055s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/launch
+[0.055s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/launch/slam.yaml
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/launch/navigation.yaml
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/launch/save_map.yaml
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/launch/cartographer.yaml
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/save_map.sh
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/ament_index/resource_index/package_run_dependencies/qcar_nav2_bringup
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/ament_index/resource_index/parent_prefix_path/qcar_nav2_bringup
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/environment/ament_prefix_path.sh
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/environment/ament_prefix_path.dsv
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/environment/path.sh
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/environment/path.dsv
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/local_setup.bash
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/local_setup.sh
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/local_setup.zsh
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/local_setup.dsv
+[0.056s] -- Installing: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/package.dsv
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/ament_index/resource_index/packages/qcar_nav2_bringup
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/cmake/qcar_nav2_bringupConfig.cmake
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/cmake/qcar_nav2_bringupConfig-version.cmake
+[0.056s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/package.xml
+[0.057s] Invoked command in '/home/g16/Documents/qcarSim/build/qcar_nav2_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/qcar_nav2_bringup

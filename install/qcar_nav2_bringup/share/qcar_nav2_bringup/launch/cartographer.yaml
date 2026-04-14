@@ -1,0 +1,28 @@
+launch:
+  - set_parameter:
+      name: use_sim_time
+      value: 'True'
+
+  - executable:
+      cmd: cp /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/qcar_cartographer.lua /opt/ros/jazzy/share/cartographer/configuration_files/qcar_cartographer.lua
+
+  - node:
+      pkg: cartographer_ros
+      exec: cartographer_node
+      name: cartographer_node
+      param:
+        - name: use_sim_time
+          value: true
+      args: -configuration_directory /opt/ros/jazzy/share/cartographer/configuration_files -configuration_basename qcar_cartographer.lua
+      remap:
+        - from: odom
+          to: odometry/filtered
+
+  - node:
+      pkg: cartographer_ros
+      exec: cartographer_occupancy_grid_node
+      name: cartographer_occupancy_grid_node
+      param:
+        - name: use_sim_time
+          value: true
+      args: -resolution 0.05 -publish_period_sec 1.0
