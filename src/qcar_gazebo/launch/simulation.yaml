@@ -58,4 +58,4 @@ launch:
       cmd: gz sim -g
 
   - include:
-      file: $(find-pkg-share qcar_gazebo)/launch/spawn_qcar.yaml``
+      file: $(find-pkg-share qcar_gazebo)/launch/spawn_qcar.yaml

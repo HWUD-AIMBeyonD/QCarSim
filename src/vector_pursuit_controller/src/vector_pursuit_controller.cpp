@@ -112,16 +112,29 @@ geometry_msgs::msg::TwistStamped VectorPursuitController::computeVelocityCommand
   // Pure Pursuit Steering Angle (The "Geometric" turn)
   double steering_geom = std::atan((2.0 * wheelbase_ * std::sin(alpha)) / lookahead_actual);
 
-  // B. Orientation Component (Screw Theory / Alignment)
-  // Extract Yaw from Lookahead Point
-  double roll, pitch, yaw_path;
-  tf2::Quaternion q;
-  tf2::fromMsg(lookahead_pose.pose.orientation, q);
-
-  tf2::Matrix3x3(q).getRPY(roll, pitch, yaw_path);
-
-  // In 'base_link' frame, Robot Yaw is 0.0.
-  // So Error = Target Yaw - Robot Yaw = yaw_path - 0.0 = yaw_path.
+  // B. Orientation Component — compute from path direction, not quaternion
+  // Use direction from current closest point to lookahead point
+  size_t la_idx = 0;
+  // Find lookahead index in transformed plan
+  for (size_t i = 0; i < transformed_plan.poses.size(); ++i) {
+    if (transformed_plan.poses[i].pose.position.x == tx && 
+        transformed_plan.poses[i].pose.position.y == ty) {
+      la_idx = i;
+      break;
+    }
+  }
+  
+  double yaw_path = 0.0;
+  if (la_idx > 0) {
+    double pdx = transformed_plan.poses[la_idx].pose.position.x - 
+                 transformed_plan.poses[la_idx - 1].pose.position.x;
+    double pdy = transformed_plan.poses[la_idx].pose.position.y - 
+                 transformed_plan.poses[la_idx - 1].pose.position.y;
+    yaw_path = std::atan2(pdy, pdx);
+  } else {
+    yaw_path = alpha;  // fallback to angle toward lookahead
+  }
+  
   double steering_orient = yaw_path;
 
   // C. Combine Components with Gains

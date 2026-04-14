@@ -1,0 +1,31 @@
+[0.015s] Invoking command in '/home/g16/Documents/qcarSim/build/vector_pursuit_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/vector_pursuit_controller -- -j32 -l32
+[0.058s] [ 50%] [32mBuilding CXX object CMakeFiles/vector_pursuit_controller.dir/src/vector_pursuit_controller.cpp.o[0m
+[2.859s] [100%] [32m[1mLinking CXX shared library libvector_pursuit_controller.so[0m
+[3.077s] [100%] Built target vector_pursuit_controller
+[3.084s] Invoked command in '/home/g16/Documents/qcarSim/build/vector_pursuit_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/vector_pursuit_controller -- -j32 -l32
+[3.085s] Invoking command in '/home/g16/Documents/qcarSim/build/vector_pursuit_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/vector_pursuit_controller
+[3.094s] -- Install configuration: ""
+[3.094s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/vector_pursuit_controller_plugin.xml
+[3.094s] -- Installing: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/lib/libvector_pursuit_controller.so
+[3.094s] -- Set non-toolchain portion of runtime path of "/home/g16/Documents/qcarSim/install/vector_pursuit_controller/lib/libvector_pursuit_controller.so" to ""
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/include
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/include/vector_pursuit_controller
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/include/vector_pursuit_controller/vector_pursuit_controller.hpp
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/vector_pursuit_controller_plugin.xml
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/ament_index/resource_index/package_run_dependencies/vector_pursuit_controller
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/ament_index/resource_index/parent_prefix_path/vector_pursuit_controller
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/environment/ament_prefix_path.sh
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/environment/ament_prefix_path.dsv
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/environment/path.sh
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/environment/path.dsv
+[3.095s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/local_setup.bash
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/local_setup.sh
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/local_setup.zsh
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/local_setup.dsv
+[3.096s] -- Installing: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/package.dsv
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/ament_index/resource_index/packages/vector_pursuit_controller
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/vector_pursuit_controller
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/cmake/vector_pursuit_controllerConfig.cmake
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/cmake/vector_pursuit_controllerConfig-version.cmake
+[3.096s] -- Up-to-date: /home/g16/Documents/qcarSim/install/vector_pursuit_controller/share/vector_pursuit_controller/package.xml
+[3.098s] Invoked command in '/home/g16/Documents/qcarSim/build/vector_pursuit_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/vector_pursuit_controller
