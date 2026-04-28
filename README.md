@@ -2,7 +2,7 @@
 
 A complete simulation environment for the Quanser QCar (1/10 scale Ackermann-steered vehicle) with autonomous navigation. Built for a Final Year Project comparing path-tracking controllers on a custom S-track course.
 
-The simulation includes four navigation controllers (RPP, Stanley, Vector Pursuit, DWB), two global planners (SmacPlannerHybrid, NavFn), and a benchmarking pipeline for KPI-based controller evaluation. A pre-built map and tuned navigation parameters are included — you can have the QCar driving autonomously within minutes of cloning.
+The simulation includes four navigation controllers (RPP, Stanley, Vector Pursuit, DWB), two global planners (SmacPlannerHybrid, NavFn), and a benchmarking pipeline for KPI-based controller evaluation. A pre-built map and tuned navigation parameters are included.
 
 ## Prerequisites
 
