@@ -46,6 +46,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qcar_nav2_bringup" TYPE DIRECTORY FILES
     "/home/g16/Documents/qcarSim/src/qcar_nav2_bringup/config"
     "/home/g16/Documents/qcarSim/src/qcar_nav2_bringup/launch"
+    "/home/g16/Documents/qcarSim/src/qcar_nav2_bringup/maps"
     )
 endif()
 

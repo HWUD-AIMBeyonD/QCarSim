@@ -120,12 +120,12 @@ launch:
 
       # Load URDF via qcar_description
       - include:
-          file: $(find-pkg-share qcar_controller)/launch/controller.yaml
+          file: $(find-pkg-share qcar_description)/launch/qcar.yaml
           let:
-            - name: configuration
-              value: $(var configuration)
             - name: use_sim
               value: 'True'
+            - name: mock_joints
+              value: 'False'
 
       # DISABLED - using Gazebo ground truth odom instead
       # - node:

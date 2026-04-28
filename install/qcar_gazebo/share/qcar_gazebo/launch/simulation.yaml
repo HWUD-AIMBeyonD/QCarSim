@@ -9,9 +9,6 @@ launch:
       name: RCUTILS_COLORIZED_OUTPUT
       value: '1'
 
-  # - set_env:
-  #     name: GZ_SIM_RESOURCE_PATH
-  #     value: $(find-pkg-share qcar_description)/..:$(env GZ_SIM_RESOURCE_PATH '')
   - set_env:
       name: GZ_SIM_RESOURCE_PATH
       value: $(find-pkg-share qcar_description)/..:$(find-pkg-share qcar_gazebo)/worlds:$(env GZ_SIM_RESOURCE_PATH '')

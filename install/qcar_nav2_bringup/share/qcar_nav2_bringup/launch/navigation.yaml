@@ -2,7 +2,7 @@ launch:
 
   - arg:
       name: map
-      default: /home/g16/Documents/qcarSim/s_map.yaml
+      default: $(find-pkg-share qcar_nav2_bringup)/maps/strack_map.yaml
       description: Full path to the map YAML file to load.
 
   - arg:
@@ -29,7 +29,7 @@ launch:
       from: /tf_static
       to: tf_static
 
-  # ==================== Map Server ====================
+  # Map Server 
   - node:
       pkg: nav2_map_server
       exec: map_server
@@ -46,7 +46,7 @@ launch:
   #     param:
   #       - from: $(var nav2_params)
 
-  # ==================== Planner Server ====================
+  #  Planner Server 
   - node:
       pkg: nav2_planner
       exec: planner_server
@@ -54,7 +54,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== Controller Server ====================
+  #  Controller Server 
   - node:
       pkg: nav2_controller
       exec: controller_server
@@ -62,7 +62,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== Smoother Server ====================
+  # Smoother Server 
   - node:
       pkg: nav2_smoother
       exec: smoother_server
@@ -70,7 +70,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== Behavior Server (recoveries) ====================
+  # Behavior Server (recoveries) 
   - node:
       pkg: nav2_behaviors
       exec: behavior_server
@@ -78,7 +78,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== BT Navigator ====================
+  # BT Navigator 
   - node:
       pkg: nav2_bt_navigator
       exec: bt_navigator
@@ -86,7 +86,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== Waypoint Follower ====================
+  # Waypoint Follower 
   - node:
       pkg: nav2_waypoint_follower
       exec: waypoint_follower
@@ -94,7 +94,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== Velocity Smoother ====================
+  # Velocity Smoother 
   - node:
       pkg: nav2_velocity_smoother
       exec: velocity_smoother
@@ -102,7 +102,7 @@ launch:
       param:
         - from: $(var nav2_params)
 
-  # ==================== Lifecycle Manager ====================
+  # Lifecycle Manager 
   - node:
       pkg: nav2_lifecycle_manager
       exec: lifecycle_manager

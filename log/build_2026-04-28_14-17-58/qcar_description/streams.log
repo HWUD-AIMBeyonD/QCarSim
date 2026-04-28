@@ -1,0 +1,50 @@
+[0.018s] Invoking command in '/home/g16/Documents/qcarSim/build/qcar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/qcar_description -- -j32 -l32
+[0.052s] Invoked command in '/home/g16/Documents/qcarSim/build/qcar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --build /home/g16/Documents/qcarSim/build/qcar_description -- -j32 -l32
+[0.053s] Invoking command in '/home/g16/Documents/qcarSim/build/qcar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/qcar_description
+[0.061s] -- Install configuration: ""
+[0.061s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/config
+[0.061s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/config/qcar
+[0.061s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/config/qcar/basic.yaml
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/launch
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/launch/rviz.yaml
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/launch/qcar.yaml
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubL.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubR.dae
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarLidar.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarBody.dae
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarWheel.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarBody.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubL.dae
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarLidar.dae
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarSteeringHubR.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/meshes/QCarWheel.dae
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/model.config
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/d435.dae
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/t265.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/models/realsense/d415.stl
+[0.062s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/rviz
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/rviz/qcar.rviz
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar_gz.urdf.xacro
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar_wheels.urdf.xacro
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar_body.urdf.xacro
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/urdf/qcar.urdf.xacro
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/ament_index/resource_index/package_run_dependencies/qcar_description
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/ament_index/resource_index/parent_prefix_path/qcar_description
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/ament_prefix_path.sh
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/ament_prefix_path.dsv
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/path.sh
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/environment/path.dsv
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.bash
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.sh
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.zsh
+[0.063s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/local_setup.dsv
+[0.064s] -- Installing: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/package.dsv
+[0.064s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/ament_index/resource_index/packages/qcar_description
+[0.064s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/cmake/qcar_descriptionConfig.cmake
+[0.064s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/cmake/qcar_descriptionConfig-version.cmake
+[0.064s] -- Up-to-date: /home/g16/Documents/qcarSim/install/qcar_description/share/qcar_description/package.xml
+[0.072s] Invoked command in '/home/g16/Documents/qcarSim/build/qcar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/cmake --install /home/g16/Documents/qcarSim/build/qcar_description

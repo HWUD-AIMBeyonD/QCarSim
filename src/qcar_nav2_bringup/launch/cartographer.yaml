@@ -4,8 +4,7 @@ launch:
       value: 'True'
 
   - executable:
-      cmd: cp /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/qcar_cartographer.lua /opt/ros/jazzy/share/cartographer/configuration_files/qcar_cartographer.lua
-
+        cmd: cp $(find-pkg-share qcar_nav2_bringup)/config/qcar_cartographer.lua /opt/ros/jazzy/share/cartographer/configuration_files/
   - node:
       pkg: cartographer_ros
       exec: cartographer_node

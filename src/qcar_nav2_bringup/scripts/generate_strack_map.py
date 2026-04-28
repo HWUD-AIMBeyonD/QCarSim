@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Generate an occupancy grid map (PGM + YAML) from the S-track geometry."""
 
+# Only to be used if there is a custom slam map that needs to be generated for NAV2 to use. The map is generated from the track geometry parameters defined in this script, so if the track changes, this script should be updated and re-run to produce a new map.
+
 import math
 import struct
 import os
 
 import numpy as np
 
-# ---------------------------------------------------------------------------
-# Track parameters (must match qcar_strack.sdf)
-# ---------------------------------------------------------------------------
+
+# Track parameters 
 track_width = 0.60
 R_center = 1.3
 R_inner = R_center - track_width / 2  # 1.00
@@ -28,9 +29,8 @@ y3 = 5.2   # top
 right_turn_cx, right_turn_cy = 1.25, 1.3
 left_turn_cx, left_turn_cy = -1.25, 3.9
 
-# ---------------------------------------------------------------------------
+
 # Map parameters
-# ---------------------------------------------------------------------------
 resolution = 0.05  # m/pixel
 padding = 1.0      # m around track extents
 
@@ -56,9 +56,8 @@ grid = np.full((height_pixels, width_pixels), 254, dtype=np.uint8)
 # Half-thickness for wall hit detection (inflated to cover SDF box-segment gaps)
 half_wall = 0.04
 
-# ---------------------------------------------------------------------------
+
 # Helper: pixel center to world coordinates
-# ---------------------------------------------------------------------------
 def pixel_to_world(row, col):
     """Convert pixel (row, col) to world (x, y). Row 0 = bottom of image."""
     wx = origin_x + (col + 0.5) * resolution
@@ -66,9 +65,8 @@ def pixel_to_world(row, col):
     return wx, wy
 
 
-# ---------------------------------------------------------------------------
+
 # Draw straight walls
-# ---------------------------------------------------------------------------
 straights = [
     (-0.30, x_left, x_right),   # bottom outer
     (0.30, x_left, x_right),    # bottom inner
@@ -92,9 +90,8 @@ for wall_y, wx_start, wx_end in straights:
         if abs(wy - wall_y) < half_wall:
             grid[r, col_start:col_end] = 0
 
-# ---------------------------------------------------------------------------
+
 # Draw arc walls
-# ---------------------------------------------------------------------------
 arcs = [
     (right_turn_cx, right_turn_cy, R_outer, -math.pi / 2, math.pi / 2),
     (right_turn_cx, right_turn_cy, R_inner, -math.pi / 2, math.pi / 2),
@@ -126,11 +123,11 @@ for cx, cy, radius, angle_start, angle_end in arcs:
                 if angle <= angle_end:
                     grid[r, c] = 0
 
-# ---------------------------------------------------------------------------
+
 # Save PGM (P5 binary format)
 # Row 0 in the image file = top of map = highest Y in world coords
 # So we flip vertically.
-# ---------------------------------------------------------------------------
+
 pgm_path = os.path.join(os.getcwd(), "strack_map.pgm")
 yaml_path = os.path.join(os.getcwd(), "strack_map.yaml")
 
@@ -143,9 +140,8 @@ with open(pgm_path, "wb") as f:
 
 print(f"Wrote {pgm_path}")
 
-# ---------------------------------------------------------------------------
+
 # Save YAML
-# ---------------------------------------------------------------------------
 yaml_content = f"""\
 image: strack_map.pgm
 mode: trinary

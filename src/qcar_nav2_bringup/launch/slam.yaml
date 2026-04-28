@@ -41,5 +41,7 @@ launch:
           value: $(var use_sim_time)
         - name: autostart
           value: true
+        - name: bond_timeout
+          value: 0.0
         - name: node_names
           value: ['slam_toolbox']
