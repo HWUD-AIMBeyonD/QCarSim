@@ -1,0 +1,173 @@
+[INFO] [launch]: All log files can be found below /home/g16/.ros/log/2026-10-09-18-59-02-317465-G16-68841
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [direct_map_publisher-1]: process started with pid [68848]
+[INFO] [hybrid_planner_server-2]: process started with pid [68849]
+[INFO] [rpp_controller_server-3]: process started with pid [68850]
+[INFO] [bt_navigator-4]: process started with pid [68851]
+[INFO] [lifecycle_manager-5]: process started with pid [68852]
+[rpp_controller_server-3] [INFO] [1791557942.402953483] [controller_server]: Initializing RPP Controller Server...
+[bt_navigator-4] [INFO] [1791557942.409882922] [bt_navigator]: 
+[bt_navigator-4] 	bt_navigator lifecycle node launched. 
+[bt_navigator-4] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-4] [INFO] [1791557942.411572632] [bt_navigator]: Creating
+[rpp_controller_server-3] [INFO] [1791557942.413093611] [local_costmap.local_costmap]: 
+[rpp_controller_server-3] 	local_costmap lifecycle node launched. 
+[rpp_controller_server-3] 	Waiting on external lifecycle transitions to activate
+[rpp_controller_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[rpp_controller_server-3] [INFO] [1791557942.413592701] [local_costmap.local_costmap]: Creating Costmap
+[rpp_controller_server-3] [INFO] [1791557942.414284609] [local_costmap.local_costmap]: Configuring
+[lifecycle_manager-5] [INFO] [1791557942.416547929] [lifecycle_manager_navigation]: Creating
+[rpp_controller_server-3] [INFO] [1791557942.417282444] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[rpp_controller_server-3] [INFO] [1791557942.421369364] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[hybrid_planner_server-2] [INFO] [1791557942.424073529] [hybrid_planner_server]: Initializing Hybrid Planner Server...
+[rpp_controller_server-3] [INFO] [1791557942.425190876] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[rpp_controller_server-3] [INFO] [1791557942.425467218] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[rpp_controller_server-3] [INFO] [1791557942.425692230] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[lifecycle_manager-5] [INFO] [1791557942.430351108] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[rpp_controller_server-3] [ERROR] [1791557942.437966264] [local_costmap.local_costmap]: The configured inflation radius (0.100) is smaller than the computed inscribed radius (0.245) of your footprint, it is highly recommended to set inflation radius to be at least as big as the inscribed radius to avoid collisions
+[rpp_controller_server-3] [INFO] [1791557942.441302922] [local_costmap.local_costmap]: Activating
+[rpp_controller_server-3] [INFO] [1791557942.441322668] [local_costmap.local_costmap]: Checking transform
+[rpp_controller_server-3] [INFO] [1791557942.441354203] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791557942.443035834] [global_costmap.global_costmap]: 
+[hybrid_planner_server-2] 	global_costmap lifecycle node launched. 
+[hybrid_planner_server-2] 	Waiting on external lifecycle transitions to activate
+[hybrid_planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[hybrid_planner_server-2] [INFO] [1791557942.443449754] [global_costmap.global_costmap]: Creating Costmap
+[hybrid_planner_server-2] [INFO] [1791557942.443800243] [hybrid_planner_server]: Configuring Lifecycle Components...
+[hybrid_planner_server-2] [INFO] [1791557942.444469094] [global_costmap.global_costmap]: Configuring
+[hybrid_planner_server-2] [INFO] [1791557942.448203605] [global_costmap.global_costmap]: Using plugin "static_layer"
+[hybrid_planner_server-2] [INFO] [1791557942.453151035] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[hybrid_planner_server-2] [INFO] [1791557942.455499504] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[hybrid_planner_server-2] [INFO] [1791557942.455733550] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[hybrid_planner_server-2] [INFO] [1791557942.456135812] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[hybrid_planner_server-2] [INFO] [1791557942.458826326] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[hybrid_planner_server-2] [INFO] [1791557942.458844549] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[hybrid_planner_server-2] [INFO] [1791557942.459050712] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[hybrid_planner_server-2] [INFO] [1791557942.485563050] [global_costmap.global_costmap]: Activating
+[hybrid_planner_server-2] [INFO] [1791557942.485592928] [global_costmap.global_costmap]: Checking transform
+[hybrid_planner_server-2] [INFO] [1791557942.485628277] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[lifecycle_manager-5] [INFO] [1791557942.853302264] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1791557942.853385573] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791557942.853841550] [bt_navigator]: Configuring
+[bt_navigator-4] [INFO] [1791557942.865483317] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-4] [WARN] [1791557942.874622108] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-4] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[lifecycle_manager-5] [INFO] [1791557942.909298997] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791557942.909353890] [bt_navigator]: Activating
+[rpp_controller_server-3] [INFO] [1791557942.941424158] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[direct_map_publisher-1] [INFO] [1791557942.947696437] [map_server]: Loading map from /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/maps/new_map_grid.pgm
+[hybrid_planner_server-2] [INFO] [1791557942.985696797] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[direct_map_publisher-1] [INFO] [1791557943.052335906] [map_server]: Map loaded: 230x380, resolution=0.05
+[direct_map_publisher-1] [INFO] [1791557943.052774310] [map_server]: Published map: 230x380
+[rpp_controller_server-3] [INFO] [1791557943.441441168] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791557943.485875681] [global_costmap.global_costmap]: start
+[rpp_controller_server-3] [INFO] [1791557943.941414182] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[rpp_controller_server-3] [INFO] [1791557944.441706668] [local_costmap.local_costmap]: start
+[hybrid_planner_server-2] [WARN] [1791557944.486230073] [global_costmap.global_costmap]: Sensor origin at (-0.01, -0.00) is out of map bounds (0.00, 0.00) to (4.98, 4.98). The costmap cannot raytrace for it.
+[hybrid_planner_server-2] [INFO] [1791557944.487517272] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 230 X 380 at 0.050000 m/pix
+[hybrid_planner_server-2] [INFO] [1791557944.488194801] [hybrid_planner_server]: CustomHybridPlanner Configured! R=0.50 Step=0.15
+[hybrid_planner_server-2] [INFO] [1791557944.488252594] [HybridPlanner]: Activating...
+[hybrid_planner_server-2] [INFO] [1791557944.498750264] [hybrid_planner_server]: Hybrid Planner Server Fully Ready!
+[rpp_controller_server-3] [INFO] [1791557944.546360121] [controller_server]: Configuring Controller...
+[rpp_controller_server-3] [INFO] [1791557944.547364698] [controller_server]: Regulated Pure Pursuit controller configured: desired_vel=0.30, lookahead=0.60
+[rpp_controller_server-3] [INFO] [1791557944.547387291] [RegulatedPurePursuitController]: Activating controller
+[rpp_controller_server-3] [INFO] [1791557944.547389518] [controller_server]: RPP Controller Server Ready!
+[bt_navigator-4] [INFO] [1791557944.608626010] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791557944.712698408] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-5] [INFO] [1791557944.712731783] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1791557944.712738156] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[bt_navigator-4] [INFO] [1791557954.805916116] [bt_navigator]: Begin navigating from current location (0.00, 0.00) to (0.56, 2.64)
+[hybrid_planner_server-2] [INFO] [1791557954.806977028] [hybrid_planner_server]: Planning from (0.00, 0.00) to (0.56, 2.64)...
+[hybrid_planner_server-2] [INFO] [1791557954.819361498] [HybridPlanner]: Path found: 73 points after 725 iterations
+[hybrid_planner_server-2] [INFO] [1791557954.819998536] [hybrid_planner_server]: Path successfully sent to BT Navigator.
+[rpp_controller_server-3] [INFO] [1791558011.338139894] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791558011.366325900] [bt_navigator]: Goal succeeded
+[bt_navigator-4] [INFO] [1791558019.414274073] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[hybrid_planner_server-2] [INFO] [1791558019.414805302] [hybrid_planner_server]: Planning from (0.00, -0.00) to (0.56, 2.64)...
+[hybrid_planner_server-2] [INFO] [1791558019.422735508] [HybridPlanner]: Path found: 73 points after 763 iterations
+[hybrid_planner_server-2] [INFO] [1791558019.423095122] [hybrid_planner_server]: Path successfully sent to BT Navigator.
+[rpp_controller_server-3] [INFO] [1791558077.085502503] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791558077.114637444] [bt_navigator]: Goal succeeded
+[rpp_controller_server-3] [WARN] [1791558079.241943193] [local_costmap.local_costmap]: Sensor origin at (0.63, 2.78) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791558084.745580907] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[hybrid_planner_server-2] [INFO] [1791558084.746417136] [hybrid_planner_server]: Planning from (0.00, -0.00) to (0.56, 2.64)...
+[hybrid_planner_server-2] [INFO] [1791558084.755511974] [HybridPlanner]: Path found: 73 points after 763 iterations
+[hybrid_planner_server-2] [INFO] [1791558084.755847080] [hybrid_planner_server]: Path successfully sent to BT Navigator.
+[rpp_controller_server-3] [INFO] [1791558142.316523433] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791558142.345862115] [bt_navigator]: Goal succeeded
+[rpp_controller_server-3] [WARN] [1791558144.441944734] [local_costmap.local_costmap]: Sensor origin at (0.63, 2.78) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[rpp_controller_server-3] [WARN] [1791558144.541927954] [local_costmap.local_costmap]: Sensor origin at (0.63, 2.78) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791558150.150204015] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[hybrid_planner_server-2] [INFO] [1791558150.150443257] [hybrid_planner_server]: Planning from (0.00, -0.00) to (0.56, 2.64)...
+[hybrid_planner_server-2] [INFO] [1791558150.155872245] [HybridPlanner]: Path found: 73 points after 763 iterations
+[hybrid_planner_server-2] [INFO] [1791558150.156251118] [hybrid_planner_server]: Path successfully sent to BT Navigator.
+[rpp_controller_server-3] [INFO] [1791558207.770884847] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791558207.800458608] [bt_navigator]: Goal succeeded
+[rpp_controller_server-3] [WARN] [1791558209.941947835] [local_costmap.local_costmap]: Sensor origin at (0.62, 2.78) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791558216.026427462] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[hybrid_planner_server-2] [INFO] [1791558216.027060007] [hybrid_planner_server]: Planning from (0.00, -0.00) to (0.56, 2.64)...
+[hybrid_planner_server-2] [INFO] [1791558216.035829276] [HybridPlanner]: Path found: 73 points after 763 iterations
+[hybrid_planner_server-2] [INFO] [1791558216.036153907] [hybrid_planner_server]: Path successfully sent to BT Navigator.
+[rpp_controller_server-3] [INFO] [1791558273.647395681] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791558273.676773755] [bt_navigator]: Goal succeeded
+[hybrid_planner_server-2] [INFO] [1791558275.578818149] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-5] [INFO] [1791558275.578808269] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791558275.578826707] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791558275.578908189] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[rpp_controller_server-3] [INFO] [1791558275.578838574] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-5] [INFO] [1791558275.578954572] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-5] [INFO] [1791558275.579023982] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[bt_navigator-4] [INFO] [1791558275.579004336] [bt_navigator]: Deactivating
+[bt_navigator-4] [INFO] [1791558275.579059875] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[hybrid_planner_server-2] [INFO] [1791558275.582211001] [HybridPlanner]: Deactivating...
+[hybrid_planner_server-2] [INFO] [1791558275.582231222] [HybridPlanner]: Cleaning up...
+[rpp_controller_server-3] [INFO] [1791558275.583071601] [RegulatedPurePursuitController]: Deactivating controller
+[rpp_controller_server-3] [INFO] [1791558275.583091948] [RegulatedPurePursuitController]: Cleaning up controller
+[bt_navigator-4] [INFO] [1791558275.589436151] [bt_navigator]: Cleaning up
+[lifecycle_manager-5] [INFO] [1791558275.596037090] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[hybrid_planner_server-2] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[hybrid_planner_server-2]          at line 127 in ./src/class_loader.cpp
+[hybrid_planner_server-2] terminate called without an active exception
+[rpp_controller_server-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[rpp_controller_server-3]          at line 127 in ./src/class_loader.cpp
+[rpp_controller_server-3] terminate called without an active exception
+[bt_navigator-4] [INFO] [1791558275.622078395] [bt_navigator]: Completed Cleaning up
+[bt_navigator-4] [INFO] [1791558275.622148613] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-4] [INFO] [1791558275.624343435] [bt_navigator]: Destroying
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 136, in main
+[direct_map_publisher-1]     rclpy.spin(node)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[direct_map_publisher-1]     executor.spin_once()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 923, in spin_once
+[direct_map_publisher-1]     self._spin_once_impl(timeout_sec)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 904, in _spin_once_impl
+[direct_map_publisher-1]     handler, entity, node = self.wait_for_ready_callbacks(
+[direct_map_publisher-1]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 874, in wait_for_ready_callbacks
+[direct_map_publisher-1]     return next(self._cb_iter)
+[direct_map_publisher-1]            ^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 782, in _wait_for_ready_callbacks
+[direct_map_publisher-1]     raise ExternalShutdownException()
+[direct_map_publisher-1] rclpy.executors.ExternalShutdownException
+[direct_map_publisher-1] 
+[direct_map_publisher-1] During handling of the above exception, another exception occurred:
+[direct_map_publisher-1] 
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 144, in <module>
+[direct_map_publisher-1]     main()
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 141, in main
+[direct_map_publisher-1]     rclpy.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[direct_map_publisher-1]     _shutdown(context=context)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[direct_map_publisher-1]     context.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[direct_map_publisher-1]     self.__context.shutdown()
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [lifecycle_manager-5]: process has finished cleanly [pid 68852]
+[INFO] [bt_navigator-4]: process has finished cleanly [pid 68851]
+[ERROR] [direct_map_publisher-1]: process has died [pid 68848, exit code 1, cmd '/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher --ros-args -r __node:=map_server --params-file /tmp/launch_params_nqu8p_11 --params-file /tmp/launch_params_q2xarh6u'].
+[ERROR] [hybrid_planner_server-2]: process has died [pid 68849, exit code -6, cmd '/home/g16/Documents/qcarSim/install/custom_hybrid_planner/lib/custom_hybrid_planner/hybrid_planner_server --ros-args -r __node:=hybrid_planner_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_rpp_hybrid.yaml --params-file /tmp/launch_params_l3cdm2d6 -r /tf:=tf -r /tf_static:=tf_static'].
+[ERROR] [rpp_controller_server-3]: process has died [pid 68850, exit code -6, cmd '/home/g16/Documents/qcarSim/install/rpp_controller/lib/rpp_controller/rpp_controller_server --ros-args -r __node:=controller_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_rpp_hybrid.yaml --params-file /tmp/launch_params_74s73zs7 -r /tf:=tf -r /tf_static:=tf_static'].

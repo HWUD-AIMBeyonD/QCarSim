@@ -1,8 +1,13 @@
 # QCar Simulation — ROS 2 Jazzy + Gazebo Harmonic
 
-A complete simulation environment for the Quanser QCar (1/10 scale Ackermann-steered vehicle) with autonomous navigation. Built for a Final Year Project comparing path-tracking controllers on a custom S-track course.
+A simulation of the Quanser QCar (1/10 scale Ackermann-steered vehicle) built to study the **sim-to-real gap**: it runs the *same* planner and controller code, parameters and map as the real car (hardware repo: ROS 2 Dashing, `~/Documents/qcar`).
 
-The simulation includes four navigation controllers (RPP, Stanley, Vector Pursuit, DWB), two global planners (SmacPlannerHybrid, NavFn), and a benchmarking pipeline for KPI-based controller evaluation. A pre-built map and tuned navigation parameters are included.
+- **World:** walls extruded from the real car's Cartographer map (`new_map.pgm`); Gazebo world frame == map frame.
+- **Planner:** the hardware's custom greedy Hybrid A* (`custom_hybrid_planner`).
+- **Controllers:** the hardware's RPP, Stanley and Vector Pursuit, each in its own standalone server (not Nav2 plugins).
+- **Behaviour tree:** plan once, then follow — same as hardware.
+- **Actuation:** `qcar_hw_emulator` applies the hardware interface's cmd_vel → [throttle, steering] mapping (steering clip, 0.16 s lag, 1 s timeout) before Gazebo.
+- **Parity check:** `check_hw_parity.sh` fails if the shared code, params or map drift from the hardware repo.
 
 ## Prerequisites
 
@@ -14,7 +19,7 @@ The simulation includes four navigation controllers (RPP, Stanley, Vector Pursui
 
 ```bash
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup \
-  ros-jazzy-nav2-smac-planner ros-jazzy-slam-toolbox \
+  ros-jazzy-slam-toolbox python3-pil \
   ros-jazzy-cartographer-ros ros-jazzy-teleop-twist-keyboard \
   ros-jazzy-laser-filters ros-jazzy-topic-tools
 
@@ -39,112 +44,94 @@ source install/setup.bash
 ros2 launch qcar_gazebo simulation.yaml
 ```
 
-Wait until Gazebo is fully loaded and the QCar is visible on the S-track.
+Wait until Gazebo is fully loaded and the QCar is visible at the start of the hardware-map corridor.
 
 ### Terminal 2 — Start navigation
 
 ```bash
-ros2 launch qcar_nav2_bringup navigation.yaml
+ros2 launch qcar_nav2_bringup navigation.launch.py controller_type:=rpp planner_type:=hybrid   # or stanley/vector, navfn
 ```
 
-Wait until the lifecycle manager reports all nodes active. RViz will open with the map loaded and the QCar localized at the start of the track.
+Wait for `Managed nodes are active`. The car spawns at map (0, 0), facing +x — the same place the real car started mapping.
 
 ### Send a navigation goal
 
-In RViz, click **2D Goal Pose** and click on the map where you want the QCar to drive to. The QCar will plan a path and follow it autonomously.
-
-Alternatively, you can send a goal from the terminal:
+In RViz, click **2D Goal Pose**, or from the terminal:
 
 ```bash
 ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose \
-  "{pose: {header: {frame_id: 'map'}, pose: {position: {x: 1.0, y: 5.2, z: 0.0},
-  orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}}}"
+  "{pose: {header: {frame_id: map}, pose: {position: {x: 3.0, y: 0.1}, orientation: {w: 1.0}}}}"
 ```
+
+**Planner range is limited, as on hardware.** The hybrid planner is a best-first search with a Euclidean heuristic, no visited set and `max_iterations: 2000`. From the spawn pose it reaches about 3 m down the straight; goals that need the car to go round a bend (e.g. (3.42, 0.49)) fail with `Failed to find path after 2000 iterations`. It also fails immediately (`after 2 iterations`) when the car stops inside the 0.24 m inscribed band of the ~0.85 m corridor, because every first primitive is in collision and nothing can reverse.
 
 The Gazebo Teleop panel (WASD keys) can be used for manual driving at any time.
 
 ## Switching Controllers
 
-Edit `src/qcar_nav2_bringup/config/nav2_params.yaml`. Under `controller_server`, uncomment the controller you want under `FollowPath:` and comment the others. RPP is active by default.
+Pass `controller_type:=rpp|stanley|vector` to `navigation.launch.py`. Each loads `config/hw/nav2_params_<type>.yaml`.
 
-| Controller | Plugin |
-|---|---|
-| Regulated Pure Pursuit (default) | `nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController` |
-| Stanley | `stanley_controller::StanleyController` |
-| Vector Pursuit | `vector_pursuit_controller::VectorPursuitController` |
-| DWB | `dwb_core::DWBLocalPlanner` |
-
-After switching, rebuild and relaunch:
+Those param files are **generated** from the hardware repo — do not edit them:
 
 ```bash
-colcon build --symlink-install --packages-select qcar_nav2_bringup
-source install/setup.bash
+python3 src/qcar_nav2_bringup/scripts/sync_hw_params.py   # --hw-repo ~/Documents/qcar by default
 ```
 
-## Switching Global Planners
+## Hardware Parity
 
-In the same `nav2_params.yaml`, change the plugin under `planner_server > GridBased:`. SmacPlannerHybrid is active by default.
+```bash
+bash check_hw_parity.sh            # or: bash check_hw_parity.sh /path/to/qcar
+```
 
-| Planner | Plugin |
+| What | How it's kept identical |
 |---|---|
-| SmacPlannerHybrid (default) | `nav2_smac_planner::SmacPlannerHybrid` |
-| NavFn | `nav2_navfn_planner::NavfnPlanner` |
+| Planner + controller algorithms (`*.cpp`/`*.hpp`, vendored `nav2_core` interfaces) | byte-identical copies; `qcar_dashing_compat` supplies the Dashing-era `tf2_geometry_msgs.h` include |
+| Server wrappers (`*_server.cpp`) | minimal Jazzy port, every change marked `[Jazzy port]`; the planner server also latches `/plan` for recording |
+| Params | generated by `sync_hw_params.py` |
+| Map publisher | verbatim `direct_map_publisher.py` |
+| `/cmd_vel` → motors | `qcar_hw_emulator.py` re-implements `qcar_hardware_interface.py`'s command path |
+| Map / world | `new_map.pgm` byte-identical; world generated from it |
+
+The script also stores hashes of the hardware files that were adapted rather than copied, so an edit on the hardware side is flagged for manual review.
+
+**Known remaining gaps** (not modelled): throttle→speed curve (`throttle_to_speed` on `qcar_hw_emulator`, default = ideal), OptiTrack HTTP polling latency and its 90° yaw offset, lidar angle resampling in the hardware driver, the hardware's standalone `/global_costmap/costmap` + `world_model` + `recoveries_server` (unused by the plan-once BT).
 
 ## KPI Benchmarking
 
-### Record a navigation run
+Fully automatic, all six combos (RPP / Stanley / Vector Pursuit × Hybrid A* / NavFn), 5 runs each, from map (0, 0) to the far end of the hook (0.56, 2.64):
 
 ```bash
-# Start recording in the background
-ros2 bag record /odom /cmd_vel /plan /received_global_plan -o rosbags/rpp_smac_run1 &
-
-# Send a goal via RViz or terminal, wait for completion, then stop recording:
-kill %1
+bash src/qcar_nav2_bringup/scripts/run_all_sim.sh 5 benchmarks_sim          # ~45 min, starts/stops everything
+COMBOS="vector:hybrid" bash src/qcar_nav2_bringup/scripts/run_all_sim.sh 5   # just some combos
+python3 src/qcar_nav2_bringup/scripts/summarize_benchmark_sim.py benchmarks_sim
 ```
 
-### Compute KPIs from a recorded run
+| Output | Contents |
+|---|---|
+| `benchmarks_sim/<ctrl>_<planner>/rosbags/` | one bag per run (`/odom /plan /cmd_vel /cmd_vel_hw`) |
+| `benchmarks_sim/kpi_results_sim.csv` | six KPIs per run (same math and format as the hardware `compute_kpis_hw.py`) |
+| `benchmarks_sim/runs_sim.csv` | outcome of every run: status, time, final distance to goal |
+| `benchmarks_sim/summary_table.csv`, `kpi_comparison.png` | mean ± std per combo, success rate, chart |
+| `benchmarks_sim/logs/` | sim and nav stack logs (`.N` = bring-up attempt) |
+
+`run_benchmark_sim.py` does one combo against an already-running stack (resets the pose, records, sends the goal, cancels after `--timeout`, computes KPIs). `run_all_sim.sh` relaunches a nav stack whose bring-up stalls (an occasional lost lifecycle reply in DDS, or a costmap that fails to activate on a TF timeout).
+
+## World and Map
+
+Both come from the hardware map:
 
 ```bash
-python3 src/qcar_nav2_bringup/scripts/compute_kpis.py \
-  rosbags/rpp_smac_run1/rpp_smac_run1.mcap \
-  --controller rpp --planner smac --run 1
+python3 src/qcar_gazebo/scripts/generate_world_from_map.py \
+  src/qcar_nav2_bringup/maps/new_map.yaml src/qcar_gazebo/worlds/qcar_hwmap.sdf \
+  --grid-out src/qcar_nav2_bringup/maps/new_map_grid.yaml          # --walls none|lines|solid
 ```
 
-Results are appended to `kpi_results.csv`. KPIs computed: CTE RMSE, CTE max, mission time, linear/angular acceleration RMS, and path efficiency.
-
-### Generate comparison charts
-
-After recording multiple runs across different controllers and planners:
-
-```bash
-python3 src/qcar_nav2_bringup/scripts/plot_kpis.py kpi_results.csv
-```
-
-## Creating a New World
-
-If you want to test on a different track layout:
-
-1. Create a new SDF world file in `src/qcar_gazebo/worlds/`. Use `qcar_strack.sdf` as a template — it contains the required Gazebo plugins (Physics, SceneBroadcaster, Sensors, Contact) and the GUI configuration with Teleop.
-
-2. Update `src/qcar_gazebo/launch/simulation.yaml` to point to your new world:
-```yaml
-  - node:
-      pkg: ros_gz_sim
-      exec: gzserver
-      name: gzserver
-      param:
-        - name: world_sdf_file
-          value: $(find-pkg-share qcar_gazebo)/worlds/your_new_world.sdf
-```
-
-3. Build a map of the new world using SLAM (see below), then either update the default map path in `navigation.yaml` or pass it at launch time:
-```bash
-ros2 launch qcar_nav2_bringup navigation.yaml map:=/path/to/your_map.yaml
-```
+- **Nav2 map** (`new_map_grid.yaml`, the default for `navigation.launch.py`): corridor free, walls closed along the edge of the driveable area (fills the ~500 gaps in the raw lidar map), everything else unknown (`free_thresh: 0.196`). `map:=.../new_map.yaml` still loads the raw hardware map.
+- **Gazebo world** (`qcar_hwmap.sdf`): **no walls** by default. The real walls are cardboard the car sometimes cuts through, and the KPIs don't measure obstacle avoidance. The planner and controller still see the walls through the map; the sim lidar sees nothing. `--walls lines` adds floor markings that only change the visuals; `--walls solid` brings back collidable walls.
 
 ## SLAM Mapping
 
-The included S-track map was generated from the known world geometry. If you need to build a map for a new world, two SLAM backends are available:
+The included map (`new_map`) was built by Cartographer on the real QCar. To map a sim world, two SLAM backends are available:
 
 ### Option A: slam_toolbox
 
@@ -183,15 +170,15 @@ bash src/qcar_nav2_bringup/scripts/save_map.sh my_cartographer_map
 | Package | Description |
 |---|---|
 | `qcar_description` | URDF/Xacro model, meshes, sensor definitions, RViz config |
-| `qcar_gazebo` | S-track world, Gazebo launch, bridge configs, laser filter |
-| `qcar_nav2_bringup` | Nav2 parameters, maps, SLAM configs, KPI scripts, launch files |
-| `stanley_controller` | Stanley path-tracking controller (Nav2 plugin) |
-| `vector_pursuit_controller` | Vector Pursuit controller (Nav2 plugin) |
+| `qcar_gazebo` | hardware-map world + generator, Gazebo launch, bridge configs, `qcar_hw_emulator` |
+| `qcar_nav2_bringup` | generated hardware params, plan-once BT, map, `direct_map_publisher`, trial/sync scripts |
+| `custom_hybrid_planner` | hardware greedy Hybrid A* planner server |
+| `rpp_controller`, `stanley_controller`, `vector_pursuit_controller` | hardware controller servers |
+| `qcar_dashing_compat` | include shim so the Dashing sources build unchanged |
 
 ## Architecture
 
-- **Drive:** `gz::sim::systems::AckermannSteering` — subscribes to `/cmd_vel`, actuates steering and drive joints
-- **Odometry:** `gz::sim::systems::OdometryPublisher` — publishes ground truth pose from the physics engine on `/odom` and the `odom → base_link` transform
-- **Localization:** Static `map → odom` identity transform (ground truth odometry makes AMCL unnecessary)
-- **Map:** Pre-built occupancy grid generated from the S-track geometry
-- **Navigation:** Nav2 with configurable global planner and local controller
+- **Drive:** `/cmd_vel` → `qcar_hw_emulator` → `/cmd_vel_hw` → `gz::sim::systems::AckermannSteering`. The Gazebo Teleop panel publishes straight to `/cmd_vel_hw`, bypassing the emulator.
+- **Odometry:** `gz::sim::systems::OdometryPublisher` gives the ground-truth pose on `/odom` and `odom → base_link` (stands in for OptiTrack).
+- **Frames:** static identity `map → odom` (world == map); static `base_link → base` because the hardware code and params use `base`.
+- **Map:** the hardware `new_map` published by the hardware's `direct_map_publisher`. Note: with `free_thresh: 0.25`, that node treats unknown grey (205) as **free**, on both hardware and sim.

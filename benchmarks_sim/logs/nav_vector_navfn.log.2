@@ -1,0 +1,643 @@
+[INFO] [launch]: All log files can be found below /home/g16/.ros/log/2026-10-09-19-26-25-475662-G16-79833
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [direct_map_publisher-1]: process started with pid [79840]
+[INFO] [planner_server-2]: process started with pid [79841]
+[INFO] [vector_pursuit_controller_server-3]: process started with pid [79842]
+[INFO] [bt_navigator-4]: process started with pid [79843]
+[INFO] [lifecycle_manager-5]: process started with pid [79844]
+[vector_pursuit_controller_server-3] [INFO] [1791559585.634421177] [controller_server]: Initializing Vector Pursuit Controller Server...
+[lifecycle_manager-5] [INFO] [1791559585.646201271] [lifecycle_manager_navigation]: Creating
+[bt_navigator-4] [INFO] [1791559585.648532949] [bt_navigator]: 
+[bt_navigator-4] 	bt_navigator lifecycle node launched. 
+[bt_navigator-4] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-4] [INFO] [1791559585.651864462] [bt_navigator]: Creating
+[planner_server-2] [INFO] [1791559585.657481060] [planner_server]: 
+[planner_server-2] 	planner_server lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-5] [INFO] [1791559585.659174664] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[planner_server-2] [INFO] [1791559585.662050953] [planner_server]: Creating
+[vector_pursuit_controller_server-3] [INFO] [1791559585.689146884] [local_costmap.local_costmap]: 
+[vector_pursuit_controller_server-3] 	local_costmap lifecycle node launched. 
+[vector_pursuit_controller_server-3] 	Waiting on external lifecycle transitions to activate
+[vector_pursuit_controller_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[vector_pursuit_controller_server-3] [INFO] [1791559585.691446035] [local_costmap.local_costmap]: Creating Costmap
+[vector_pursuit_controller_server-3] [INFO] [1791559585.695152876] [local_costmap.local_costmap]: Configuring
+[vector_pursuit_controller_server-3] [INFO] [1791559585.711587686] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791559585.715578072] [global_costmap.global_costmap]: 
+[planner_server-2] 	global_costmap lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791559585.716331969] [global_costmap.global_costmap]: Creating Costmap
+[vector_pursuit_controller_server-3] [INFO] [1791559585.721752535] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[vector_pursuit_controller_server-3] [INFO] [1791559586.062483935] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559586.062538846] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559586.063128675] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559586.084584031] [local_costmap.local_costmap]: Activating
+[vector_pursuit_controller_server-3] [INFO] [1791559586.084614929] [local_costmap.local_costmap]: Checking transform
+[vector_pursuit_controller_server-3] [INFO] [1791559586.084651443] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[direct_map_publisher-1] [INFO] [1791559586.330431689] [map_server]: Loading map from /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/maps/new_map_grid.pgm
+[lifecycle_manager-5] [INFO] [1791559586.350914527] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1791559586.350970555] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-2] [INFO] [1791559586.352553906] [planner_server]: Configuring
+[planner_server-2] [INFO] [1791559586.352632538] [global_costmap.global_costmap]: Configuring
+[planner_server-2] [INFO] [1791559586.369337225] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-2] [INFO] [1791559586.374974102] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-2] [INFO] [1791559586.377052938] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-2] [INFO] [1791559586.377077573] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791559586.377392358] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-2] [INFO] [1791559586.380996682] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791559586.381038558] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-2] [INFO] [1791559586.381601795] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-2] [INFO] [1791559586.403514723] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-2] [INFO] [1791559586.403561619] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791559586.403976200] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-5] [INFO] [1791559586.413690342] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791559586.413959330] [bt_navigator]: Configuring
+[bt_navigator-4] [INFO] [1791559586.424118600] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-4] [WARN] [1791559586.429767774] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-4] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[lifecycle_manager-5] [INFO] [1791559586.505581892] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-2] [INFO] [1791559586.505776311] [planner_server]: Activating
+[planner_server-2] [INFO] [1791559586.505840431] [global_costmap.global_costmap]: Activating
+[planner_server-2] [INFO] [1791559586.505861010] [global_costmap.global_costmap]: Checking transform
+[planner_server-2] [INFO] [1791559586.506077916] [global_costmap.global_costmap]: start
+[vector_pursuit_controller_server-3] [INFO] [1791559586.584841441] [local_costmap.local_costmap]: start
+[direct_map_publisher-1] [INFO] [1791559586.615069343] [map_server]: Map loaded: 230x380, resolution=0.05
+[direct_map_publisher-1] [INFO] [1791559586.615791844] [map_server]: Published map: 230x380
+[vector_pursuit_controller_server-3] [INFO] [1791559586.694193351] [controller_server]: Configuring Vector Pursuit Controller...
+[vector_pursuit_controller_server-3] [INFO] [1791559586.697307578] [controller_server]: Vector Pursuit configured: dist=0.60, k_trans=1.50, k_rot=2.00
+[vector_pursuit_controller_server-3] [INFO] [1791559586.697353957] [VectorPursuitController]: Activating controller
+[vector_pursuit_controller_server-3] [INFO] [1791559586.697360807] [controller_server]: Vector Pursuit Controller Server Ready!
+[planner_server-2] [INFO] [1791559586.749967433] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 230 X 380 at 0.050000 m/pix
+[vector_pursuit_controller_server-3] [INFO] [1791559586.967999632] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser' at time 1588.900 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1791559587.057375768] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791559587.059259861] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791559587.167039783] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-5] [INFO] [1791559587.167094464] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791559587.167473401] [bt_navigator]: Activating
+[bt_navigator-4] [INFO] [1791559587.186358856] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791559587.293964925] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-5] [INFO] [1791559587.294045755] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1791559587.294070055] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[vector_pursuit_controller_server-3] [WARN] [1791559593.685123504] [local_costmap.local_costmap]: Sensor origin at (0.61, 2.78) is out of map bounds (-1.45, -1.45) to (1.52, 1.52). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791559599.204202410] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[vector_pursuit_controller_server-3] [INFO] [1791559599.680326073] [VectorPursuitController]: plan=397 idx=29 target=(0.54, -0.27) geom=-0.369 align=-0.880 path_yaw=-0.109 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559600.178416691] [VectorPursuitController]: plan=390 idx=25 target=(0.55, -0.25) geom=-0.336 align=-0.269 path_yaw=0.017 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559600.679729672] [VectorPursuitController]: plan=386 idx=24 target=(0.58, -0.20) geom=-0.265 align=-0.111 path_yaw=0.170 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559601.178297562] [VectorPursuitController]: plan=382 idx=24 target=(0.60, -0.08) geom=-0.106 align=0.057 path_yaw=0.335 delta=-0.045 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559601.680524744] [VectorPursuitController]: plan=377 idx=24 target=(0.60, 0.08) geom=0.107 align=0.199 path_yaw=0.526 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559602.179306080] [VectorPursuitController]: plan=375 idx=25 target=(0.60, 0.12) geom=0.167 align=0.214 path_yaw=0.547 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559602.679205792] [VectorPursuitController]: plan=372 idx=25 target=(0.60, 0.13) geom=0.178 align=0.206 path_yaw=0.493 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559603.179500218] [VectorPursuitController]: plan=370 idx=26 target=(0.61, 0.11) geom=0.149 align=0.156 path_yaw=0.375 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559603.678440525] [VectorPursuitController]: plan=367 idx=26 target=(0.62, 0.07) geom=0.086 align=0.138 path_yaw=0.230 delta=0.404 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559604.179366295] [VectorPursuitController]: plan=361 idx=25 target=(0.62, -0.05) geom=-0.063 align=0.067 path_yaw=-0.034 delta=0.040 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559604.679292423] [VectorPursuitController]: plan=356 idx=25 target=(0.60, -0.17) geom=-0.226 align=-0.036 path_yaw=-0.206 delta=-0.412 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559605.178451127] [VectorPursuitController]: plan=353 idx=24 target=(0.57, -0.20) geom=-0.275 align=-0.041 path_yaw=-0.239 delta=-0.494 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559605.679803563] [VectorPursuitController]: plan=349 idx=23 target=(0.58, -0.19) geom=-0.257 align=0.002 path_yaw=-0.217 delta=-0.381 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559606.180744271] [VectorPursuitController]: plan=345 idx=24 target=(0.60, -0.13) geom=-0.170 align=0.091 path_yaw=-0.071 delta=-0.074 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559606.678668081] [VectorPursuitController]: plan=339 idx=24 target=(0.62, -0.05) geom=-0.064 align=0.098 path_yaw=0.166 delta=0.101 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559607.178277927] [VectorPursuitController]: plan=334 idx=24 target=(0.60, 0.02) geom=0.029 align=0.116 path_yaw=0.245 delta=0.275 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559607.678759524] [VectorPursuitController]: plan=330 idx=25 target=(0.61, 0.05) geom=0.068 align=0.094 path_yaw=0.166 delta=0.291 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559608.178327315] [VectorPursuitController]: plan=324 idx=25 target=(0.62, 0.03) geom=0.041 align=0.008 path_yaw=0.105 delta=0.077 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559608.677995434] [VectorPursuitController]: plan=319 idx=25 target=(0.60, -0.02) geom=-0.024 align=0.015 path_yaw=0.104 delta=-0.006 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559609.180314027] [VectorPursuitController]: plan=312 idx=24 target=(0.61, -0.04) geom=-0.059 align=0.066 path_yaw=0.341 delta=0.045 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559609.678259481] [VectorPursuitController]: plan=307 idx=25 target=(0.61, -0.05) geom=-0.067 align=-0.032 path_yaw=0.639 delta=-0.164 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559610.179354368] [VectorPursuitController]: plan=301 idx=26 target=(0.61, 0.05) geom=0.067 align=-0.060 path_yaw=0.751 delta=-0.020 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559610.679451502] [VectorPursuitController]: plan=295 idx=27 target=(0.60, 0.17) geom=0.221 align=-0.017 path_yaw=0.844 delta=0.298 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559611.178912154] [VectorPursuitController]: plan=292 idx=27 target=(0.57, 0.21) geom=0.285 align=0.057 path_yaw=0.827 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559611.679792667] [VectorPursuitController]: plan=289 idx=27 target=(0.56, 0.22) geom=0.302 align=0.164 path_yaw=0.778 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559612.177777032] [VectorPursuitController]: plan=286 idx=27 target=(0.57, 0.21) geom=0.285 align=0.280 path_yaw=0.746 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559612.679018098] [VectorPursuitController]: plan=281 idx=25 target=(0.58, 0.17) geom=0.241 align=0.376 path_yaw=0.741 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559613.179397333] [VectorPursuitController]: plan=278 idx=25 target=(0.59, 0.13) geom=0.182 align=0.305 path_yaw=0.669 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559613.679460086] [VectorPursuitController]: plan=274 idx=25 target=(0.62, 0.09) geom=0.120 align=0.241 path_yaw=0.548 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559614.178622383] [VectorPursuitController]: plan=271 idx=25 target=(0.61, 0.03) geom=0.038 align=0.155 path_yaw=0.375 delta=0.367 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559614.678778362] [VectorPursuitController]: plan=265 idx=25 target=(0.62, -0.10) geom=-0.127 align=-0.037 path_yaw=0.170 delta=-0.266 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559615.177846065] [VectorPursuitController]: plan=262 idx=25 target=(0.60, -0.16) geom=-0.208 align=-0.114 path_yaw=0.120 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559615.677800581] [VectorPursuitController]: plan=260 idx=25 target=(0.58, -0.15) geom=-0.213 align=-0.063 path_yaw=0.162 delta=-0.447 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559616.178372284] [VectorPursuitController]: plan=254 idx=24 target=(0.60, -0.08) geom=-0.106 align=0.171 path_yaw=0.320 delta=0.183 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559616.679650731] [VectorPursuitController]: plan=250 idx=25 target=(0.62, 0.00) geom=0.001 align=0.244 path_yaw=0.441 delta=0.489 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559617.178094269] [VectorPursuitController]: plan=246 idx=24 target=(0.62, 0.02) geom=0.023 align=0.178 path_yaw=0.513 delta=0.390 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559617.678527902] [VectorPursuitController]: plan=241 idx=25 target=(0.61, -0.02) geom=-0.029 align=0.067 path_yaw=0.450 delta=0.090 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559618.177868660] [VectorPursuitController]: plan=236 idx=26 target=(0.60, -0.02) geom=-0.023 align=0.050 path_yaw=0.299 delta=0.066 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559618.677781115] [VectorPursuitController]: plan=229 idx=25 target=(0.61, -0.06) geom=-0.077 align=0.060 path_yaw=0.386 delta=0.005 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559619.177879485] [VectorPursuitController]: plan=221 idx=23 target=(0.62, -0.03) geom=-0.046 align=0.138 path_yaw=0.168 delta=0.208 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559619.677773995] [VectorPursuitController]: plan=215 idx=22 target=(0.61, -0.06) geom=-0.089 align=0.140 path_yaw=0.198 delta=0.147 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559620.177852308] [VectorPursuitController]: plan=210 idx=23 target=(0.61, -0.10) geom=-0.129 align=0.040 path_yaw=0.210 delta=-0.112 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559620.678490300] [VectorPursuitController]: plan=204 idx=23 target=(0.61, -0.09) geom=-0.116 align=0.176 path_yaw=0.219 delta=0.178 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559621.178806580] [VectorPursuitController]: plan=198 idx=23 target=(0.61, -0.08) geom=-0.102 align=-0.007 path_yaw=0.218 delta=-0.167 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559621.678080409] [VectorPursuitController]: plan=195 idx=26 target=(0.61, -0.04) geom=-0.049 align=0.024 path_yaw=0.207 delta=-0.026 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559622.177709234] [VectorPursuitController]: plan=188 idx=24 target=(0.60, -0.00) geom=-0.001 align=0.178 path_yaw=0.410 delta=0.355 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559622.677931971] [VectorPursuitController]: plan=184 idx=23 target=(0.60, -0.01) geom=-0.008 align=0.164 path_yaw=0.484 delta=0.317 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559623.178458055] [VectorPursuitController]: plan=179 idx=21 target=(0.63, 0.00) geom=0.003 align=0.108 path_yaw=0.288 delta=0.220 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559623.677524721] [VectorPursuitController]: plan=173 idx=20 target=(0.61, -0.04) geom=-0.060 align=-0.008 path_yaw=0.200 delta=-0.105 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559624.178042410] [VectorPursuitController]: plan=168 idx=20 target=(0.59, -0.09) geom=-0.125 align=0.078 path_yaw=0.287 delta=-0.032 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559624.678483828] [VectorPursuitController]: plan=162 idx=17 target=(0.60, -0.06) geom=-0.091 align=0.138 path_yaw=0.536 delta=0.140 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559625.178467161] [VectorPursuitController]: plan=159 idx=17 target=(0.62, 0.00) geom=0.005 align=0.072 path_yaw=0.414 delta=0.150 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559625.677534424] [VectorPursuitController]: plan=154 idx=15 target=(0.63, 0.01) geom=0.009 align=0.071 path_yaw=0.756 delta=0.155 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559626.177813304] [VectorPursuitController]: plan=149 idx=12 target=(0.60, 0.06) geom=0.079 align=0.144 path_yaw=0.693 delta=0.405 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559626.677363085] [VectorPursuitController]: plan=145 idx=10 target=(0.60, 0.11) geom=0.150 align=0.402 path_yaw=0.620 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559627.177381386] [VectorPursuitController]: plan=145 idx=13 target=(0.61, 0.09) geom=0.123 align=0.330 path_yaw=0.643 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559627.677528493] [VectorPursuitController]: plan=143 idx=14 target=(0.61, 0.05) geom=0.064 align=0.123 path_yaw=0.618 delta=0.342 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559628.177697166] [VectorPursuitController]: plan=141 idx=18 target=(0.60, -0.03) geom=-0.037 align=-0.072 path_yaw=0.525 delta=-0.201 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559628.677853417] [VectorPursuitController]: plan=141 idx=24 target=(0.62, -0.04) geom=-0.050 align=-0.170 path_yaw=0.497 delta=-0.415 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559629.178231405] [VectorPursuitController]: plan=135 idx=23 target=(0.60, 0.01) geom=0.010 align=0.128 path_yaw=0.409 delta=0.272 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559629.677460745] [VectorPursuitController]: plan=133 idx=24 target=(0.61, 0.03) geom=0.039 align=0.159 path_yaw=0.251 delta=0.378 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559630.177323165] [VectorPursuitController]: plan=128 idx=21 target=(0.64, 0.01) geom=0.017 align=0.220 path_yaw=0.346 delta=0.465 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559630.677317072] [VectorPursuitController]: plan=122 idx=16 target=(0.60, -0.08) geom=-0.115 align=0.221 path_yaw=0.410 delta=0.269 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559631.177483152] [VectorPursuitController]: plan=117 idx=14 target=(0.59, -0.17) geom=-0.226 align=0.080 path_yaw=0.229 delta=-0.179 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559631.677184114] [VectorPursuitController]: plan=110 idx=10 target=(0.63, -0.22) geom=-0.244 align=-0.279 path_yaw=0.166 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559632.177262857] [VectorPursuitController]: plan=110 idx=10 target=(0.57, -0.21) geom=-0.285 align=-0.268 path_yaw=0.176 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559632.677140507] [VectorPursuitController]: plan=110 idx=13 target=(0.59, -0.14) geom=-0.192 align=-0.212 path_yaw=0.250 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559633.177330172] [VectorPursuitController]: plan=108 idx=14 target=(0.60, -0.07) geom=-0.100 align=-0.119 path_yaw=0.471 delta=-0.387 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559633.677986546] [VectorPursuitController]: plan=107 idx=18 target=(0.59, 0.10) geom=0.137 align=0.300 path_yaw=0.597 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559634.177310444] [VectorPursuitController]: plan=105 idx=19 target=(0.58, 0.17) geom=0.236 align=0.335 path_yaw=0.535 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559634.677727550] [VectorPursuitController]: plan=103 idx=19 target=(0.60, 0.22) geom=0.272 align=0.476 path_yaw=0.471 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559635.177819404] [VectorPursuitController]: plan=102 idx=19 target=(0.57, 0.19) geom=0.265 align=0.307 path_yaw=0.452 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559635.677374955] [VectorPursuitController]: plan=101 idx=21 target=(0.59, 0.14) geom=0.190 align=0.149 path_yaw=0.490 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559636.177272743] [VectorPursuitController]: plan=98 idx=21 target=(0.60, 0.07) geom=0.096 align=0.141 path_yaw=0.513 delta=0.425 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559636.677648614] [VectorPursuitController]: plan=94 idx=23 target=(0.62, -0.03) geom=-0.039 align=0.155 path_yaw=0.593 delta=0.253 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559637.177149972] [VectorPursuitController]: plan=87 idx=22 target=(0.60, -0.10) geom=-0.141 align=-0.125 path_yaw=0.595 delta=-0.462 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559637.677143000] [VectorPursuitController]: plan=85 idx=23 target=(0.60, -0.10) geom=-0.133 align=-0.217 path_yaw=0.686 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559638.177158678] [VectorPursuitController]: plan=84 idx=25 target=(0.60, -0.04) geom=-0.056 align=-0.200 path_yaw=0.798 delta=-0.484 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559638.677364078] [VectorPursuitController]: plan=82 idx=29 target=(0.59, 0.14) geom=0.196 align=-0.004 path_yaw=1.012 delta=0.287 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559639.177382605] [VectorPursuitController]: plan=77 idx=28 target=(0.55, 0.26) geom=0.347 align=0.278 path_yaw=1.116 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559639.677103836] [VectorPursuitController]: plan=73 idx=27 target=(0.53, 0.31) geom=0.403 align=0.439 path_yaw=1.147 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559640.177090141] [VectorPursuitController]: plan=70 idx=27 target=(0.52, 0.33) geom=0.423 align=0.500 path_yaw=1.180 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559640.677042189] [VectorPursuitController]: plan=66 idx=26 target=(0.52, 0.33) geom=0.423 align=0.522 path_yaw=1.193 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559641.177120321] [VectorPursuitController]: plan=63 idx=26 target=(0.52, 0.32) geom=0.412 align=0.528 path_yaw=1.174 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559641.677437853] [VectorPursuitController]: plan=60 idx=26 target=(0.53, 0.31) geom=0.399 align=0.498 path_yaw=1.109 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559642.177164547] [VectorPursuitController]: plan=56 idx=25 target=(0.54, 0.29) geom=0.380 align=0.482 path_yaw=0.998 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559642.677122802] [VectorPursuitController]: plan=53 idx=25 target=(0.55, 0.26) geom=0.353 align=0.387 path_yaw=0.880 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559643.176964329] [VectorPursuitController]: plan=50 idx=25 target=(0.56, 0.23) geom=0.312 align=0.296 path_yaw=0.774 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559643.676900473] [VectorPursuitController]: plan=47 idx=25 target=(0.57, 0.18) geom=0.250 align=0.218 path_yaw=0.695 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559644.176858615] [VectorPursuitController]: plan=44 idx=26 target=(0.61, 0.14) geom=0.177 align=0.177 path_yaw=0.597 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559644.676866185] [VectorPursuitController]: plan=41 idx=26 target=(0.61, 0.07) geom=0.089 align=0.124 path_yaw=0.285 delta=0.381 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559645.177122268] [VectorPursuitController]: plan=35 idx=25 target=(0.60, -0.06) geom=-0.088 align=0.063 path_yaw=-0.150 delta=-0.006 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559645.676928937] [VectorPursuitController]: plan=29 idx=24 target=(0.58, -0.20) geom=-0.260 align=-0.069 path_yaw=-0.311 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559646.176856543] [VectorPursuitController]: plan=26 idx=23 target=(0.55, -0.24) geom=-0.325 align=-0.055 path_yaw=-0.328 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559646.676814955] [VectorPursuitController]: plan=24 idx=22 target=(0.55, -0.26) geom=-0.341 align=0.006 path_yaw=-0.290 delta=-0.499 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559647.176814489] [VectorPursuitController]: plan=19 idx=18 target=(0.48, -0.16) geom=-0.308 align=0.187 path_yaw=-0.174 delta=-0.087 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559647.676869726] [VectorPursuitController]: plan=13 idx=12 target=(0.36, -0.09) geom=-0.311 align=-0.043 path_yaw=-0.045 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559648.176842077] [VectorPursuitController]: plan=11 idx=10 target=(0.29, -0.05) geom=-0.287 align=-0.033 path_yaw=0.035 delta=-0.496 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559648.676901711] [VectorPursuitController]: plan=7 idx=6 target=(0.18, 0.01) geom=0.091 align=0.079 path_yaw=0.079 delta=0.293 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559648.776863708] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791559648.804807477] [bt_navigator]: Goal succeeded
+[vector_pursuit_controller_server-3] [WARN] [1791559652.185105046] [local_costmap.local_costmap]: Sensor origin at (0.64, 2.77) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791559658.108094202] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[vector_pursuit_controller_server-3] [INFO] [1791559658.533451263] [VectorPursuitController]: plan=397 idx=29 target=(0.54, -0.27) geom=-0.366 align=-0.882 path_yaw=-0.112 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559659.033712455] [VectorPursuitController]: plan=397 idx=32 target=(0.56, -0.26) geom=-0.335 align=-0.832 path_yaw=0.011 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559659.533179347] [VectorPursuitController]: plan=387 idx=25 target=(0.58, -0.21) geom=-0.268 align=-0.133 path_yaw=0.158 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559660.031869234] [VectorPursuitController]: plan=383 idx=25 target=(0.61, -0.09) geom=-0.122 align=0.030 path_yaw=0.313 delta=-0.124 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559660.532167237] [VectorPursuitController]: plan=378 idx=25 target=(0.61, 0.07) geom=0.095 align=0.194 path_yaw=0.518 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559661.031460032] [VectorPursuitController]: plan=375 idx=24 target=(0.59, 0.11) geom=0.156 align=0.212 path_yaw=0.545 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559661.531714716] [VectorPursuitController]: plan=373 idx=25 target=(0.59, 0.12) geom=0.171 align=0.186 path_yaw=0.503 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559662.032570718] [VectorPursuitController]: plan=370 idx=25 target=(0.60, 0.10) geom=0.145 align=0.159 path_yaw=0.404 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559662.532961562] [VectorPursuitController]: plan=367 idx=25 target=(0.60, 0.06) geom=0.083 align=0.142 path_yaw=0.243 delta=0.408 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559663.032465669] [VectorPursuitController]: plan=361 idx=24 target=(0.61, -0.04) geom=-0.062 align=0.078 path_yaw=-0.012 delta=0.063 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559663.531382747] [VectorPursuitController]: plan=356 idx=24 target=(0.58, -0.17) geom=-0.230 align=-0.030 path_yaw=-0.195 delta=-0.404 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559664.031618572] [VectorPursuitController]: plan=353 idx=24 target=(0.57, -0.20) geom=-0.274 align=-0.038 path_yaw=-0.236 delta=-0.488 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559664.532294383] [VectorPursuitController]: plan=349 idx=23 target=(0.58, -0.19) geom=-0.257 align=0.005 path_yaw=-0.214 delta=-0.375 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559665.032864521] [VectorPursuitController]: plan=344 idx=23 target=(0.60, -0.13) geom=-0.171 align=0.069 path_yaw=-0.068 delta=-0.119 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559665.531347739] [VectorPursuitController]: plan=339 idx=24 target=(0.61, -0.05) geom=-0.065 align=0.101 path_yaw=0.168 delta=0.104 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559666.031435508] [VectorPursuitController]: plan=334 idx=24 target=(0.60, 0.02) geom=0.029 align=0.118 path_yaw=0.246 delta=0.279 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559666.531381604] [VectorPursuitController]: plan=330 idx=25 target=(0.61, 0.05) geom=0.069 align=0.096 path_yaw=0.168 delta=0.296 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559667.032389837] [VectorPursuitController]: plan=324 idx=25 target=(0.62, 0.03) geom=0.041 align=0.010 path_yaw=0.107 delta=0.081 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559667.531539642] [VectorPursuitController]: plan=318 idx=25 target=(0.62, -0.02) geom=-0.024 align=0.042 path_yaw=0.103 delta=0.048 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559668.031748789] [VectorPursuitController]: plan=312 idx=24 target=(0.60, -0.05) geom=-0.065 align=0.063 path_yaw=0.337 delta=0.027 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559668.532394660] [VectorPursuitController]: plan=306 idx=24 target=(0.60, -0.05) geom=-0.074 align=-0.038 path_yaw=0.636 delta=-0.187 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559669.031812477] [VectorPursuitController]: plan=301 idx=26 target=(0.61, 0.05) geom=0.064 align=-0.061 path_yaw=0.750 delta=-0.025 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559669.531407590] [VectorPursuitController]: plan=295 idx=27 target=(0.60, 0.17) geom=0.220 align=-0.016 path_yaw=0.845 delta=0.298 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559670.031770504] [VectorPursuitController]: plan=292 idx=27 target=(0.57, 0.21) geom=0.285 align=0.059 path_yaw=0.829 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559670.531530282] [VectorPursuitController]: plan=289 idx=27 target=(0.56, 0.22) geom=0.302 align=0.166 path_yaw=0.780 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559671.031141814] [VectorPursuitController]: plan=286 idx=27 target=(0.57, 0.21) geom=0.285 align=0.282 path_yaw=0.749 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559671.530770739] [VectorPursuitController]: plan=281 idx=25 target=(0.58, 0.17) geom=0.239 align=0.374 path_yaw=0.739 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559672.031457840] [VectorPursuitController]: plan=277 idx=25 target=(0.61, 0.14) geom=0.182 align=0.311 path_yaw=0.686 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559672.532355713] [VectorPursuitController]: plan=274 idx=25 target=(0.61, 0.09) geom=0.117 align=0.239 path_yaw=0.546 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559673.031321738] [VectorPursuitController]: plan=271 idx=25 target=(0.61, 0.03) geom=0.042 align=0.161 path_yaw=0.381 delta=0.385 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559673.532514879] [VectorPursuitController]: plan=265 idx=24 target=(0.59, -0.10) geom=-0.135 align=-0.032 path_yaw=0.152 delta=-0.267 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559674.030879162] [VectorPursuitController]: plan=262 idx=25 target=(0.60, -0.16) geom=-0.208 align=-0.115 path_yaw=0.120 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559674.530991280] [VectorPursuitController]: plan=260 idx=25 target=(0.58, -0.16) geom=-0.215 align=-0.066 path_yaw=0.159 delta=-0.454 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559675.031400190] [VectorPursuitController]: plan=254 idx=25 target=(0.61, -0.07) geom=-0.089 align=0.174 path_yaw=0.323 delta=0.214 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559675.531502053] [VectorPursuitController]: plan=249 idx=24 target=(0.61, 0.00) geom=0.002 align=0.238 path_yaw=0.443 delta=0.481 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559676.032513165] [VectorPursuitController]: plan=245 idx=23 target=(0.61, 0.02) geom=0.022 align=0.160 path_yaw=0.512 delta=0.354 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559676.532294269] [VectorPursuitController]: plan=241 idx=25 target=(0.61, -0.02) geom=-0.028 align=0.068 path_yaw=0.451 delta=0.094 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559677.030867166] [VectorPursuitController]: plan=235 idx=26 target=(0.62, -0.02) geom=-0.022 align=0.056 path_yaw=0.355 delta=0.079 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559677.531063939] [VectorPursuitController]: plan=229 idx=26 target=(0.62, -0.06) geom=-0.075 align=0.050 path_yaw=0.348 delta=-0.013 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559678.032552138] [VectorPursuitController]: plan=221 idx=23 target=(0.61, -0.04) geom=-0.058 align=0.127 path_yaw=0.156 delta=0.166 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559678.531158714] [VectorPursuitController]: plan=215 idx=23 target=(0.62, -0.07) geom=-0.095 align=0.132 path_yaw=0.211 delta=0.121 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559679.030724481] [VectorPursuitController]: plan=210 idx=23 target=(0.59, -0.10) geom=-0.136 align=0.039 path_yaw=0.208 delta=-0.127 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559679.531951199] [VectorPursuitController]: plan=204 idx=23 target=(0.60, -0.08) geom=-0.118 align=0.178 path_yaw=0.222 delta=0.179 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559680.031420599] [VectorPursuitController]: plan=198 idx=23 target=(0.60, -0.07) geom=-0.102 align=-0.006 path_yaw=0.219 delta=-0.165 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559680.531188656] [VectorPursuitController]: plan=195 idx=26 target=(0.61, -0.04) geom=-0.049 align=0.023 path_yaw=0.206 delta=-0.029 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559681.031913438] [VectorPursuitController]: plan=187 idx=24 target=(0.62, 0.00) geom=0.003 align=0.175 path_yaw=0.428 delta=0.354 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559681.530715593] [VectorPursuitController]: plan=184 idx=24 target=(0.64, -0.00) geom=-0.002 align=0.158 path_yaw=0.537 delta=0.313 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559682.031275819] [VectorPursuitController]: plan=178 idx=20 target=(0.61, -0.01) geom=-0.012 align=0.103 path_yaw=0.273 delta=0.187 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559682.530567703] [VectorPursuitController]: plan=172 idx=20 target=(0.61, -0.04) geom=-0.060 align=-0.018 path_yaw=0.191 delta=-0.125 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559683.030510942] [VectorPursuitController]: plan=167 idx=20 target=(0.62, -0.09) geom=-0.122 align=0.090 path_yaw=0.445 delta=-0.004 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559683.530696724] [VectorPursuitController]: plan=162 idx=18 target=(0.63, -0.07) geom=-0.096 align=0.130 path_yaw=0.528 delta=0.117 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559684.030455443] [VectorPursuitController]: plan=159 idx=18 target=(0.65, 0.04) geom=0.043 align=0.057 path_yaw=0.399 delta=0.178 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559684.531205659] [VectorPursuitController]: plan=153 idx=14 target=(0.60, -0.00) geom=-0.007 align=0.052 path_yaw=0.741 delta=0.093 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559685.030539318] [VectorPursuitController]: plan=149 idx=13 target=(0.64, 0.09) geom=0.105 align=0.135 path_yaw=0.726 delta=0.427 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559685.530961273] [VectorPursuitController]: plan=145 idx=11 target=(0.61, 0.11) geom=0.148 align=0.392 path_yaw=0.647 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559686.030806032] [VectorPursuitController]: plan=145 idx=14 target=(0.62, 0.09) geom=0.117 align=0.316 path_yaw=0.650 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559686.530492716] [VectorPursuitController]: plan=142 idx=14 target=(0.61, 0.04) geom=0.054 align=0.100 path_yaw=0.624 delta=0.281 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559687.030976814] [VectorPursuitController]: plan=141 idx=19 target=(0.60, -0.02) geom=-0.035 align=-0.088 path_yaw=0.556 delta=-0.227 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559687.530541618] [VectorPursuitController]: plan=138 idx=21 target=(0.60, -0.04) geom=-0.058 align=0.180 path_yaw=0.493 delta=0.273 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559688.030417086] [VectorPursuitController]: plan=135 idx=25 target=(0.63, 0.05) geom=0.065 align=0.115 path_yaw=0.181 delta=0.328 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559688.530492113] [VectorPursuitController]: plan=132 idx=24 target=(0.62, 0.05) geom=0.061 align=0.155 path_yaw=0.125 delta=0.400 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559689.031128050] [VectorPursuitController]: plan=127 idx=20 target=(0.60, -0.01) geom=-0.016 align=0.203 path_yaw=0.314 delta=0.381 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559689.530445122] [VectorPursuitController]: plan=122 idx=18 target=(0.65, -0.11) geom=-0.126 align=0.171 path_yaw=0.360 delta=0.153 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559690.030963043] [VectorPursuitController]: plan=114 idx=12 target=(0.58, -0.17) geom=-0.237 align=0.014 path_yaw=0.092 delta=-0.327 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559690.530401271] [VectorPursuitController]: plan=110 idx=10 target=(0.61, -0.21) geom=-0.259 align=-0.277 path_yaw=0.168 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559691.030514388] [VectorPursuitController]: plan=110 idx=11 target=(0.59, -0.18) geom=-0.235 align=-0.251 path_yaw=0.185 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559691.530411385] [VectorPursuitController]: plan=108 idx=12 target=(0.59, -0.12) geom=-0.169 align=-0.185 path_yaw=0.313 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559692.030357150] [VectorPursuitController]: plan=108 idx=16 target=(0.61, -0.01) geom=-0.020 align=-0.066 path_yaw=0.554 delta=-0.162 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559692.531142702] [VectorPursuitController]: plan=105 idx=17 target=(0.59, 0.12) geom=0.169 align=0.311 path_yaw=0.570 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559693.030268708] [VectorPursuitController]: plan=105 idx=20 target=(0.60, 0.19) geom=0.245 align=0.319 path_yaw=0.489 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559693.530906900] [VectorPursuitController]: plan=103 idx=19 target=(0.58, 0.20) geom=0.261 align=0.442 path_yaw=0.436 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559694.030367316] [VectorPursuitController]: plan=101 idx=19 target=(0.58, 0.16) geom=0.226 align=0.197 path_yaw=0.450 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559694.530383626] [VectorPursuitController]: plan=101 idx=22 target=(0.60, 0.10) geom=0.140 align=0.093 path_yaw=0.484 delta=0.395 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559695.030822304] [VectorPursuitController]: plan=97 idx=23 target=(0.60, -0.00) geom=-0.004 align=0.106 path_yaw=0.540 delta=0.206 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559695.530557549] [VectorPursuitController]: plan=89 idx=22 target=(0.62, -0.08) geom=-0.109 align=0.010 path_yaw=0.599 delta=-0.144 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559696.030247987] [VectorPursuitController]: plan=86 idx=23 target=(0.60, -0.10) geom=-0.136 align=-0.171 path_yaw=0.666 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559696.530399737] [VectorPursuitController]: plan=84 idx=24 target=(0.60, -0.06) geom=-0.080 align=-0.202 path_yaw=0.764 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559697.030453898] [VectorPursuitController]: plan=83 idx=28 target=(0.60, 0.08) geom=0.109 align=-0.078 path_yaw=0.964 delta=0.008 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559697.530539158] [VectorPursuitController]: plan=78 idx=28 target=(0.56, 0.23) geom=0.311 align=0.224 path_yaw=1.093 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559698.030100375] [VectorPursuitController]: plan=75 idx=28 target=(0.54, 0.29) geom=0.379 align=0.361 path_yaw=1.143 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559698.530529837] [VectorPursuitController]: plan=72 idx=28 target=(0.53, 0.32) geom=0.408 align=0.417 path_yaw=1.177 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559699.030616504] [VectorPursuitController]: plan=68 idx=27 target=(0.52, 0.32) geom=0.411 align=0.474 path_yaw=1.175 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559699.530170276] [VectorPursuitController]: plan=64 idx=26 target=(0.53, 0.31) geom=0.400 align=0.496 path_yaw=1.170 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559700.030299217] [VectorPursuitController]: plan=61 idx=26 target=(0.53, 0.30) geom=0.387 align=0.487 path_yaw=1.120 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559700.530142720] [VectorPursuitController]: plan=57 idx=25 target=(0.54, 0.28) geom=0.369 align=0.488 path_yaw=1.020 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559701.030474354] [VectorPursuitController]: plan=54 idx=25 target=(0.55, 0.25) geom=0.343 align=0.406 path_yaw=0.897 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559701.530180622] [VectorPursuitController]: plan=51 idx=26 target=(0.57, 0.23) geom=0.304 align=0.309 path_yaw=0.795 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559702.030289624] [VectorPursuitController]: plan=48 idx=26 target=(0.59, 0.19) geom=0.247 align=0.206 path_yaw=0.722 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559702.530271269] [VectorPursuitController]: plan=45 idx=26 target=(0.60, 0.13) geom=0.175 align=0.170 path_yaw=0.615 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559703.030045526] [VectorPursuitController]: plan=42 idx=26 target=(0.60, 0.06) geom=0.080 align=0.108 path_yaw=0.410 delta=0.336 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559703.530049797] [VectorPursuitController]: plan=35 idx=25 target=(0.62, -0.05) geom=-0.069 align=0.093 path_yaw=-0.119 delta=0.083 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559704.030151122] [VectorPursuitController]: plan=29 idx=24 target=(0.59, -0.19) geom=-0.251 align=-0.051 path_yaw=-0.292 delta=-0.479 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559704.529986367] [VectorPursuitController]: plan=27 idx=24 target=(0.56, -0.24) geom=-0.320 align=-0.068 path_yaw=-0.317 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559705.030153888] [VectorPursuitController]: plan=24 idx=22 target=(0.56, -0.26) geom=-0.338 align=0.014 path_yaw=-0.283 delta=-0.480 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559705.530155264] [VectorPursuitController]: plan=19 idx=18 target=(0.49, -0.17) geom=-0.310 align=0.190 path_yaw=-0.172 delta=-0.085 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559706.030135130] [VectorPursuitController]: plan=13 idx=12 target=(0.37, -0.09) geom=-0.323 align=-0.045 path_yaw=-0.046 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559706.529911014] [VectorPursuitController]: plan=11 idx=10 target=(0.30, -0.06) geom=-0.307 align=-0.034 path_yaw=0.034 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559707.029912713] [VectorPursuitController]: plan=8 idx=7 target=(0.19, -0.00) geom=-0.035 align=0.103 path_yaw=0.103 delta=0.154 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559707.229997361] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791559707.258381642] [bt_navigator]: Goal succeeded
+[vector_pursuit_controller_server-3] [WARN] [1791559710.785108130] [local_costmap.local_costmap]: Sensor origin at (0.64, 2.77) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791559716.039797661] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[vector_pursuit_controller_server-3] [INFO] [1791559716.363953968] [VectorPursuitController]: plan=397 idx=29 target=(0.55, -0.28) geom=-0.356 align=-0.888 path_yaw=-0.117 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559716.863553930] [VectorPursuitController]: plan=397 idx=31 target=(0.55, -0.26) geom=-0.351 align=-0.845 path_yaw=-0.033 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559717.362705198] [VectorPursuitController]: plan=388 idx=25 target=(0.57, -0.22) geom=-0.293 align=-0.173 path_yaw=0.119 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559717.862869428] [VectorPursuitController]: plan=384 idx=25 target=(0.61, -0.12) geom=-0.161 align=-0.009 path_yaw=0.277 delta=-0.260 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559718.362717525] [VectorPursuitController]: plan=378 idx=24 target=(0.60, 0.05) geom=0.072 align=0.183 path_yaw=0.501 delta=0.474 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559718.864122485] [VectorPursuitController]: plan=376 idx=25 target=(0.60, 0.11) geom=0.150 align=0.212 path_yaw=0.545 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559719.363867153] [VectorPursuitController]: plan=373 idx=25 target=(0.60, 0.13) geom=0.173 align=0.196 path_yaw=0.514 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559719.864838916] [VectorPursuitController]: plan=370 idx=25 target=(0.61, 0.12) geom=0.154 align=0.176 path_yaw=0.421 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559720.362517696] [VectorPursuitController]: plan=368 idx=26 target=(0.61, 0.07) geom=0.096 align=0.135 path_yaw=0.260 delta=0.414 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559720.864602716] [VectorPursuitController]: plan=362 idx=25 target=(0.62, -0.03) geom=-0.036 align=0.097 path_yaw=0.011 delta=0.139 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559721.362534256] [VectorPursuitController]: plan=356 idx=24 target=(0.59, -0.16) geom=-0.214 align=-0.020 path_yaw=-0.185 delta=-0.361 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559721.862581065] [VectorPursuitController]: plan=353 idx=24 target=(0.58, -0.21) geom=-0.270 align=-0.041 path_yaw=-0.238 delta=-0.487 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559722.362830879] [VectorPursuitController]: plan=350 idx=23 target=(0.57, -0.20) geom=-0.272 align=-0.005 path_yaw=-0.227 delta=-0.418 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559722.863849050] [VectorPursuitController]: plan=345 idx=23 target=(0.59, -0.14) geom=-0.188 align=0.076 path_yaw=-0.104 delta=-0.130 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559723.362645573] [VectorPursuitController]: plan=340 idx=24 target=(0.61, -0.06) geom=-0.080 align=0.112 path_yaw=0.136 delta=0.103 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559723.862663928] [VectorPursuitController]: plan=335 idx=25 target=(0.62, 0.02) geom=0.025 align=0.120 path_yaw=0.244 delta=0.276 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559724.363822787] [VectorPursuitController]: plan=330 idx=24 target=(0.61, 0.05) geom=0.065 align=0.101 path_yaw=0.183 delta=0.299 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559724.863427932] [VectorPursuitController]: plan=325 idx=25 target=(0.62, 0.04) geom=0.049 align=0.024 path_yaw=0.105 delta=0.123 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559725.362638420] [VectorPursuitController]: plan=319 idx=25 target=(0.62, -0.02) geom=-0.021 align=0.019 path_yaw=0.108 delta=0.008 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559725.864506291] [VectorPursuitController]: plan=313 idx=24 target=(0.60, -0.04) geom=-0.061 align=0.070 path_yaw=0.278 delta=0.048 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559726.363519276] [VectorPursuitController]: plan=307 idx=24 target=(0.60, -0.06) geom=-0.085 align=-0.028 path_yaw=0.613 delta=-0.184 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559726.864318977] [VectorPursuitController]: plan=302 idx=26 target=(0.61, 0.03) geom=0.044 align=-0.057 path_yaw=0.732 delta=-0.048 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559727.362397362] [VectorPursuitController]: plan=296 idx=27 target=(0.60, 0.15) geom=0.204 align=-0.001 path_yaw=0.835 delta=0.304 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559727.862898760] [VectorPursuitController]: plan=292 idx=27 target=(0.58, 0.21) geom=0.279 align=0.065 path_yaw=0.835 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559728.363790402] [VectorPursuitController]: plan=290 idx=28 target=(0.57, 0.23) geom=0.300 align=0.155 path_yaw=0.791 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559728.863411105] [VectorPursuitController]: plan=287 idx=28 target=(0.58, 0.22) geom=0.285 align=0.249 path_yaw=0.760 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559729.362218893] [VectorPursuitController]: plan=282 idx=26 target=(0.59, 0.18) geom=0.244 align=0.376 path_yaw=0.757 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559729.863647487] [VectorPursuitController]: plan=278 idx=25 target=(0.60, 0.14) geom=0.188 align=0.321 path_yaw=0.685 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559730.362341647] [VectorPursuitController]: plan=275 idx=25 target=(0.60, 0.09) geom=0.123 align=0.250 path_yaw=0.573 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559730.862858053] [VectorPursuitController]: plan=272 idx=25 target=(0.61, 0.03) geom=0.045 align=0.172 path_yaw=0.429 delta=0.411 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559731.362156696] [VectorPursuitController]: plan=266 idx=25 target=(0.61, -0.08) geom=-0.105 align=-0.012 path_yaw=0.178 delta=-0.182 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559731.862041199] [VectorPursuitController]: plan=263 idx=25 target=(0.58, -0.16) geom=-0.215 align=-0.117 path_yaw=0.116 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559732.362352873] [VectorPursuitController]: plan=260 idx=25 target=(0.59, -0.16) geom=-0.209 align=-0.064 path_yaw=0.161 delta=-0.441 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559732.862315328] [VectorPursuitController]: plan=255 idx=25 target=(0.62, -0.08) geom=-0.109 align=0.148 path_yaw=0.312 delta=0.133 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559733.363330007] [VectorPursuitController]: plan=250 idx=24 target=(0.61, -0.01) geom=-0.009 align=0.248 path_yaw=0.424 delta=0.483 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559733.862045542] [VectorPursuitController]: plan=246 idx=23 target=(0.61, 0.01) geom=0.018 align=0.189 path_yaw=0.488 delta=0.404 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559734.362489870] [VectorPursuitController]: plan=242 idx=25 target=(0.62, -0.01) geom=-0.018 align=0.076 path_yaw=0.475 delta=0.125 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559734.863859950] [VectorPursuitController]: plan=237 idx=26 target=(0.61, -0.03) geom=-0.039 align=0.037 path_yaw=0.305 delta=0.015 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559735.362217293] [VectorPursuitController]: plan=230 idx=25 target=(0.61, -0.06) geom=-0.074 align=0.070 path_yaw=0.389 delta=0.030 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559735.863631856] [VectorPursuitController]: plan=221 idx=22 target=(0.60, -0.05) geom=-0.064 align=0.150 path_yaw=0.198 delta=0.203 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559736.362651999] [VectorPursuitController]: plan=217 idx=23 target=(0.61, -0.05) geom=-0.069 align=0.170 path_yaw=0.183 delta=0.238 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559736.862343972] [VectorPursuitController]: plan=210 idx=22 target=(0.61, -0.09) geom=-0.120 align=0.056 path_yaw=0.223 delta=-0.069 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559737.362005209] [VectorPursuitController]: plan=206 idx=24 target=(0.61, -0.09) geom=-0.117 align=0.151 path_yaw=0.223 delta=0.126 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559737.862294562] [VectorPursuitController]: plan=199 idx=23 target=(0.61, -0.08) geom=-0.107 align=0.011 path_yaw=0.220 delta=-0.138 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559738.362024689] [VectorPursuitController]: plan=195 idx=25 target=(0.61, -0.05) geom=-0.064 align=0.015 path_yaw=0.199 delta=-0.067 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559738.861945968] [VectorPursuitController]: plan=188 idx=24 target=(0.62, -0.00) geom=-0.005 align=0.175 path_yaw=0.408 delta=0.343 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559739.363104392] [VectorPursuitController]: plan=184 idx=23 target=(0.62, 0.00) geom=0.001 align=0.174 path_yaw=0.493 delta=0.349 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559739.862017908] [VectorPursuitController]: plan=180 idx=22 target=(0.65, 0.02) geom=0.023 align=0.125 path_yaw=0.310 delta=0.285 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559740.361804048] [VectorPursuitController]: plan=174 idx=20 target=(0.61, -0.03) geom=-0.044 align=0.021 path_yaw=0.229 delta=-0.023 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559740.861869685] [VectorPursuitController]: plan=169 idx=21 target=(0.61, -0.08) geom=-0.108 align=-0.076 path_yaw=0.296 delta=-0.315 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559741.362707476] [VectorPursuitController]: plan=163 idx=18 target=(0.63, -0.06) geom=-0.079 align=0.117 path_yaw=0.537 delta=0.114 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559741.862782325] [VectorPursuitController]: plan=159 idx=17 target=(0.65, 0.00) geom=0.005 align=0.071 path_yaw=0.414 delta=0.151 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559742.361813587] [VectorPursuitController]: plan=155 idx=15 target=(0.61, 0.01) geom=0.017 align=-0.064 path_yaw=0.480 delta=-0.101 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559742.861925111] [VectorPursuitController]: plan=150 idx=13 target=(0.63, 0.06) geom=0.073 align=-0.002 path_yaw=0.696 delta=0.105 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559743.362063114] [VectorPursuitController]: plan=147 idx=11 target=(0.60, 0.07) geom=0.097 align=0.305 path_yaw=0.702 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559743.861922129] [VectorPursuitController]: plan=145 idx=13 target=(0.61, 0.10) geom=0.132 align=0.346 path_yaw=0.659 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559744.362398359] [VectorPursuitController]: plan=143 idx=14 target=(0.62, 0.06) geom=0.083 align=0.146 path_yaw=0.641 delta=0.417 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559744.862747268] [VectorPursuitController]: plan=141 idx=17 target=(0.60, -0.01) geom=-0.016 align=-0.034 path_yaw=0.546 delta=-0.092 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559745.362409949] [VectorPursuitController]: plan=141 idx=23 target=(0.61, -0.04) geom=-0.051 align=-0.158 path_yaw=0.496 delta=-0.393 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559745.862762651] [VectorPursuitController]: plan=135 idx=22 target=(0.60, -0.01) geom=-0.014 align=0.125 path_yaw=0.427 delta=0.229 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559746.362547665] [VectorPursuitController]: plan=133 idx=24 target=(0.61, 0.02) geom=0.023 align=0.145 path_yaw=0.236 delta=0.325 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559746.861645751] [VectorPursuitController]: plan=127 idx=20 target=(0.62, -0.01) geom=-0.009 align=0.211 path_yaw=0.322 delta=0.409 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559747.362207728] [VectorPursuitController]: plan=122 idx=17 target=(0.61, -0.08) geom=-0.102 align=0.196 path_yaw=0.202 delta=0.239 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559747.861684225] [VectorPursuitController]: plan=115 idx=13 target=(0.60, -0.15) geom=-0.196 align=0.157 path_yaw=0.123 delta=0.019 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559748.362362971] [VectorPursuitController]: plan=110 idx=10 target=(0.61, -0.20) geom=-0.247 align=-0.264 path_yaw=0.181 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559748.861582190] [VectorPursuitController]: plan=110 idx=11 target=(0.59, -0.17) geom=-0.226 align=-0.244 path_yaw=0.193 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559749.361526181] [VectorPursuitController]: plan=108 idx=13 target=(0.61, -0.11) geom=-0.149 align=-0.180 path_yaw=0.372 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559749.862166441] [VectorPursuitController]: plan=108 idx=16 target=(0.61, -0.02) geom=-0.022 align=-0.072 path_yaw=0.548 delta=-0.177 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559750.362146329] [VectorPursuitController]: plan=105 idx=17 target=(0.60, 0.12) geom=0.163 align=0.303 path_yaw=0.562 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559750.862113445] [VectorPursuitController]: plan=105 idx=20 target=(0.61, 0.19) geom=0.238 align=0.311 path_yaw=0.481 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559751.361663317] [VectorPursuitController]: plan=103 idx=19 target=(0.58, 0.19) geom=0.252 align=0.430 path_yaw=0.425 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559751.861894292] [VectorPursuitController]: plan=101 idx=19 target=(0.58, 0.15) geom=0.215 align=0.184 path_yaw=0.437 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559752.361836093] [VectorPursuitController]: plan=101 idx=23 target=(0.62, 0.09) geom=0.119 align=0.072 path_yaw=0.511 delta=0.323 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559752.862277014] [VectorPursuitController]: plan=97 idx=24 target=(0.62, -0.01) geom=-0.019 align=0.083 path_yaw=0.556 delta=0.138 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559753.362044823] [VectorPursuitController]: plan=89 idx=22 target=(0.61, -0.09) geom=-0.117 align=0.006 path_yaw=0.595 delta=-0.164 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559753.861890062] [VectorPursuitController]: plan=86 idx=23 target=(0.61, -0.10) geom=-0.129 align=-0.162 path_yaw=0.676 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559754.361732476] [VectorPursuitController]: plan=84 idx=24 target=(0.61, -0.05) geom=-0.069 align=-0.189 path_yaw=0.777 delta=-0.481 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559754.861941869] [VectorPursuitController]: plan=83 idx=29 target=(0.61, 0.11) geom=0.152 align=-0.056 path_yaw=0.998 delta=0.116 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559755.361355708] [VectorPursuitController]: plan=78 idx=28 target=(0.56, 0.24) geom=0.324 align=0.234 path_yaw=1.104 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559755.861988078] [VectorPursuitController]: plan=74 idx=27 target=(0.53, 0.29) geom=0.386 align=0.408 path_yaw=1.145 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559756.361657566] [VectorPursuitController]: plan=71 idx=27 target=(0.52, 0.32) geom=0.410 align=0.477 path_yaw=1.174 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559756.861403279] [VectorPursuitController]: plan=68 idx=27 target=(0.52, 0.32) geom=0.411 align=0.470 path_yaw=1.172 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559757.361683463] [VectorPursuitController]: plan=64 idx=26 target=(0.53, 0.31) geom=0.399 align=0.491 path_yaw=1.165 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559757.861333837] [VectorPursuitController]: plan=61 idx=26 target=(0.54, 0.30) geom=0.385 align=0.482 path_yaw=1.114 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559758.361438503] [VectorPursuitController]: plan=57 idx=25 target=(0.54, 0.28) geom=0.366 align=0.482 path_yaw=1.014 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559758.861309713] [VectorPursuitController]: plan=54 idx=25 target=(0.55, 0.25) geom=0.339 align=0.399 path_yaw=0.890 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559759.361361926] [VectorPursuitController]: plan=51 idx=26 target=(0.58, 0.23) geom=0.301 align=0.302 path_yaw=0.794 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559759.861300188] [VectorPursuitController]: plan=48 idx=26 target=(0.59, 0.19) geom=0.244 align=0.204 path_yaw=0.720 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559760.361662382] [VectorPursuitController]: plan=45 idx=26 target=(0.60, 0.12) geom=0.167 align=0.163 path_yaw=0.608 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559760.861697792] [VectorPursuitController]: plan=42 idx=26 target=(0.60, 0.05) geom=0.072 align=0.101 path_yaw=0.404 delta=0.309 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559761.361258843] [VectorPursuitController]: plan=35 idx=25 target=(0.61, -0.07) geom=-0.090 align=0.077 path_yaw=-0.136 delta=0.019 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559761.861259552] [VectorPursuitController]: plan=29 idx=24 target=(0.59, -0.20) geom=-0.257 align=-0.053 path_yaw=-0.294 delta=-0.490 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559762.361366061] [VectorPursuitController]: plan=27 idx=24 target=(0.56, -0.24) geom=-0.318 align=-0.063 path_yaw=-0.313 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559762.861197031] [VectorPursuitController]: plan=24 idx=22 target=(0.56, -0.26) geom=-0.334 align=0.020 path_yaw=-0.277 delta=-0.461 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559763.361307428] [VectorPursuitController]: plan=19 idx=18 target=(0.48, -0.16) geom=-0.303 align=0.202 path_yaw=-0.159 delta=-0.050 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559763.861140186] [VectorPursuitController]: plan=13 idx=12 target=(0.37, -0.09) geom=-0.317 align=-0.038 path_yaw=-0.039 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559764.361242241] [VectorPursuitController]: plan=11 idx=10 target=(0.30, -0.06) geom=-0.307 align=-0.031 path_yaw=0.037 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559764.861200256] [VectorPursuitController]: plan=7 idx=6 target=(0.19, -0.00) geom=-0.032 align=0.072 path_yaw=0.072 delta=0.098 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559765.011140746] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791559765.040110153] [bt_navigator]: Goal succeeded
+[vector_pursuit_controller_server-3] [WARN] [1791559768.485196774] [local_costmap.local_costmap]: Sensor origin at (0.64, 2.77) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[vector_pursuit_controller_server-3] [WARN] [1791559768.585076397] [local_costmap.local_costmap]: Sensor origin at (0.64, 2.77) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791559775.094526865] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[vector_pursuit_controller_server-3] [INFO] [1791559775.468503783] [VectorPursuitController]: plan=397 idx=29 target=(0.54, -0.28) geom=-0.362 align=-0.885 path_yaw=-0.114 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559775.968598191] [VectorPursuitController]: plan=397 idx=32 target=(0.56, -0.26) geom=-0.334 align=-0.837 path_yaw=0.006 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559776.468423492] [VectorPursuitController]: plan=387 idx=24 target=(0.56, -0.21) geom=-0.291 align=-0.141 path_yaw=0.131 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559776.968143130] [VectorPursuitController]: plan=383 idx=24 target=(0.60, -0.11) geom=-0.153 align=0.012 path_yaw=0.291 delta=-0.205 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559777.468419639] [VectorPursuitController]: plan=378 idx=25 target=(0.62, 0.07) geom=0.089 align=0.189 path_yaw=0.512 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559777.967398971] [VectorPursuitController]: plan=376 idx=25 target=(0.59, 0.11) geom=0.155 align=0.214 path_yaw=0.546 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559778.469561295] [VectorPursuitController]: plan=373 idx=25 target=(0.60, 0.13) geom=0.175 align=0.194 path_yaw=0.511 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559778.967259608] [VectorPursuitController]: plan=370 idx=25 target=(0.60, 0.11) geom=0.152 align=0.168 path_yaw=0.412 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559779.467985794] [VectorPursuitController]: plan=367 idx=25 target=(0.61, 0.07) geom=0.092 align=0.152 path_yaw=0.253 delta=0.443 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559779.968028002] [VectorPursuitController]: plan=361 idx=24 target=(0.62, -0.03) geom=-0.041 align=0.096 path_yaw=0.006 delta=0.129 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559780.466941181] [VectorPursuitController]: plan=356 idx=24 target=(0.59, -0.16) geom=-0.214 align=-0.021 path_yaw=-0.186 delta=-0.365 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559780.967304119] [VectorPursuitController]: plan=353 idx=24 target=(0.58, -0.20) geom=-0.268 align=-0.039 path_yaw=-0.237 delta=-0.481 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559781.467424298] [VectorPursuitController]: plan=350 idx=24 target=(0.59, -0.20) geom=-0.256 align=0.002 path_yaw=-0.220 delta=-0.380 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559781.967591224] [VectorPursuitController]: plan=345 idx=24 target=(0.61, -0.13) geom=-0.175 align=0.081 path_yaw=-0.080 delta=-0.100 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559782.467531188] [VectorPursuitController]: plan=339 idx=23 target=(0.60, -0.06) geom=-0.078 align=0.092 path_yaw=0.139 delta=0.066 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559782.967052957] [VectorPursuitController]: plan=334 idx=24 target=(0.61, 0.02) geom=0.026 align=0.115 path_yaw=0.244 delta=0.269 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559783.468721042] [VectorPursuitController]: plan=330 idx=25 target=(0.62, 0.05) geom=0.070 align=0.099 path_yaw=0.171 delta=0.303 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559783.967731004] [VectorPursuitController]: plan=324 idx=24 target=(0.61, 0.03) geom=0.047 align=0.014 path_yaw=0.101 delta=0.099 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559784.468158787] [VectorPursuitController]: plan=319 idx=25 target=(0.61, -0.02) geom=-0.021 align=0.019 path_yaw=0.107 delta=0.007 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559784.967671118] [VectorPursuitController]: plan=313 idx=25 target=(0.62, -0.04) geom=-0.056 align=0.069 path_yaw=0.343 delta=0.053 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559785.468595628] [VectorPursuitController]: plan=307 idx=25 target=(0.62, -0.05) geom=-0.066 align=-0.031 path_yaw=0.640 delta=-0.160 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559785.968176356] [VectorPursuitController]: plan=302 idx=26 target=(0.60, 0.03) geom=0.043 align=-0.059 path_yaw=0.730 delta=-0.052 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559786.469210717] [VectorPursuitController]: plan=296 idx=27 target=(0.59, 0.15) geom=0.205 align=-0.002 path_yaw=0.833 delta=0.304 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559786.967965714] [VectorPursuitController]: plan=292 idx=27 target=(0.57, 0.21) geom=0.281 align=0.063 path_yaw=0.833 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559787.466974765] [VectorPursuitController]: plan=289 idx=27 target=(0.57, 0.23) geom=0.302 align=0.171 path_yaw=0.785 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559787.967398920] [VectorPursuitController]: plan=287 idx=28 target=(0.57, 0.21) geom=0.286 align=0.245 path_yaw=0.756 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559788.466803170] [VectorPursuitController]: plan=281 idx=25 target=(0.58, 0.18) geom=0.244 align=0.387 path_yaw=0.752 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559788.967029680] [VectorPursuitController]: plan=278 idx=25 target=(0.59, 0.14) geom=0.187 align=0.317 path_yaw=0.681 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559789.467817848] [VectorPursuitController]: plan=275 idx=25 target=(0.60, 0.09) geom=0.121 align=0.245 path_yaw=0.568 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559789.968553005] [VectorPursuitController]: plan=272 idx=25 target=(0.60, 0.03) geom=0.042 align=0.167 path_yaw=0.424 delta=0.397 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559790.468253764] [VectorPursuitController]: plan=266 idx=25 target=(0.61, -0.08) geom=-0.103 align=-0.012 path_yaw=0.148 delta=-0.179 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559790.966729670] [VectorPursuitController]: plan=262 idx=25 target=(0.60, -0.16) geom=-0.207 align=-0.114 path_yaw=0.120 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559791.467804709] [VectorPursuitController]: plan=260 idx=25 target=(0.59, -0.16) geom=-0.217 align=-0.069 path_yaw=0.155 delta=-0.464 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559791.967693142] [VectorPursuitController]: plan=255 idx=25 target=(0.61, -0.09) geom=-0.117 align=0.143 path_yaw=0.307 delta=0.111 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559792.466739511] [VectorPursuitController]: plan=250 idx=25 target=(0.62, 0.00) geom=0.000 align=0.246 path_yaw=0.443 delta=0.492 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559792.967858832] [VectorPursuitController]: plan=246 idx=24 target=(0.62, 0.02) geom=0.029 align=0.185 path_yaw=0.521 delta=0.413 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559793.468137945] [VectorPursuitController]: plan=241 idx=25 target=(0.62, -0.01) geom=-0.017 align=0.080 path_yaw=0.462 delta=0.134 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559793.966702162] [VectorPursuitController]: plan=236 idx=26 target=(0.61, -0.01) geom=-0.015 align=0.056 path_yaw=0.305 delta=0.090 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559794.467491946] [VectorPursuitController]: plan=229 idx=25 target=(0.61, -0.06) geom=-0.078 align=0.057 path_yaw=0.383 delta=-0.004 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559794.966597470] [VectorPursuitController]: plan=221 idx=23 target=(0.63, -0.04) geom=-0.053 align=0.129 path_yaw=0.159 delta=0.179 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559795.467411346] [VectorPursuitController]: plan=216 idx=23 target=(0.61, -0.07) geom=-0.093 align=0.145 path_yaw=0.195 delta=0.151 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559795.966794806] [VectorPursuitController]: plan=210 idx=23 target=(0.61, -0.10) geom=-0.128 align=0.042 path_yaw=0.211 delta=-0.108 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559796.466679296] [VectorPursuitController]: plan=204 idx=23 target=(0.61, -0.08) geom=-0.115 align=0.180 path_yaw=0.224 delta=0.187 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559796.967137567] [VectorPursuitController]: plan=198 idx=23 target=(0.61, -0.07) geom=-0.099 align=-0.004 path_yaw=0.221 delta=-0.155 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559797.467285842] [VectorPursuitController]: plan=195 idx=26 target=(0.62, -0.04) geom=-0.048 align=0.023 path_yaw=0.207 delta=-0.026 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559797.967030142] [VectorPursuitController]: plan=188 idx=24 target=(0.60, -0.00) geom=-0.003 align=0.175 path_yaw=0.408 delta=0.345 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559798.467332570] [VectorPursuitController]: plan=184 idx=24 target=(0.65, 0.00) geom=0.002 align=0.162 path_yaw=0.541 delta=0.327 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559798.967260151] [VectorPursuitController]: plan=179 idx=21 target=(0.61, -0.00) geom=-0.005 align=0.100 path_yaw=0.280 delta=0.192 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559799.466338229] [VectorPursuitController]: plan=173 idx=21 target=(0.62, -0.04) geom=-0.053 align=-0.011 path_yaw=0.196 delta=-0.101 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559799.966833172] [VectorPursuitController]: plan=167 idx=20 target=(0.63, -0.09) geom=-0.116 align=0.093 path_yaw=0.448 delta=0.012 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559800.467608033] [VectorPursuitController]: plan=162 idx=18 target=(0.64, -0.07) geom=-0.090 align=0.133 path_yaw=0.532 delta=0.132 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559800.967413325] [VectorPursuitController]: plan=159 idx=17 target=(0.61, -0.01) geom=-0.007 align=0.060 path_yaw=0.402 delta=0.109 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559801.466835954] [VectorPursuitController]: plan=153 idx=14 target=(0.61, -0.00) geom=-0.005 align=0.054 path_yaw=0.744 delta=0.101 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559801.966387049] [VectorPursuitController]: plan=149 idx=13 target=(0.65, 0.09) geom=0.106 align=0.138 path_yaw=0.729 delta=0.436 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559802.466810039] [VectorPursuitController]: plan=145 idx=10 target=(0.59, 0.11) geom=0.148 align=0.398 path_yaw=0.616 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559802.966283180] [VectorPursuitController]: plan=145 idx=13 target=(0.60, 0.09) geom=0.120 align=0.324 path_yaw=0.638 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559803.466247830] [VectorPursuitController]: plan=143 idx=15 target=(0.62, 0.05) geom=0.069 align=0.117 path_yaw=0.641 delta=0.337 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559803.966304366] [VectorPursuitController]: plan=141 idx=19 target=(0.61, -0.02) geom=-0.022 align=-0.078 path_yaw=0.566 delta=-0.189 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559804.466375790] [VectorPursuitController]: plan=141 idx=24 target=(0.61, -0.04) geom=-0.054 align=-0.173 path_yaw=0.494 delta=-0.426 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559804.966519504] [VectorPursuitController]: plan=135 idx=24 target=(0.61, 0.02) geom=0.022 align=0.117 path_yaw=0.286 delta=0.268 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559805.466319323] [VectorPursuitController]: plan=132 idx=24 target=(0.63, 0.05) geom=0.061 align=0.157 path_yaw=0.127 delta=0.405 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559805.966514400] [VectorPursuitController]: plan=127 idx=20 target=(0.61, -0.01) geom=-0.014 align=0.205 path_yaw=0.317 delta=0.390 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559806.466531979] [VectorPursuitController]: plan=122 idx=18 target=(0.66, -0.11) geom=-0.123 align=0.174 path_yaw=0.363 delta=0.163 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559806.966628029] [VectorPursuitController]: plan=114 idx=12 target=(0.58, -0.17) geom=-0.228 align=0.024 path_yaw=0.101 delta=-0.294 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559807.466971538] [VectorPursuitController]: plan=110 idx=10 target=(0.60, -0.21) geom=-0.260 align=-0.272 path_yaw=0.172 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559807.966268040] [VectorPursuitController]: plan=110 idx=11 target=(0.58, -0.17) geom=-0.235 align=-0.247 path_yaw=0.189 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559808.466234446] [VectorPursuitController]: plan=108 idx=13 target=(0.61, -0.12) geom=-0.155 align=-0.181 path_yaw=0.371 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559808.966102040] [VectorPursuitController]: plan=108 idx=16 target=(0.60, -0.02) geom=-0.024 align=-0.071 path_yaw=0.550 delta=-0.177 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559809.466219138] [VectorPursuitController]: plan=105 idx=18 target=(0.60, 0.14) geom=0.184 align=0.312 path_yaw=0.541 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559809.966262050] [VectorPursuitController]: plan=105 idx=20 target=(0.59, 0.20) geom=0.251 align=0.320 path_yaw=0.490 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559810.466539778] [VectorPursuitController]: plan=102 idx=18 target=(0.57, 0.20) geom=0.267 align=0.339 path_yaw=0.436 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559810.966533652] [VectorPursuitController]: plan=101 idx=20 target=(0.60, 0.17) geom=0.219 align=0.197 path_yaw=0.479 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559811.466589666] [VectorPursuitController]: plan=101 idx=23 target=(0.61, 0.11) geom=0.142 align=0.092 path_yaw=0.531 delta=0.397 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559811.966634755] [VectorPursuitController]: plan=98 idx=24 target=(0.62, 0.02) geom=0.027 align=0.051 path_yaw=0.568 delta=0.142 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559812.466194793] [VectorPursuitController]: plan=90 idx=22 target=(0.61, -0.08) geom=-0.102 align=0.061 path_yaw=0.581 delta=-0.031 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559812.966005761] [VectorPursuitController]: plan=86 idx=22 target=(0.59, -0.11) geom=-0.154 align=-0.174 path_yaw=0.610 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559813.466458553] [VectorPursuitController]: plan=85 idx=25 target=(0.62, -0.06) geom=-0.086 align=-0.203 path_yaw=0.753 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559813.966096175] [VectorPursuitController]: plan=83 idx=27 target=(0.61, 0.04) geom=0.058 align=-0.104 path_yaw=0.923 delta=-0.121 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559814.466367142] [VectorPursuitController]: plan=79 idx=28 target=(0.56, 0.21) geom=0.291 align=0.175 path_yaw=1.078 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559814.966320054] [VectorPursuitController]: plan=75 idx=27 target=(0.54, 0.28) geom=0.372 align=0.370 path_yaw=1.113 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559815.466473815] [VectorPursuitController]: plan=72 idx=27 target=(0.52, 0.31) geom=0.408 align=0.434 path_yaw=1.162 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559815.966052659] [VectorPursuitController]: plan=68 idx=26 target=(0.52, 0.32) geom=0.416 align=0.500 path_yaw=1.165 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559816.465937182] [VectorPursuitController]: plan=65 idx=26 target=(0.52, 0.31) geom=0.408 align=0.487 path_yaw=1.176 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559816.966519881] [VectorPursuitController]: plan=62 idx=26 target=(0.53, 0.30) geom=0.394 align=0.495 path_yaw=1.133 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559817.466315635] [VectorPursuitController]: plan=58 idx=25 target=(0.53, 0.28) geom=0.376 align=0.495 path_yaw=1.044 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559817.965978905] [VectorPursuitController]: plan=55 idx=26 target=(0.55, 0.28) geom=0.353 align=0.423 path_yaw=0.925 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559818.466071995] [VectorPursuitController]: plan=52 idx=26 target=(0.56, 0.24) geom=0.318 align=0.321 path_yaw=0.827 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559818.966150885] [VectorPursuitController]: plan=49 idx=26 target=(0.58, 0.20) geom=0.267 align=0.235 path_yaw=0.738 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559819.465889237] [VectorPursuitController]: plan=46 idx=26 target=(0.59, 0.15) geom=0.197 align=0.156 path_yaw=0.645 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559819.966106032] [VectorPursuitController]: plan=43 idx=26 target=(0.60, 0.09) geom=0.116 align=0.120 path_yaw=0.466 delta=0.415 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559820.465851928] [VectorPursuitController]: plan=37 idx=25 target=(0.61, -0.01) geom=-0.020 align=0.118 path_yaw=-0.085 delta=0.207 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559820.965964192] [VectorPursuitController]: plan=30 idx=24 target=(0.60, -0.17) geom=-0.217 align=-0.031 path_yaw=-0.271 delta=-0.387 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559821.465931187] [VectorPursuitController]: plan=27 idx=23 target=(0.56, -0.22) geom=-0.305 align=-0.069 path_yaw=-0.318 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559821.966100671] [VectorPursuitController]: plan=25 idx=23 target=(0.58, -0.27) geom=-0.328 align=-0.022 path_yaw=-0.298 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559822.465864615] [VectorPursuitController]: plan=22 idx=21 target=(0.53, -0.20) geom=-0.305 align=0.111 path_yaw=-0.224 delta=-0.235 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559822.965776213] [VectorPursuitController]: plan=15 idx=14 target=(0.41, -0.11) geom=-0.303 align=0.122 path_yaw=-0.080 delta=-0.212 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559823.465741823] [VectorPursuitController]: plan=12 idx=11 target=(0.32, -0.07) geom=-0.308 align=-0.025 path_yaw=0.006 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559823.965793032] [VectorPursuitController]: plan=9 idx=8 target=(0.24, -0.02) geom=-0.185 align=0.086 path_yaw=0.086 delta=-0.105 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559824.315738683] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791559824.344938101] [bt_navigator]: Goal succeeded
+[vector_pursuit_controller_server-3] [WARN] [1791559827.785069811] [local_costmap.local_costmap]: Sensor origin at (0.64, 2.77) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791559833.256939821] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[vector_pursuit_controller_server-3] [INFO] [1791559833.429708349] [VectorPursuitController]: plan=397 idx=28 target=(0.55, -0.27) geom=-0.359 align=-0.892 path_yaw=-0.145 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559833.930814581] [VectorPursuitController]: plan=397 idx=31 target=(0.56, -0.27) geom=-0.345 align=-0.862 path_yaw=-0.050 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559834.430747293] [VectorPursuitController]: plan=389 idx=25 target=(0.56, -0.24) geom=-0.317 align=-0.212 path_yaw=0.074 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559834.929610592] [VectorPursuitController]: plan=385 idx=24 target=(0.58, -0.16) geom=-0.227 align=-0.062 path_yaw=0.214 delta=-0.464 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559835.431646620] [VectorPursuitController]: plan=380 idx=25 target=(0.61, 0.01) geom=0.016 align=0.146 path_yaw=0.453 delta=0.318 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559835.931579495] [VectorPursuitController]: plan=377 idx=25 target=(0.60, 0.09) geom=0.130 align=0.207 path_yaw=0.538 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559836.432412370] [VectorPursuitController]: plan=374 idx=25 target=(0.60, 0.12) geom=0.167 align=0.200 path_yaw=0.527 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559836.929895063] [VectorPursuitController]: plan=371 idx=25 target=(0.61, 0.12) geom=0.160 align=0.173 path_yaw=0.445 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559837.430005265] [VectorPursuitController]: plan=369 idx=26 target=(0.61, 0.09) geom=0.114 align=0.145 path_yaw=0.311 delta=0.462 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559837.929429477] [VectorPursuitController]: plan=365 idx=26 target=(0.62, 0.01) geom=0.009 align=0.093 path_yaw=0.097 delta=0.200 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559838.430373191] [VectorPursuitController]: plan=358 idx=24 target=(0.59, -0.12) geom=-0.172 align=-0.004 path_yaw=-0.136 delta=-0.265 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559838.930000127] [VectorPursuitController]: plan=354 idx=24 target=(0.58, -0.19) geom=-0.263 align=-0.037 path_yaw=-0.228 delta=-0.469 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559839.430159040] [VectorPursuitController]: plan=351 idx=24 target=(0.59, -0.20) geom=-0.261 align=-0.010 path_yaw=-0.231 delta=-0.412 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559839.931229685] [VectorPursuitController]: plan=346 idx=23 target=(0.59, -0.15) geom=-0.207 align=0.050 path_yaw=-0.141 delta=-0.212 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559840.430081447] [VectorPursuitController]: plan=341 idx=24 target=(0.61, -0.08) geom=-0.107 align=0.102 path_yaw=0.089 delta=0.042 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559840.930923845] [VectorPursuitController]: plan=336 idx=24 target=(0.60, -0.01) geom=-0.011 align=0.105 path_yaw=0.228 delta=0.193 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559841.430700419] [VectorPursuitController]: plan=331 idx=25 target=(0.61, 0.04) geom=0.061 align=0.108 path_yaw=0.183 delta=0.308 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559841.929759313] [VectorPursuitController]: plan=325 idx=25 target=(0.62, 0.05) geom=0.063 align=0.041 path_yaw=0.122 delta=0.175 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559842.429376117] [VectorPursuitController]: plan=319 idx=24 target=(0.60, -0.00) geom=-0.003 align=0.039 path_yaw=0.081 delta=0.073 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559842.929415566] [VectorPursuitController]: plan=313 idx=24 target=(0.61, -0.03) geom=-0.048 align=0.077 path_yaw=0.285 delta=0.081 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559843.429468981] [VectorPursuitController]: plan=307 idx=24 target=(0.61, -0.06) geom=-0.087 align=-0.037 path_yaw=0.604 delta=-0.206 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559843.930837665] [VectorPursuitController]: plan=302 idx=26 target=(0.62, 0.02) geom=0.026 align=-0.074 path_yaw=0.714 delta=-0.109 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559844.429118486] [VectorPursuitController]: plan=297 idx=27 target=(0.59, 0.13) geom=0.175 align=-0.016 path_yaw=0.824 delta=0.230 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559844.930055300] [VectorPursuitController]: plan=292 idx=27 target=(0.57, 0.21) geom=0.285 align=0.065 path_yaw=0.835 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559845.431001232] [VectorPursuitController]: plan=289 idx=27 target=(0.56, 0.23) geom=0.312 align=0.181 path_yaw=0.795 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559845.930304414] [VectorPursuitController]: plan=286 idx=27 target=(0.57, 0.23) geom=0.302 align=0.305 path_yaw=0.772 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559846.429387179] [VectorPursuitController]: plan=281 idx=25 target=(0.58, 0.20) geom=0.265 align=0.405 path_yaw=0.771 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559846.929450403] [VectorPursuitController]: plan=278 idx=25 target=(0.59, 0.15) geom=0.212 align=0.336 path_yaw=0.700 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559847.429506605] [VectorPursuitController]: plan=275 idx=25 target=(0.60, 0.11) geom=0.150 align=0.266 path_yaw=0.589 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559847.929511230] [VectorPursuitController]: plan=272 idx=25 target=(0.60, 0.05) geom=0.074 align=0.188 path_yaw=0.445 delta=0.487 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559848.429837126] [VectorPursuitController]: plan=267 idx=25 target=(0.61, -0.04) geom=-0.050 align=0.043 path_yaw=0.215 delta=0.011 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559848.930190298] [VectorPursuitController]: plan=263 idx=25 target=(0.59, -0.14) geom=-0.198 align=-0.115 path_yaw=0.118 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559849.430238841] [VectorPursuitController]: plan=260 idx=25 target=(0.59, -0.15) geom=-0.209 align=-0.079 path_yaw=0.146 delta=-0.472 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559849.929177018] [VectorPursuitController]: plan=256 idx=25 target=(0.60, -0.11) geom=-0.146 align=0.094 path_yaw=0.274 delta=-0.030 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559850.430633567] [VectorPursuitController]: plan=250 idx=25 target=(0.62, -0.01) geom=-0.008 align=0.229 path_yaw=0.425 delta=0.445 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559850.930209440] [VectorPursuitController]: plan=246 idx=24 target=(0.61, 0.02) geom=0.031 align=0.179 path_yaw=0.515 delta=0.405 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559851.429704125] [VectorPursuitController]: plan=242 idx=25 target=(0.60, 0.00) geom=0.001 align=0.086 path_yaw=0.485 delta=0.173 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559851.928951286] [VectorPursuitController]: plan=237 idx=27 target=(0.61, 0.01) geom=0.012 align=0.043 path_yaw=0.320 delta=0.105 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559852.429692798] [VectorPursuitController]: plan=229 idx=25 target=(0.62, -0.04) geom=-0.059 align=0.061 path_yaw=0.387 delta=0.033 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559852.930228534] [VectorPursuitController]: plan=221 idx=23 target=(0.63, -0.04) geom=-0.050 align=0.120 path_yaw=0.150 delta=0.166 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559853.429429248] [VectorPursuitController]: plan=217 idx=24 target=(0.62, -0.07) geom=-0.094 align=0.136 path_yaw=0.183 delta=0.131 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559853.929600973] [VectorPursuitController]: plan=210 idx=22 target=(0.59, -0.10) geom=-0.145 align=0.033 path_yaw=0.200 delta=-0.150 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559854.430660759] [VectorPursuitController]: plan=205 idx=23 target=(0.60, -0.09) geom=-0.123 align=0.169 path_yaw=0.220 delta=0.153 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559854.928901827] [VectorPursuitController]: plan=198 idx=22 target=(0.60, -0.07) geom=-0.102 align=0.000 path_yaw=0.228 delta=-0.152 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559855.429088309] [VectorPursuitController]: plan=195 idx=25 target=(0.60, -0.03) geom=-0.049 align=0.028 path_yaw=0.212 delta=-0.018 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559855.929327675] [VectorPursuitController]: plan=188 idx=24 target=(0.61, 0.00) geom=0.006 align=0.178 path_yaw=0.411 delta=0.365 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559856.429516327] [VectorPursuitController]: plan=184 idx=23 target=(0.61, -0.00) geom=-0.002 align=0.164 path_yaw=0.483 delta=0.325 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559856.928872436] [VectorPursuitController]: plan=179 idx=21 target=(0.63, 0.00) geom=0.004 align=0.105 path_yaw=0.284 delta=0.215 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559857.428908173] [VectorPursuitController]: plan=173 idx=20 target=(0.60, -0.04) geom=-0.060 align=-0.012 path_yaw=0.196 delta=-0.114 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559857.929180105] [VectorPursuitController]: plan=168 idx=21 target=(0.64, -0.09) geom=-0.110 align=0.078 path_yaw=0.447 delta=-0.010 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559858.429639907] [VectorPursuitController]: plan=162 idx=17 target=(0.60, -0.06) geom=-0.087 align=0.137 path_yaw=0.536 delta=0.144 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559858.929945944] [VectorPursuitController]: plan=159 idx=17 target=(0.62, 0.00) geom=0.001 align=0.065 path_yaw=0.407 delta=0.131 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559859.429125167] [VectorPursuitController]: plan=154 idx=15 target=(0.63, -0.00) geom=-0.004 align=0.057 path_yaw=0.741 delta=0.108 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559859.929108685] [VectorPursuitController]: plan=149 idx=12 target=(0.61, 0.05) geom=0.068 align=0.136 path_yaw=0.685 delta=0.373 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559860.429276655] [VectorPursuitController]: plan=145 idx=10 target=(0.59, 0.10) geom=0.145 align=0.396 path_yaw=0.614 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559860.929160591] [VectorPursuitController]: plan=145 idx=13 target=(0.60, 0.09) geom=0.119 align=0.325 path_yaw=0.638 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559861.428731204] [VectorPursuitController]: plan=143 idx=15 target=(0.62, 0.05) geom=0.071 align=0.118 path_yaw=0.642 delta=0.343 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559861.929809705] [VectorPursuitController]: plan=141 idx=19 target=(0.61, -0.01) geom=-0.013 align=-0.070 path_yaw=0.574 delta=-0.159 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559862.429271708] [VectorPursuitController]: plan=138 idx=21 target=(0.61, -0.04) geom=-0.053 align=0.181 path_yaw=0.494 delta=0.284 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559862.928759398] [VectorPursuitController]: plan=135 idx=25 target=(0.63, 0.04) geom=0.051 align=0.100 path_yaw=0.166 delta=0.278 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559863.428548227] [VectorPursuitController]: plan=131 idx=23 target=(0.61, 0.02) geom=0.032 align=0.147 path_yaw=0.096 delta=0.343 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559863.928690504] [VectorPursuitController]: plan=124 idx=18 target=(0.64, -0.06) geom=-0.069 align=0.201 path_yaw=0.454 delta=0.299 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559864.429402563] [VectorPursuitController]: plan=118 idx=14 target=(0.61, -0.14) geom=-0.178 align=0.149 path_yaw=0.327 delta=0.030 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559864.928624413] [VectorPursuitController]: plan=111 idx=10 target=(0.59, -0.16) geom=-0.214 align=-0.135 path_yaw=0.026 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559865.428494567] [VectorPursuitController]: plan=110 idx=10 target=(0.58, -0.19) geom=-0.258 align=-0.253 path_yaw=0.192 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559865.929237471] [VectorPursuitController]: plan=110 idx=13 target=(0.60, -0.14) geom=-0.181 align=-0.215 path_yaw=0.247 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559866.428510780] [VectorPursuitController]: plan=108 idx=14 target=(0.61, -0.08) geom=-0.106 align=-0.139 path_yaw=0.451 delta=-0.438 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559866.929327493] [VectorPursuitController]: plan=107 idx=18 target=(0.61, 0.09) geom=0.114 align=0.275 path_yaw=0.571 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559867.428518471] [VectorPursuitController]: plan=105 idx=19 target=(0.60, 0.17) geom=0.219 align=0.318 path_yaw=0.518 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559867.929411714] [VectorPursuitController]: plan=105 idx=20 target=(0.57, 0.18) geom=0.255 align=0.297 path_yaw=0.467 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559868.428960250] [VectorPursuitController]: plan=102 idx=19 target=(0.59, 0.19) geom=0.249 align=0.296 path_yaw=0.442 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559868.928926950] [VectorPursuitController]: plan=101 idx=21 target=(0.60, 0.13) geom=0.176 align=0.140 path_yaw=0.481 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559869.428836279] [VectorPursuitController]: plan=98 idx=21 target=(0.60, 0.05) geom=0.070 align=0.118 path_yaw=0.490 delta=0.342 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559869.928828902] [VectorPursuitController]: plan=94 idx=23 target=(0.61, -0.05) geom=-0.067 align=0.134 path_yaw=0.571 delta=0.167 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559870.429097473] [VectorPursuitController]: plan=87 idx=22 target=(0.60, -0.11) geom=-0.144 align=-0.120 path_yaw=0.600 delta=-0.457 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559870.928815636] [VectorPursuitController]: plan=85 idx=24 target=(0.61, -0.08) geom=-0.107 align=-0.207 path_yaw=0.715 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559871.428488591] [VectorPursuitController]: plan=84 idx=26 target=(0.61, -0.01) geom=-0.020 align=-0.183 path_yaw=0.853 delta=-0.396 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559871.928464528] [VectorPursuitController]: plan=81 idx=30 target=(0.58, 0.20) geom=0.263 align=0.053 path_yaw=1.066 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559872.428641569] [VectorPursuitController]: plan=76 idx=28 target=(0.55, 0.28) geom=0.360 align=0.327 path_yaw=1.120 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559872.928384362] [VectorPursuitController]: plan=72 idx=26 target=(0.52, 0.30) geom=0.406 align=0.456 path_yaw=1.135 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559873.428462519] [VectorPursuitController]: plan=69 idx=26 target=(0.51, 0.32) geom=0.423 align=0.495 path_yaw=1.156 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559873.928411817] [VectorPursuitController]: plan=66 idx=26 target=(0.51, 0.32) geom=0.418 align=0.496 path_yaw=1.167 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559874.428673238] [VectorPursuitController]: plan=62 idx=25 target=(0.52, 0.30) geom=0.405 align=0.536 path_yaw=1.147 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559874.928769009] [VectorPursuitController]: plan=59 idx=26 target=(0.54, 0.31) geom=0.389 align=0.502 path_yaw=1.087 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559875.428265933] [VectorPursuitController]: plan=56 idx=26 target=(0.55, 0.29) geom=0.369 align=0.451 path_yaw=0.968 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559875.928383819] [VectorPursuitController]: plan=53 idx=26 target=(0.56, 0.26) geom=0.339 align=0.356 path_yaw=0.848 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559876.428340321] [VectorPursuitController]: plan=49 idx=25 target=(0.57, 0.22) geom=0.294 align=0.281 path_yaw=0.764 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559876.928523917] [VectorPursuitController]: plan=47 idx=26 target=(0.59, 0.17) geom=0.230 align=0.192 path_yaw=0.681 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559877.428327150] [VectorPursuitController]: plan=44 idx=26 target=(0.60, 0.11) geom=0.153 align=0.150 path_yaw=0.570 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559877.928548063] [VectorPursuitController]: plan=40 idx=26 target=(0.62, 0.05) geom=0.062 align=0.124 path_yaw=0.177 delta=0.341 v=0.22
+[vector_pursuit_controller_server-3] [INFO] [1791559878.428391518] [VectorPursuitController]: plan=33 idx=24 target=(0.60, -0.09) geom=-0.121 align=0.049 path_yaw=-0.183 delta=-0.082 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559878.928466233] [VectorPursuitController]: plan=29 idx=24 target=(0.57, -0.20) geom=-0.274 align=-0.071 path_yaw=-0.313 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559879.428234975] [VectorPursuitController]: plan=26 idx=24 target=(0.60, -0.28) geom=-0.315 align=-0.048 path_yaw=-0.321 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559879.928239044] [VectorPursuitController]: plan=23 idx=21 target=(0.55, -0.25) geom=-0.341 align=0.039 path_yaw=-0.277 delta=-0.434 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559880.428207344] [VectorPursuitController]: plan=18 idx=17 target=(0.47, -0.15) geom=-0.305 align=0.219 path_yaw=-0.151 delta=-0.019 v=0.30
+[vector_pursuit_controller_server-3] [INFO] [1791559880.928182623] [VectorPursuitController]: plan=13 idx=12 target=(0.35, -0.08) geom=-0.311 align=-0.029 path_yaw=-0.030 delta=-0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559881.428211204] [VectorPursuitController]: plan=11 idx=10 target=(0.29, -0.05) geom=-0.269 align=-0.015 path_yaw=0.053 delta=-0.434 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559881.928122724] [VectorPursuitController]: plan=6 idx=5 target=(0.16, 0.01) geom=0.249 align=0.106 path_yaw=0.106 delta=0.500 v=0.15
+[vector_pursuit_controller_server-3] [INFO] [1791559882.028138617] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791559882.057305061] [bt_navigator]: Goal succeeded
+[planner_server-2] [INFO] [1791559885.191543026] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-2] [INFO] [1791559885.191599537] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-2] [INFO] [1791559885.191648286] [planner_server]: Deactivating
+[bt_navigator-4] [INFO] [1791559885.191549682] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791559885.191601180] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-4] [INFO] [1791559885.191648878] [bt_navigator]: Deactivating
+[bt_navigator-4] [INFO] [1791559885.191665443] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791559885.191542348] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-5] [INFO] [1791559885.191665545] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-5] [INFO] [1791559885.191720533] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[planner_server-2] [INFO] [1791559885.191673783] [global_costmap.global_costmap]: Deactivating
+[vector_pursuit_controller_server-3] [INFO] [1791559885.191575200] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[vector_pursuit_controller_server-3] [INFO] [1791559885.195298706] [VectorPursuitController]: Deactivating controller
+[vector_pursuit_controller_server-3] [INFO] [1791559885.195321613] [VectorPursuitController]: Cleaning up controller
+[bt_navigator-4] [INFO] [1791559885.201951817] [bt_navigator]: Cleaning up
+[vector_pursuit_controller_server-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[vector_pursuit_controller_server-3]          at line 127 in ./src/class_loader.cpp
+[vector_pursuit_controller_server-3] terminate called without an active exception
+[lifecycle_manager-5] [INFO] [1791559885.220449235] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[bt_navigator-4] [INFO] [1791559885.238714881] [bt_navigator]: Completed Cleaning up
+[bt_navigator-4] [INFO] [1791559885.238803006] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-4] [INFO] [1791559885.245461833] [bt_navigator]: Destroying
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 144, in <module>
+[direct_map_publisher-1]     main()
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 141, in main
+[direct_map_publisher-1]     rclpy.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[direct_map_publisher-1]     _shutdown(context=context)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[direct_map_publisher-1]     context.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[direct_map_publisher-1]     self.__context.shutdown()
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [lifecycle_manager-5]: process has finished cleanly [pid 79844]
+[INFO] [bt_navigator-4]: process has finished cleanly [pid 79843]
+[ERROR] [direct_map_publisher-1]: process has died [pid 79840, exit code 1, cmd '/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher --ros-args -r __node:=map_server --params-file /tmp/launch_params_aa2ek6m1 --params-file /tmp/launch_params_8e8gpukq'].
+[planner_server-2] [INFO] [1791559885.506388432] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791559885.506459042] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1791559885.516627462] [planner_server]: Cleaning up
+[planner_server-2] [INFO] [1791559885.524987203] [global_costmap.global_costmap]: Cleaning up
+[planner_server-2] [INFO] [1791559885.528259816] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791559885.528539505] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791559885.543884671] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1791559885.549580314] [global_costmap.global_costmap]: Destroying
+[planner_server-2] [INFO] [1791559885.560231955] [planner_server]: Destroying
+[INFO] [planner_server-2]: process has finished cleanly [pid 79841]
+[ERROR] [vector_pursuit_controller_server-3]: process has died [pid 79842, exit code -6, cmd '/home/g16/Documents/qcarSim/install/vector_pursuit_controller/lib/vector_pursuit_controller/vector_pursuit_controller_server --ros-args -r __node:=controller_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_vector_navfn.yaml --params-file /tmp/launch_params_exurl0bb -r /tf:=tf -r /tf_static:=tf_static'].

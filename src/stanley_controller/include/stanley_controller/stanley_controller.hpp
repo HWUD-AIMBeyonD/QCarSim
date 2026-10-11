@@ -23,7 +23,7 @@ namespace stanley_controller
 
 /**
  * @class StanleyController
- * @brief Stanley Controller plugin for Nav2 (Jazzy API)
+ * @brief Stanley Controller plugin for Nav2 (ROS 2 Dashing)
  */
 class StanleyController : public nav2_core::Controller
 {
@@ -31,11 +31,12 @@ public:
   StanleyController() = default;
   ~StanleyController() override = default;
 
+  // Nav2 Controller interface (Dashing API)
   void configure(
-    const rclcpp_lifecycle::LifecycleNode::WeakPtr & parent,
+    const rclcpp::Node::WeakPtr & parent,
     std::string name,
-    std::shared_ptr<tf2_ros::Buffer> tf,
-    std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros) override;
+    const std::shared_ptr<tf2_ros::Buffer> & tf,
+    const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & costmap_ros) override;
 
   void activate() override;
   void deactivate() override;
@@ -45,26 +46,30 @@ public:
 
   geometry_msgs::msg::TwistStamped computeVelocityCommands(
     const geometry_msgs::msg::PoseStamped & pose,
-    const geometry_msgs::msg::Twist & velocity,
-    nav2_core::GoalChecker * goal_checker) override;
-
-  void setSpeedLimit(const double & speed_limit, const bool & percentage) override;
+    const geometry_msgs::msg::Twist & velocity) override;
 
 protected:
+  // Helper functions
   nav_msgs::msg::Path transformGlobalPlan(const geometry_msgs::msg::PoseStamped & pose);
-
+  
+  // Parameters
   double desired_linear_vel_;
   double max_angular_vel_;
-  double k_gain_;
-  double wheelbase_;
+  double k_gain_;       // Stanley control gain
+  double wheelbase_;    // Distance from rear axle to front axle (meters)
 
   std::string plugin_name_;
-
-  rclcpp_lifecycle::LifecycleNode::WeakPtr node_;
+  
+  // ROS handles
+  rclcpp::Node::WeakPtr node_;
   std::shared_ptr<tf2_ros::Buffer> tf_;
   std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros_;
   nav_msgs::msg::Path global_plan_;
-  size_t last_closest_idx_ = 0;
+
+  // Debug viz -- same topic names the RPP controller uses, so the RViz config
+  // (blue controller path + red target arrow) works unchanged for Stanley.
+  rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr local_plan_pub_;
+  rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr lookahead_pub_;
 };
 
 }  // namespace stanley_controller

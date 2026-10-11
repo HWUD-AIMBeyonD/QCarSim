@@ -1,0 +1,12 @@
+<!-- Same plan-once tree as bt_navigation.xml, for the NavFn variant:
+     ComputePathToPose goes to Jazzy's planner_server (default action name
+     compute_path_to_pose); FollowPath still goes to the hardware-code
+     controller_server. -->
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToPose">
+      <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>
+      <FollowPath path="{path}" controller_id="FollowPath" server_name="FollowPath"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

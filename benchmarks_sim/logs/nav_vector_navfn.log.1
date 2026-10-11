@@ -1,0 +1,101 @@
+[INFO] [launch]: All log files can be found below /home/g16/.ros/log/2026-10-09-19-25-13-104703-G16-79223
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [direct_map_publisher-1]: process started with pid [79237]
+[INFO] [planner_server-2]: process started with pid [79238]
+[INFO] [vector_pursuit_controller_server-3]: process started with pid [79239]
+[INFO] [bt_navigator-4]: process started with pid [79240]
+[INFO] [lifecycle_manager-5]: process started with pid [79241]
+[lifecycle_manager-5] [INFO] [1791559513.294826255] [lifecycle_manager_navigation]: Creating
+[planner_server-2] [INFO] [1791559513.301954442] [planner_server]: 
+[planner_server-2] 	planner_server lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791559513.306395497] [planner_server]: Creating
+[lifecycle_manager-5] [INFO] [1791559513.327783205] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[bt_navigator-4] [INFO] [1791559513.352915875] [bt_navigator]: 
+[bt_navigator-4] 	bt_navigator lifecycle node launched. 
+[bt_navigator-4] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-5] [INFO] [1791559513.354123005] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1791559513.354188800] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[bt_navigator-4] [INFO] [1791559513.357251159] [bt_navigator]: Creating
+[vector_pursuit_controller_server-3] [INFO] [1791559513.373778160] [controller_server]: Initializing Vector Pursuit Controller Server...
+[planner_server-2] [INFO] [1791559513.396935261] [global_costmap.global_costmap]: 
+[planner_server-2] 	global_costmap lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791559513.397813558] [global_costmap.global_costmap]: Creating Costmap
+[vector_pursuit_controller_server-3] [INFO] [1791559513.435511628] [local_costmap.local_costmap]: 
+[vector_pursuit_controller_server-3] 	local_costmap lifecycle node launched. 
+[vector_pursuit_controller_server-3] 	Waiting on external lifecycle transitions to activate
+[vector_pursuit_controller_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[vector_pursuit_controller_server-3] [INFO] [1791559513.436748674] [local_costmap.local_costmap]: Creating Costmap
+[vector_pursuit_controller_server-3] [INFO] [1791559513.438414212] [local_costmap.local_costmap]: Configuring
+[vector_pursuit_controller_server-3] [INFO] [1791559513.444670484] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559513.450383287] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[vector_pursuit_controller_server-3] [INFO] [1791559513.454285849] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559513.454322668] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559513.454689804] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791559513.478473189] [local_costmap.local_costmap]: Activating
+[vector_pursuit_controller_server-3] [INFO] [1791559513.478513084] [local_costmap.local_costmap]: Checking transform
+[vector_pursuit_controller_server-3] [INFO] [1791559513.478557176] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[vector_pursuit_controller_server-3] [INFO] [1791559513.978732044] [local_costmap.local_costmap]: start
+[direct_map_publisher-1] [INFO] [1791559514.026071387] [map_server]: Loading map from /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/maps/new_map_grid.pgm
+[vector_pursuit_controller_server-3] [INFO] [1791559514.095586508] [controller_server]: Configuring Vector Pursuit Controller...
+[vector_pursuit_controller_server-3] [INFO] [1791559514.101911208] [controller_server]: Vector Pursuit configured: dist=0.60, k_trans=1.50, k_rot=2.00
+[vector_pursuit_controller_server-3] [INFO] [1791559514.101971672] [VectorPursuitController]: Activating controller
+[vector_pursuit_controller_server-3] [INFO] [1791559514.101980889] [controller_server]: Vector Pursuit Controller Server Ready!
+[direct_map_publisher-1] [INFO] [1791559514.279166202] [map_server]: Map loaded: 230x380, resolution=0.05
+[direct_map_publisher-1] [INFO] [1791559514.279924400] [map_server]: Published map: 230x380
+[vector_pursuit_controller_server-3] [INFO] [1791559573.102450252] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791559573.102538620] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791559573.102650957] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-4] [INFO] [1791559573.102705940] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791559573.102557210] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-5] [INFO] [1791559573.102654321] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[planner_server-2] [INFO] [1791559573.102574609] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-2] [INFO] [1791559573.102651033] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-2] [INFO] [1791559573.102706020] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[bt_navigator-4] [INFO] [1791559573.103517890] [bt_navigator]: Destroying
+[planner_server-2] [INFO] [1791559573.104089415] [global_costmap.global_costmap]: Destroying
+[vector_pursuit_controller_server-3] [INFO] [1791559573.105712728] [VectorPursuitController]: Deactivating controller
+[vector_pursuit_controller_server-3] [INFO] [1791559573.105722681] [VectorPursuitController]: Cleaning up controller
+[planner_server-2] [INFO] [1791559573.115442202] [planner_server]: Destroying
+[vector_pursuit_controller_server-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[vector_pursuit_controller_server-3]          at line 127 in ./src/class_loader.cpp
+[vector_pursuit_controller_server-3] terminate called without an active exception
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 136, in main
+[direct_map_publisher-1]     rclpy.spin(node)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[direct_map_publisher-1]     executor.spin_once()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 923, in spin_once
+[direct_map_publisher-1]     self._spin_once_impl(timeout_sec)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 904, in _spin_once_impl
+[direct_map_publisher-1]     handler, entity, node = self.wait_for_ready_callbacks(
+[direct_map_publisher-1]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 874, in wait_for_ready_callbacks
+[direct_map_publisher-1]     return next(self._cb_iter)
+[direct_map_publisher-1]            ^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 782, in _wait_for_ready_callbacks
+[direct_map_publisher-1]     raise ExternalShutdownException()
+[direct_map_publisher-1] rclpy.executors.ExternalShutdownException
+[direct_map_publisher-1] 
+[direct_map_publisher-1] During handling of the above exception, another exception occurred:
+[direct_map_publisher-1] 
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 144, in <module>
+[direct_map_publisher-1]     main()
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 141, in main
+[direct_map_publisher-1]     rclpy.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[direct_map_publisher-1]     _shutdown(context=context)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[direct_map_publisher-1]     context.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[direct_map_publisher-1]     self.__context.shutdown()
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [bt_navigator-4]: process has finished cleanly [pid 79240]
+[INFO] [planner_server-2]: process has finished cleanly [pid 79238]
+[ERROR] [direct_map_publisher-1]: process has died [pid 79237, exit code 1, cmd '/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher --ros-args -r __node:=map_server --params-file /tmp/launch_params__02g9r9b --params-file /tmp/launch_params_0q4i7hk5'].
+[ERROR] [vector_pursuit_controller_server-3]: process has died [pid 79239, exit code -6, cmd '/home/g16/Documents/qcarSim/install/vector_pursuit_controller/lib/vector_pursuit_controller/vector_pursuit_controller_server --ros-args -r __node:=controller_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_vector_navfn.yaml --params-file /tmp/launch_params_2qhenvvg -r /tf:=tf -r /tf_static:=tf_static'].

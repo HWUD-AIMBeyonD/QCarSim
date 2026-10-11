@@ -1,0 +1,12 @@
+<!-- Jazzy (BT.CPP v4) equivalent of the hardware bt_navigation.xml:
+     plan ONCE, then follow that path. No replanning, no recoveries.
+     server_name points the BT nodes at the hardware-style action names
+     served by hybrid_planner_server and the ported controller_server. -->
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToPose">
+      <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased" server_name="ComputePathToPose"/>
+      <FollowPath path="{path}" controller_id="FollowPath" server_name="FollowPath"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,4 +1,0 @@
----
-# QCar basic configuration.
-# Sensors (RPLiDAR, IMU, RealSense, CSI cameras) are built into qcar_body.urdf.xacro.
-components: []

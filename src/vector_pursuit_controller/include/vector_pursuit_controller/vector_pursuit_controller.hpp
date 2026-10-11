@@ -23,7 +23,7 @@ namespace vector_pursuit_controller
 
 /**
  * @class VectorPursuitController
- * @brief Vector Pursuit Controller plugin for Ackermann vehicles (Jazzy API)
+ * @brief Vector Pursuit Controller plugin for Ackermann vehicles
  * Combines Proportional Position Control (Screw Theory) with Orientation Control
  */
 class VectorPursuitController : public nav2_core::Controller
@@ -32,11 +32,12 @@ public:
   VectorPursuitController() = default;
   ~VectorPursuitController() override = default;
 
+  // Nav2 Controller interface
   void configure(
-    const rclcpp_lifecycle::LifecycleNode::WeakPtr & parent,
+    const rclcpp::Node::WeakPtr & parent,
     std::string name,
-    std::shared_ptr<tf2_ros::Buffer> tf,
-    std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros) override;
+    const std::shared_ptr<tf2_ros::Buffer> & tf,
+    const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & costmap_ros) override;
 
   void activate() override;
   void deactivate() override;
@@ -46,34 +47,54 @@ public:
 
   geometry_msgs::msg::TwistStamped computeVelocityCommands(
     const geometry_msgs::msg::PoseStamped & pose,
-    const geometry_msgs::msg::Twist & velocity,
-    nav2_core::GoalChecker * goal_checker) override;
-
-  void setSpeedLimit(const double & speed_limit, const bool & percentage) override;
+    const geometry_msgs::msg::Twist & velocity) override;
 
 protected:
+  // Helper functions
   nav_msgs::msg::Path transformGlobalPlan(const geometry_msgs::msg::PoseStamped & pose);
-
+  
+  // Re-introducing LookAhead logic (essential for Vector Pursuit)
   geometry_msgs::msg::PoseStamped getLookAheadPoint(
     const double & lookahead_dist,
     const nav_msgs::msg::Path & transformed_plan);
 
+  // Index of the lookahead pose. Needed as well as the pose itself because the
+  // orientation component reads the path heading from the NEIGHBOURING poses,
+  // not from the pose's own quaternion (navfn leaves those at identity).
+  size_t getLookAheadIndex(
+    const double & lookahead_dist,
+    const nav_msgs::msg::Path & transformed_plan);
+
+  // Heading of the path at index i, measured over a span of poses to smooth
+  // out navfn's 45-degree grid quantisation.
+  double getPathHeading(const nav_msgs::msg::Path & plan, size_t i);
+
+  // Parameters
   double desired_linear_vel_;
   double max_angular_vel_;
-  double lookahead_dist_;
-  double k_trans_;
-  double k_rot_;
-  double wheelbase_;
+  double lookahead_dist_; // Distance to target vector
+  double k_trans_;        // Gain for translation error (Position)
+  double k_rot_;          // Gain for rotation error (Orientation)
+  double wheelbase_;      // Distance between axles
 
   std::string plugin_name_;
 
-  rclcpp_lifecycle::LifecycleNode::WeakPtr node_;
+  // Cycle counter used to throttle the per-cycle INFO diagnostic.
+  unsigned int debug_counter_ = 0;
+
+  // ROS handles
+  rclcpp::Node::WeakPtr node_;
   std::shared_ptr<tf2_ros::Buffer> tf_;
   std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros_;
   nav_msgs::msg::Path global_plan_;
-  size_t last_closest_idx_ = 0;
+
+  // Debug viz -- same topic names the RPP and Stanley controllers use, so the
+  // RViz config (blue controller path + red target arrow) works unchanged.
+  rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr local_plan_pub_;
+  rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr lookahead_pub_;
 };
 
 }  // namespace vector_pursuit_controller
 
 #endif  // VECTOR_PURSUIT_CONTROLLER__VECTOR_PURSUIT_CONTROLLER_HPP_
+

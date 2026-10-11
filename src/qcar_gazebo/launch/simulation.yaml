@@ -47,7 +47,7 @@ launch:
       name: gzserver
       param:
         - name: world_sdf_file
-          value: $(find-pkg-share qcar_gazebo)/worlds/qcar_strack.sdf
+          value: $(find-pkg-share qcar_gazebo)/worlds/qcar_hwmap.sdf
         - name: use_sim_time
           value: true
 

@@ -1,7 +1,6 @@
 #include "stanley_controller/stanley_controller.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
-#include "nav2_core/goal_checker.hpp"
-#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
 #include <cmath>
 #include <chrono>
 #include <limits>
@@ -10,10 +9,10 @@ namespace stanley_controller
 {
 
 void StanleyController::configure(
-  const rclcpp_lifecycle::LifecycleNode::WeakPtr & parent,
+  const rclcpp::Node::WeakPtr & parent,
   std::string name,
-  std::shared_ptr<tf2_ros::Buffer> tf,
-  std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros)
+  const std::shared_ptr<tf2_ros::Buffer> & tf,
+  const std::shared_ptr<nav2_costmap_2d::Costmap2DROS> & costmap_ros)
 {
   node_ = parent;
   auto node = parent.lock();
@@ -23,7 +22,7 @@ void StanleyController::configure(
 
   // Declare and get parameters
   // Defaults suitable for QCar
-  node->declare_parameter(plugin_name_ + ".desired_linear_vel", rclcpp::ParameterValue(0.5));
+  node->declare_parameter(plugin_name_ + ".desired_linear_vel", rclcpp::ParameterValue(0.3));
   node->declare_parameter(plugin_name_ + ".max_angular_vel", rclcpp::ParameterValue(1.0));
   node->declare_parameter(plugin_name_ + ".k_gain", rclcpp::ParameterValue(0.5)); 
   node->declare_parameter(plugin_name_ + ".wheelbase", rclcpp::ParameterValue(0.256)); 
@@ -33,7 +32,10 @@ void StanleyController::configure(
   node->get_parameter(plugin_name_ + ".k_gain", k_gain_);
   node->get_parameter(plugin_name_ + ".wheelbase", wheelbase_);
 
-  RCLCPP_INFO(node->get_logger(), 
+  local_plan_pub_ = node->create_publisher<nav_msgs::msg::Path>("local_plan", 1);
+  lookahead_pub_ = node->create_publisher<geometry_msgs::msg::PoseStamped>("lookahead_point", 1);
+
+  RCLCPP_INFO(node->get_logger(),
     "Stanley Controller configured: desired_vel=%.2f, k_gain=%.2f, wheelbase=%.3f",
     desired_linear_vel_, k_gain_, wheelbase_);
 }
@@ -56,22 +58,11 @@ void StanleyController::cleanup()
 void StanleyController::setPlan(const nav_msgs::msg::Path & path) 
 {
   global_plan_ = path;
-  last_closest_idx_ = 0;
-}
-
-void StanleyController::setSpeedLimit(
-  const double & speed_limit, const bool & percentage)
-{
-  (void)percentage;
-  if (speed_limit > 0.0) {
-    desired_linear_vel_ = speed_limit;
-  }
 }
 
 geometry_msgs::msg::TwistStamped StanleyController::computeVelocityCommands(
   const geometry_msgs::msg::PoseStamped & pose,
-  const geometry_msgs::msg::Twist & velocity,
-  nav2_core::GoalChecker * /*goal_checker*/)
+  const geometry_msgs::msg::Twist & velocity)
 {
   geometry_msgs::msg::TwistStamped cmd_vel;
   cmd_vel.header.frame_id = "base_link";
@@ -79,11 +70,12 @@ geometry_msgs::msg::TwistStamped StanleyController::computeVelocityCommands(
 
   // 1. Transform global plan to robot frame (base_link)
   auto transformed_plan = transformGlobalPlan(pose);
-  
+  local_plan_pub_->publish(transformed_plan);
+
   if (transformed_plan.poses.empty()) {
     RCLCPP_WARN(rclcpp::get_logger("StanleyController"), 
       "Transformed plan is empty, stopping robot");
-    return cmd_vel;
+    return cmd_vel; // Returns zero velocity
   }
 
   // 2. Project Position to FRONT AXLE
@@ -92,7 +84,6 @@ geometry_msgs::msg::TwistStamped StanleyController::computeVelocityCommands(
   double front_y = 0.0; 
 
   // 3. Find closest point on path to the FRONT AXLE
-  // We search the transformed plan, which is already a window around the robot
   size_t closest_index = 0;
   double min_dist_sq = std::numeric_limits<double>::max();
 
@@ -108,13 +99,27 @@ geometry_msgs::msg::TwistStamped StanleyController::computeVelocityCommands(
   }
 
   // 4. Calculate Cross Track Error (e)
+  // Since the path is transformed to robot frame:
+  // The 'y' component of the closest point IS the lateral error.
   double cx = transformed_plan.poses[closest_index].pose.position.x;
   double cy = transformed_plan.poses[closest_index].pose.position.y;
-  
+
+  // Stanley has no lookahead point; the equivalent "what am I tracking" marker
+  // is the closest path pose to the front axle. Published on the same topic as
+  // the RPP lookahead so the red arrow in RViz means the same thing.
+  auto target_pose = transformed_plan.poses[closest_index];
+  target_pose.header.frame_id = "base";
+  lookahead_pub_->publish(target_pose);
+
+
+  // Standard Stanley formulation: 
+  // e is positive if the path is to the left of the vehicle.
   // In robot frame, positive y is left. So e = cy.
   double error_cross_track = cy; 
 
   // 5. Calculate Heading Error (psi)
+  // We need the orientation of the path at the closest point.
+  // Approximation: Angle of the segment connecting current point to next point.
   double path_heading = 0.0;
   
   if (closest_index + 1 < transformed_plan.poses.size()) {
@@ -122,11 +127,14 @@ geometry_msgs::msg::TwistStamped StanleyController::computeVelocityCommands(
     double next_y = transformed_plan.poses[closest_index + 1].pose.position.y;
     path_heading = std::atan2(next_y - cy, next_x - cx);
   } else if (closest_index > 0) {
+    // End of path, look behind
     double prev_x = transformed_plan.poses[closest_index - 1].pose.position.x;
     double prev_y = transformed_plan.poses[closest_index - 1].pose.position.y;
     path_heading = std::atan2(cy - prev_y, cx - prev_x);
   }
 
+  // In base_link frame, robot heading is always 0.0.
+  // So heading error is simply the path heading.
   double error_heading = path_heading;
 
   // Normalize angle to [-pi, pi]
@@ -134,19 +142,44 @@ geometry_msgs::msg::TwistStamped StanleyController::computeVelocityCommands(
   while (error_heading < -M_PI) error_heading += 2.0 * M_PI;
 
   // 6. Compute Steering Angle (Stanley Law)
+  // delta = psi + arctan(k * e / v)
   double current_speed = velocity.linear.x;
+  
+  // Guard against zero speed division or negative speed logic
+  // (Stanley can be unstable at 0 speed, usually we clamp the denominator)
   double v_denominator = std::max(std::abs(current_speed), 0.1); 
 
   double delta = error_heading + std::atan2(k_gain_ * error_cross_track, v_denominator);
 
-  // 7. Clamp steering
+  // 7. Clamp steering to physical limits
   delta = std::max(std::min(delta, max_angular_vel_), -max_angular_vel_);
 
-  // 8. Convert Steering Angle (delta) to Angular Velocity (omega)
-  double angular_vel = (desired_linear_vel_ / wheelbase_) * std::tan(delta);
+  // 8. REGULATION: slow down on sharp curves, same thresholds as the RPP
+  // controller so the two are comparable. For an Ackermann vehicle the path
+  // curvature implied by the steering angle is k = tan(delta) / L, which is
+  // the same quantity RPP regulates on.
+  double linear_vel = desired_linear_vel_;
+  double abs_curvature = std::abs(std::tan(delta) / wheelbase_);
+  if (abs_curvature > 0.5) {
+    linear_vel *= 0.5;   // Cut speed in half for sharp turns
+  } else if (abs_curvature > 0.3) {
+    linear_vel *= 0.75;  // Reduce speed moderately
+  }
 
-  cmd_vel.twist.linear.x = desired_linear_vel_;
+  // 9. Convert Steering Angle (delta) to Angular Velocity (omega)
+  // The local planner must output Twist (v, w).
+  // Formula: w = (v / L) * tan(delta)
+  // Uses the regulated speed, so the hardware interface's inverse mapping
+  // atan(L*w/v) recovers the same delta we clamped above.
+  double angular_vel = (linear_vel / wheelbase_) * std::tan(delta);
+
+  // 10. Set command
+  cmd_vel.twist.linear.x = linear_vel;
   cmd_vel.twist.angular.z = angular_vel;
+
+  RCLCPP_DEBUG(rclcpp::get_logger("StanleyController"),
+    "CTE: %.3f, HeadingErr: %.3f, Delta: %.3f, Curv: %.3f, Linear: %.3f",
+    error_cross_track, error_heading, delta, abs_curvature, linear_vel);
 
   return cmd_vel;
 }
@@ -155,41 +188,52 @@ nav_msgs::msg::Path StanleyController::transformGlobalPlan(
   const geometry_msgs::msg::PoseStamped & pose)
 {
   nav_msgs::msg::Path local_path;
-  local_path.header.frame_id = "base_link";
+  local_path.header.frame_id = "base";
   local_path.header.stamp = pose.header.stamp;
 
   if (global_plan_.poses.empty()) {
+    RCLCPP_WARN(rclcpp::get_logger("StanleyController"), 
+      "Global plan is empty");
     return local_path;
   }
 
-  // Find closest point to robot in global frame to avoid transforming the whole path
-  // Search forward from last known position (don't search backwards or across the track)
-  size_t search_start = (last_closest_idx_ > 10) ? last_closest_idx_ - 10 : 0;
-  size_t closest_idx = search_start;
-  double min_dist_sq = std::numeric_limits<double>::max();
-  for (size_t i = search_start; i < std::min(global_plan_.poses.size(), search_start + 200); ++i) {
-    double dx = global_plan_.poses[i].pose.position.x - pose.pose.position.x;
-    double dy = global_plan_.poses[i].pose.position.y - pose.pose.position.y;
-    double d2 = dx*dx + dy*dy;
-    if (d2 < min_dist_sq) {
-      min_dist_sq = d2;
-      closest_idx = i;
+  try {
+    for (const auto & global_pose : global_plan_.poses) {
+      geometry_msgs::msg::PoseStamped local_pose;
+      
+      // Transform from map frame to base frame
+      // Using a short timeout to prevent blocking
+      tf_->transform(global_pose, local_pose, "base", 
+                     std::chrono::milliseconds(500));
+      
+      local_path.poses.push_back(local_pose);
+    }
+  } catch (tf2::TransformException & ex) {
+    RCLCPP_ERROR(rclcpp::get_logger("StanleyController"), 
+      "TF Transform failed: %s", ex.what());
+    return local_path;
+  }
+
+  // Drop the stretch of path the car has already driven past, measured from
+  // the front axle (the point Stanley tracks). Without this the closest-point
+  // search can snap back to an earlier stretch that happens to pass nearby --
+  // on a course that doubles back, that sends the car round the loop again.
+  size_t closest = 0;
+  double closest_dist = std::numeric_limits<double>::max();
+  for (size_t i = 0; i < local_path.poses.size(); ++i) {
+    double d = std::hypot(local_path.poses[i].pose.position.x - wheelbase_,
+                          local_path.poses[i].pose.position.y);
+    if (d < closest_dist) {
+      closest_dist = d;
+      closest = i;
     }
   }
-  last_closest_idx_ = closest_idx;
-
-  // Transform a window of points (e.g., 50 points forward)
-  size_t window_size = 50;
-  for (size_t i = closest_idx; i < std::min(global_plan_.poses.size(), closest_idx + window_size); ++i) {
-    try {
-      geometry_msgs::msg::PoseStamped local_pose;
-      tf_->transform(global_plan_.poses[i], local_pose, "base_link",
-                     tf2::durationFromSec(0.1));
-      local_path.poses.push_back(local_pose);
-    } catch (tf2::TransformException & ex) {
-      RCLCPP_ERROR(rclcpp::get_logger("StanleyController"), 
-        "TF Transform failed at index %zu: %s", i, ex.what());
-    }
+  if (closest > 0) {
+    // Prune the stored plan too, so progress stays monotonic across cycles.
+    global_plan_.poses.erase(global_plan_.poses.begin(),
+                             global_plan_.poses.begin() + closest);
+    local_path.poses.erase(local_path.poses.begin(),
+                           local_path.poses.begin() + closest);
   }
 
   return local_path;

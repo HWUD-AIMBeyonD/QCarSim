@@ -26,7 +26,7 @@ launch:
 
   - arg:
       name: x
-      default: '-1.0'
+      default: '0.0'
       description: Initial robot x position.
   - arg:
       name: y
@@ -151,6 +151,22 @@ launch:
           exec: static_transform_publisher
           name: map_to_odom
           args: --x 0 --y 0 --z 0 --roll 0 --pitch 0 --yaw 0 --frame-id map --child-frame-id odom
+
+      # The hardware stack uses 'base' as the robot frame (OptiTrack odom -> base).
+      # Alias it to base_link so the ported planner/controller params and code
+      # (which hard-code 'base') run unchanged.
+      - node:
+          pkg: tf2_ros
+          exec: static_transform_publisher
+          name: base_link_to_base
+          args: --x 0 --y 0 --z 0 --roll 0 --pitch 0 --yaw 0 --frame-id base_link --child-frame-id base
+
+      # Emulates qcar_hardware_interface.py between /cmd_vel and Gazebo:
+      # steering clip, 0.16 s steering lag, 1 s command timeout, throttle clip.
+      - node:
+          pkg: qcar_gazebo
+          exec: qcar_hw_emulator.py
+          name: qcar_hw_emulator
 
       # Laser filter (filters self-hits from scan, QCar-specific dimensions)
       - node:

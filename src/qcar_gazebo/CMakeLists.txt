@@ -9,4 +9,7 @@ install(DIRECTORY config launch
 install(DIRECTORY worlds/
         DESTINATION share/${PROJECT_NAME}/worlds)
 
+install(PROGRAMS scripts/qcar_hw_emulator.py scripts/generate_world_from_map.py
+        DESTINATION lib/${PROJECT_NAME})
+
 ament_package()

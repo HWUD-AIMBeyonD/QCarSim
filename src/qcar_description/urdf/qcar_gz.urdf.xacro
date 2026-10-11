@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
   <!-- ==================== ACKERMANN STEERING (native Gazebo plugin) ==================== -->
-  <!-- This replaces ros2_control for drive. Gazebo directly handles cmd_vel to wheel commands.
+  <!-- This replaces ros2_control for drive. Gazebo turns cmd_vel_hw (from qcar_hw_emulator) into wheel commands.
        The plugin subscribes to a Twist message on <topic> and commands the steering/drive joints.
        Odometry is published on <odom_topic>. -->
   <xacro:macro name="ackermann_steering" params="namespace:=''">
@@ -11,7 +11,7 @@
     <gazebo>
       <plugin filename="gz-sim-ackermann-steering-system"
               name="gz::sim::systems::AckermannSteering">
-        <topic>${ns}cmd_vel</topic>
+        <topic>${ns}cmd_vel_hw</topic>
         <left_steering_joint>fl_steering_joint</left_steering_joint>
         <right_steering_joint>fr_steering_joint</right_steering_joint>
         <left_joint>rl_wheel_joint</left_joint>
