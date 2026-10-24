@@ -1,0 +1,145 @@
+[INFO] [launch]: All log files can be found below /home/g16/.ros/log/2026-10-11-18-59-56-892393-G16-276109
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [direct_map_publisher-1]: process started with pid [276116]
+[INFO] [hybrid_planner_server-2]: process started with pid [276117]
+[INFO] [vector_pursuit_controller_server-3]: process started with pid [276118]
+[INFO] [bt_navigator-4]: process started with pid [276119]
+[INFO] [lifecycle_manager-5]: process started with pid [276120]
+[vector_pursuit_controller_server-3] [INFO] [1791730797.098395884] [controller_server]: Initializing Vector Pursuit Controller Server...
+[lifecycle_manager-5] [INFO] [1791730797.127183838] [lifecycle_manager_navigation]: Creating
+[hybrid_planner_server-2] [INFO] [1791730797.142448882] [hybrid_planner_server]: Initializing Hybrid Planner Server...
+[lifecycle_manager-5] [INFO] [1791730797.154348467] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[bt_navigator-4] [INFO] [1791730797.166087773] [bt_navigator]: 
+[bt_navigator-4] 	bt_navigator lifecycle node launched. 
+[bt_navigator-4] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-5] [INFO] [1791730797.171486610] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1791730797.171562424] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791730797.172141169] [bt_navigator]: Creating
+[vector_pursuit_controller_server-3] [INFO] [1791730797.225198957] [local_costmap.local_costmap]: 
+[vector_pursuit_controller_server-3] 	local_costmap lifecycle node launched. 
+[vector_pursuit_controller_server-3] 	Waiting on external lifecycle transitions to activate
+[vector_pursuit_controller_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[vector_pursuit_controller_server-3] [INFO] [1791730797.230635775] [local_costmap.local_costmap]: Creating Costmap
+[vector_pursuit_controller_server-3] [INFO] [1791730797.232184465] [local_costmap.local_costmap]: Configuring
+[vector_pursuit_controller_server-3] [INFO] [1791730797.243961116] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.251969874] [global_costmap.global_costmap]: 
+[hybrid_planner_server-2] 	global_costmap lifecycle node launched. 
+[hybrid_planner_server-2] 	Waiting on external lifecycle transitions to activate
+[hybrid_planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[hybrid_planner_server-2] [INFO] [1791730797.253249245] [global_costmap.global_costmap]: Creating Costmap
+[vector_pursuit_controller_server-3] [INFO] [1791730797.253622525] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[hybrid_planner_server-2] [INFO] [1791730797.255085270] [hybrid_planner_server]: Configuring Lifecycle Components...
+[hybrid_planner_server-2] [INFO] [1791730797.255123714] [global_costmap.global_costmap]: Configuring
+[vector_pursuit_controller_server-3] [INFO] [1791730797.260731071] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791730797.260806135] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791730797.261698267] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.263312367] [global_costmap.global_costmap]: Using plugin "static_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.271891767] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[hybrid_planner_server-2] [INFO] [1791730797.274595800] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.274632275] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.274992163] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[hybrid_planner_server-2] [INFO] [1791730797.280181094] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.280239106] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[hybrid_planner_server-2] [INFO] [1791730797.281107063] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[vector_pursuit_controller_server-3] [INFO] [1791730797.299835532] [local_costmap.local_costmap]: Activating
+[vector_pursuit_controller_server-3] [INFO] [1791730797.299878114] [local_costmap.local_costmap]: Checking transform
+[vector_pursuit_controller_server-3] [INFO] [1791730797.299924844] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[bt_navigator-4] [INFO] [1791730797.313799125] [bt_navigator]: Configuring
+[hybrid_planner_server-2] [INFO] [1791730797.320896420] [global_costmap.global_costmap]: Activating
+[hybrid_planner_server-2] [INFO] [1791730797.320946713] [global_costmap.global_costmap]: Checking transform
+[hybrid_planner_server-2] [INFO] [1791730797.320992845] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[bt_navigator-4] [INFO] [1791730797.322357118] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-4] [WARN] [1791730797.333553097] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-4] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[lifecycle_manager-5] [INFO] [1791730797.441380834] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791730797.441576534] [bt_navigator]: Activating
+[vector_pursuit_controller_server-3] [INFO] [1791730797.800132428] [local_costmap.local_costmap]: start
+[hybrid_planner_server-2] [INFO] [1791730797.821063022] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[vector_pursuit_controller_server-3] [INFO] [1791730797.912395372] [controller_server]: Configuring Vector Pursuit Controller...
+[vector_pursuit_controller_server-3] [INFO] [1791730797.915858468] [controller_server]: Vector Pursuit configured: dist=0.60, k_trans=1.50, k_rot=2.00
+[vector_pursuit_controller_server-3] [INFO] [1791730797.915939578] [VectorPursuitController]: Activating controller
+[vector_pursuit_controller_server-3] [INFO] [1791730797.915952287] [controller_server]: Vector Pursuit Controller Server Ready!
+[hybrid_planner_server-2] [INFO] [1791730798.321055577] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[direct_map_publisher-1] [INFO] [1791730798.613419477] [map_server]: Loading map from /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/maps/new_map_grid.pgm
+[hybrid_planner_server-2] [INFO] [1791730798.821043670] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[direct_map_publisher-1] [INFO] [1791730798.851442321] [map_server]: Map loaded: 230x380, resolution=0.05
+[direct_map_publisher-1] [INFO] [1791730798.852303816] [map_server]: Published map: 230x380
+[hybrid_planner_server-2] [INFO] [1791730799.321059662] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730799.821048059] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730800.321049502] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730800.821065428] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730801.321400295] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730801.821043268] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730802.321040940] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [INFO] [1791730802.821080307] [global_costmap.global_costmap]: Timed out waiting for transform from base to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[hybrid_planner_server-2] [ERROR] [1791730802.821182910] [global_costmap.global_costmap]: Failed to activate global_costmap because transform from base to map did not become available before timeout
+[hybrid_planner_server-2] [INFO] [1791730802.822210352] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 230 X 380 at 0.050000 m/pix
+[hybrid_planner_server-2] [INFO] [1791730802.822487250] [hybrid_planner_server]: CustomHybridPlanner Configured! R=0.50 Step=0.15
+[hybrid_planner_server-2] [INFO] [1791730802.822527942] [HybridPlanner]: Activating...
+[hybrid_planner_server-2] [INFO] [1791730802.834766485] [hybrid_planner_server]: Hybrid Planner Server Fully Ready!
+[bt_navigator-4] [INFO] [1791730802.842985683] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791730802.950306777] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-5] [INFO] [1791730802.950383643] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1791730802.950410517] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[lifecycle_manager-5] [INFO] [1791730803.368769748] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-5] [INFO] [1791730803.368886325] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-5] [INFO] [1791730803.368933340] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[hybrid_planner_server-2] [INFO] [1791730803.368805883] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[vector_pursuit_controller_server-3] [INFO] [1791730803.368807334] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791730803.368818121] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791730803.368952763] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-4] [INFO] [1791730803.369077930] [bt_navigator]: Deactivating
+[bt_navigator-4] [INFO] [1791730803.369123942] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[hybrid_planner_server-2] [INFO] [1791730803.373275068] [HybridPlanner]: Deactivating...
+[hybrid_planner_server-2] [INFO] [1791730803.373300008] [HybridPlanner]: Cleaning up...
+[vector_pursuit_controller_server-3] [INFO] [1791730803.373455633] [VectorPursuitController]: Deactivating controller
+[vector_pursuit_controller_server-3] [INFO] [1791730803.373476226] [VectorPursuitController]: Cleaning up controller
+[bt_navigator-4] [INFO] [1791730803.379635084] [bt_navigator]: Cleaning up
+[lifecycle_manager-5] [INFO] [1791730803.384174416] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[hybrid_planner_server-2] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[hybrid_planner_server-2]          at line 127 in ./src/class_loader.cpp
+[vector_pursuit_controller_server-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[vector_pursuit_controller_server-3]          at line 127 in ./src/class_loader.cpp
+[vector_pursuit_controller_server-3] terminate called without an active exception
+[hybrid_planner_server-2] [INFO] [1791730803.413483419] [global_costmap.global_costmap]: Destroying
+[bt_navigator-4] [INFO] [1791730803.418201503] [bt_navigator]: Completed Cleaning up
+[bt_navigator-4] [INFO] [1791730803.418321949] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-4] [INFO] [1791730803.426739838] [bt_navigator]: Destroying
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 136, in main
+[direct_map_publisher-1]     rclpy.spin(node)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[direct_map_publisher-1]     executor.spin_once()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 923, in spin_once
+[direct_map_publisher-1]     self._spin_once_impl(timeout_sec)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 904, in _spin_once_impl
+[direct_map_publisher-1]     handler, entity, node = self.wait_for_ready_callbacks(
+[direct_map_publisher-1]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 874, in wait_for_ready_callbacks
+[direct_map_publisher-1]     return next(self._cb_iter)
+[direct_map_publisher-1]            ^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 754, in _wait_for_ready_callbacks
+[direct_map_publisher-1]     wait_set = _rclpy.WaitSet(
+[direct_map_publisher-1]                ^^^^^^^^^^^^^^^
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[direct_map_publisher-1] 
+[direct_map_publisher-1] During handling of the above exception, another exception occurred:
+[direct_map_publisher-1] 
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 144, in <module>
+[direct_map_publisher-1]     main()
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 141, in main
+[direct_map_publisher-1]     rclpy.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[direct_map_publisher-1]     _shutdown(context=context)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[direct_map_publisher-1]     context.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[direct_map_publisher-1]     self.__context.shutdown()
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [lifecycle_manager-5]: process has finished cleanly [pid 276120]
+[INFO] [hybrid_planner_server-2]: process has finished cleanly [pid 276117]
+[INFO] [bt_navigator-4]: process has finished cleanly [pid 276119]
+[ERROR] [direct_map_publisher-1]: process has died [pid 276116, exit code 1, cmd '/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher --ros-args -r __node:=map_server --params-file /tmp/launch_params_5k2dlacy --params-file /tmp/launch_params_5y5mgxqb'].
+[ERROR] [vector_pursuit_controller_server-3]: process has died [pid 276118, exit code -6, cmd '/home/g16/Documents/qcarSim/install/vector_pursuit_controller/lib/vector_pursuit_controller/vector_pursuit_controller_server --ros-args -r __node:=controller_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_vector_hybrid.yaml --params-file /tmp/launch_params_t7ojuk67 -r /tf:=tf -r /tf_static:=tf_static'].

@@ -116,6 +116,31 @@ python3 src/qcar_nav2_bringup/scripts/summarize_benchmark_sim.py benchmarks_sim
 
 `run_benchmark_sim.py` does one combo against an already-running stack (resets the pose, records, sends the goal, cancels after `--timeout`, computes KPIs). `run_all_sim.sh` relaunches a nav stack whose bring-up stalls (an occasional lost lifecycle reply in DDS, or a costmap that fails to activate on a TF timeout).
 
+### Hardware results and sim-to-real comparison
+
+Hardware bags (recorded on the car with `run_benchmark_hw.sh`) are compiled into the same layout as the sim results:
+
+```bash
+python3 src/qcar_nav2_bringup/scripts/compile_hw_results.py ~/Music --out benchmarks_hw   # one folder per combo, e.g. rpp_navfn/
+```
+
+Bag names inside a combo folder are ignored (runs are numbered by recording time) and each bag is read straight from its `.db3`. `runs_hw.csv` classifies every bag: `REACHED`, `REACHED_NO_PLAN` (no `/plan` recorded, so only mission time and accelerations), `NOT_REACHED`, or `EXCLUDED` (car never moved, or did not start at the start pose; not counted as an attempt). `kpi_results_hw.csv` reproduces the numbers `compute_kpis_hw.py` gives on the car.
+
+**Speed calibration.** The real car drives 2.43x the commanded speed. `calibrate_speed_hw.py benchmarks_hw` measures this from OptiTrack and prints the matching `throttle_to_speed` for `qcar_hw_emulator` (6.07, the default in `spawn_qcar.yaml`; `throttle_to_speed:=2.5` makes the sim car drive exactly at the commanded speed). `benchmarks_sim_ideal_speed/` holds the earlier sim benchmark at 2.5.
+
+**One KPI calculation for both.** The numbers to compare come from a single script that reads sim and hardware bags with the same code and preprocessing (mission-window CTE, de-noised path lengths; see its docstring):
+
+```bash
+python3 src/qcar_nav2_bringup/scripts/compute_kpis_all.py --sim benchmarks_sim --hw benchmarks_hw --out benchmarks_compare
+```
+
+| Output | Contents |
+|---|---|
+| `benchmarks_compare/kpi_results_all.csv` | KPIs per run, `source` = sim / hw |
+| `benchmarks_compare/summary_all.csv` | mean ± sample std per source × controller × planner |
+| `benchmarks_compare/sim_vs_hw.csv`, `sim_vs_hw_navfn.png` | sim vs hardware per controller, gap and gap % |
+| `benchmarks_compare/sim_hybrid_vs_navfn.png` | the two planners in sim |
+
 ## World and Map
 
 Both come from the hardware map:

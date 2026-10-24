@@ -1,0 +1,150 @@
+[INFO] [launch]: All log files can be found below /home/g16/.ros/log/2026-10-11-19-14-29-784807-G16-278945
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [direct_map_publisher-1]: process started with pid [278952]
+[INFO] [planner_server-2]: process started with pid [278953]
+[INFO] [stanley_controller_server-3]: process started with pid [278954]
+[INFO] [bt_navigator-4]: process started with pid [278955]
+[INFO] [lifecycle_manager-5]: process started with pid [278956]
+[lifecycle_manager-5] [INFO] [1791731670.001241935] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-5] [INFO] [1791731670.017738242] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[stanley_controller_server-3] [INFO] [1791731670.040049146] [controller_server]: Initializing Stanley Controller Server...
+[planner_server-2] [INFO] [1791731670.068981559] [planner_server]: 
+[planner_server-2] 	planner_server lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791731670.072556463] [planner_server]: Creating
+[planner_server-2] [INFO] [1791731670.124492346] [global_costmap.global_costmap]: 
+[planner_server-2] 	global_costmap lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791731670.125134536] [global_costmap.global_costmap]: Creating Costmap
+[bt_navigator-4] [INFO] [1791731670.131705801] [bt_navigator]: 
+[bt_navigator-4] 	bt_navigator lifecycle node launched. 
+[bt_navigator-4] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[stanley_controller_server-3] [INFO] [1791731670.133208879] [local_costmap.local_costmap]: 
+[stanley_controller_server-3] 	local_costmap lifecycle node launched. 
+[stanley_controller_server-3] 	Waiting on external lifecycle transitions to activate
+[stanley_controller_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[stanley_controller_server-3] [INFO] [1791731670.134480143] [local_costmap.local_costmap]: Creating Costmap
+[bt_navigator-4] [INFO] [1791731670.136045349] [bt_navigator]: Creating
+[stanley_controller_server-3] [INFO] [1791731670.136391353] [local_costmap.local_costmap]: Configuring
+[stanley_controller_server-3] [INFO] [1791731670.142050837] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[stanley_controller_server-3] [INFO] [1791731670.147212555] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[stanley_controller_server-3] [INFO] [1791731670.151372204] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[stanley_controller_server-3] [INFO] [1791731670.151425407] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[stanley_controller_server-3] [INFO] [1791731670.152131181] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[stanley_controller_server-3] [INFO] [1791731670.182744268] [local_costmap.local_costmap]: Activating
+[stanley_controller_server-3] [INFO] [1791731670.182794487] [local_costmap.local_costmap]: Checking transform
+[stanley_controller_server-3] [INFO] [1791731670.182841906] [local_costmap.local_costmap]: Timed out waiting for transform from base to odom to become available, tf error: Could not find a connection between 'odom' and 'base' because they are not part of the same tree.Tf has two or more unconnected trees.
+[stanley_controller_server-3] [INFO] [1791731670.682998461] [local_costmap.local_costmap]: start
+[stanley_controller_server-3] [INFO] [1791731670.790815463] [controller_server]: Configuring Stanley Controller...
+[stanley_controller_server-3] [INFO] [1791731670.792507650] [controller_server]: Stanley Controller configured: desired_vel=0.30, k_gain=0.80, wheelbase=0.256
+[stanley_controller_server-3] [INFO] [1791731670.792550727] [StanleyController]: Activating controller
+[stanley_controller_server-3] [INFO] [1791731670.792557471] [controller_server]: Stanley Controller Server Ready!
+[lifecycle_manager-5] [INFO] [1791731670.879563709] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1791731670.879620372] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-2] [INFO] [1791731670.879985772] [planner_server]: Configuring
+[planner_server-2] [INFO] [1791731670.880027703] [global_costmap.global_costmap]: Configuring
+[planner_server-2] [INFO] [1791731670.893613607] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-2] [INFO] [1791731670.898501285] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-2] [INFO] [1791731670.900729874] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-2] [INFO] [1791731670.900765169] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791731670.901288412] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-2] [INFO] [1791731670.904983546] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791731670.905039243] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-2] [INFO] [1791731670.905645004] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-2] [INFO] [1791731670.937309801] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-2] [INFO] [1791731670.937363164] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731670.938073788] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-5] [INFO] [1791731670.950806283] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791731670.951182045] [bt_navigator]: Configuring
+[bt_navigator-4] [INFO] [1791731670.959967393] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-4] [WARN] [1791731670.965641486] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-4] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[lifecycle_manager-5] [INFO] [1791731671.046719081] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-2] [INFO] [1791731671.046968223] [planner_server]: Activating
+[planner_server-2] [INFO] [1791731671.047019654] [global_costmap.global_costmap]: Activating
+[planner_server-2] [INFO] [1791731671.047030787] [global_costmap.global_costmap]: Checking transform
+[planner_server-2] [INFO] [1791731671.047188461] [global_costmap.global_costmap]: start
+[direct_map_publisher-1] [INFO] [1791731671.113463506] [map_server]: Loading map from /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/maps/new_map_grid.pgm
+[direct_map_publisher-1] [INFO] [1791731671.506773418] [map_server]: Map loaded: 230x380, resolution=0.05
+[planner_server-2] [INFO] [1791731671.507691541] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 230 X 380 at 0.050000 m/pix
+[direct_map_publisher-1] [INFO] [1791731671.508197675] [map_server]: Published map: 230x380
+[planner_server-2] [INFO] [1791731671.598212387] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731671.600048896] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791731671.708084936] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-5] [INFO] [1791731671.708132525] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791731671.708396630] [bt_navigator]: Activating
+[bt_navigator-4] [INFO] [1791731671.722041756] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791731671.828557188] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-5] [INFO] [1791731671.828633168] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1791731671.828662711] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[stanley_controller_server-3] [WARN] [1791731679.083226465] [local_costmap.local_costmap]: Sensor origin at (0.69, 2.64) is out of map bounds (-1.45, -1.45) to (1.52, 1.52). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791731685.962007008] [bt_navigator]: Begin navigating from current location (0.00, 0.00) to (0.56, 2.64)
+[bt_navigator-4] [INFO] [1791731835.984773477] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-4] [INFO] [1791731835.984998556] [bt_navigator]: Goal canceled
+[stanley_controller_server-3] [WARN] [1791731842.283244360] [local_costmap.local_costmap]: Sensor origin at (0.82, 2.83) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791731848.196712480] [bt_navigator]: Begin navigating from current location (-0.00, -0.00) to (0.56, 2.64)
+[bt_navigator-4] [INFO] [1791731998.218069681] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-4] [INFO] [1791731998.218226386] [bt_navigator]: Goal canceled
+[stanley_controller_server-3] [WARN] [1791732004.583216809] [local_costmap.local_costmap]: Sensor origin at (0.72, 2.77) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791732011.108517891] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[bt_navigator-4] [INFO] [1791732161.130427710] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-4] [INFO] [1791732161.130561663] [bt_navigator]: Goal canceled
+[stanley_controller_server-3] [WARN] [1791732167.483223382] [local_costmap.local_costmap]: Sensor origin at (0.84, 2.80) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791732172.991056692] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[bt_navigator-4] [INFO] [1791732323.012512842] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-4] [INFO] [1791732323.012664958] [bt_navigator]: Goal canceled
+[stanley_controller_server-3] [WARN] [1791732329.083222221] [local_costmap.local_costmap]: Sensor origin at (0.87, 2.60) is out of map bounds (-1.45, -1.45) to (1.53, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791732335.168395446] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[bt_navigator-4] [INFO] [1791732485.189973326] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-4] [INFO] [1791732485.190122690] [bt_navigator]: Goal canceled
+[stanley_controller_server-3] [INFO] [1791732491.194899620] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791732491.194903685] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791732491.194982621] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-4] [INFO] [1791732491.195074781] [bt_navigator]: Deactivating
+[planner_server-2] [INFO] [1791732491.194901682] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-2] [INFO] [1791732491.194982680] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-2] [INFO] [1791732491.195075123] [planner_server]: Deactivating
+[lifecycle_manager-5] [INFO] [1791732491.194908976] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-5] [INFO] [1791732491.195087264] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-5] [INFO] [1791732491.195146081] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[bt_navigator-4] [INFO] [1791732491.195110546] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[planner_server-2] [INFO] [1791732491.195126256] [global_costmap.global_costmap]: Deactivating
+[stanley_controller_server-3] [INFO] [1791732491.198883105] [StanleyController]: Deactivating controller
+[stanley_controller_server-3] [INFO] [1791732491.198901207] [StanleyController]: Cleaning up controller
+[bt_navigator-4] [INFO] [1791732491.205524402] [bt_navigator]: Cleaning up
+[stanley_controller_server-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[stanley_controller_server-3]          at line 127 in ./src/class_loader.cpp
+[stanley_controller_server-3] terminate called without an active exception
+[lifecycle_manager-5] [INFO] [1791732491.224573289] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[bt_navigator-4] [INFO] [1791732491.238223949] [bt_navigator]: Completed Cleaning up
+[bt_navigator-4] [INFO] [1791732491.238286408] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-4] [INFO] [1791732491.243957673] [bt_navigator]: Destroying
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 144, in <module>
+[direct_map_publisher-1]     main()
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 141, in main
+[direct_map_publisher-1]     rclpy.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[direct_map_publisher-1]     _shutdown(context=context)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[direct_map_publisher-1]     context.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[direct_map_publisher-1]     self.__context.shutdown()
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [lifecycle_manager-5]: process has finished cleanly [pid 278956]
+[INFO] [bt_navigator-4]: process has finished cleanly [pid 278955]
+[ERROR] [direct_map_publisher-1]: process has died [pid 278952, exit code 1, cmd '/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher --ros-args -r __node:=map_server --params-file /tmp/launch_params_gbo_w9aw --params-file /tmp/launch_params_dmc_a_fc'].
+[planner_server-2] [INFO] [1791732491.547496890] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791732491.547564636] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1791732491.557775207] [planner_server]: Cleaning up
+[planner_server-2] [INFO] [1791732491.567231076] [global_costmap.global_costmap]: Cleaning up
+[planner_server-2] [INFO] [1791732491.571836154] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791732491.572315550] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791732491.583768117] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1791732491.589260706] [global_costmap.global_costmap]: Destroying
+[planner_server-2] [INFO] [1791732491.597559669] [planner_server]: Destroying
+[INFO] [planner_server-2]: process has finished cleanly [pid 278953]
+[ERROR] [stanley_controller_server-3]: process has died [pid 278954, exit code -6, cmd '/home/g16/Documents/qcarSim/install/stanley_controller/lib/stanley_controller/stanley_controller_server --ros-args -r __node:=controller_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_stanley_navfn.yaml --params-file /tmp/launch_params_xbw_wv0b -r /tf:=tf -r /tf_static:=tf_static'].

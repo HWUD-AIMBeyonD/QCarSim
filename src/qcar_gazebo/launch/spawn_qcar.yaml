@@ -25,6 +25,15 @@ launch:
         - value: 'False'
 
   - arg:
+      name: throttle_to_speed
+      default: '6.07'
+      description: >-
+        Throttle -> m/s gain of qcar_hw_emulator. 6.07 is calibrated from the
+        hardware OptiTrack runs (calibrate_speed_hw.py: the real car drives
+        2.43x the commanded speed); 2.5 makes the sim car drive at exactly the
+        commanded speed.
+
+  - arg:
       name: x
       default: '0.0'
       description: Initial robot x position.
@@ -167,6 +176,9 @@ launch:
           pkg: qcar_gazebo
           exec: qcar_hw_emulator.py
           name: qcar_hw_emulator
+          param:
+            - name: throttle_to_speed
+              value: $(var throttle_to_speed)
 
       # Laser filter (filters self-hits from scan, QCar-specific dimensions)
       - node:

@@ -1,0 +1,25 @@
+controller,planner,kpi,sim_mean,sim_std,sim_n,hw_mean,hw_std,hw_n,gap_hw_minus_sim,gap_pct_of_sim
+RPP,NavFn,CTE RMSE (m),0.0556,0.0003,5,0.0787,0.0627,4,+0.0231,+41.5
+RPP,NavFn,CTE max (m),0.1417,0.0010,5,0.1404,0.0730,4,-0.0013,-0.9
+RPP,NavFn,Mission time (s),21.9683,0.1299,5,23.2664,5.8726,5,+1.2981,+5.9
+RPP,NavFn,Path efficiency (driven / planned),0.9543,0.0008,5,1.0056,0.0224,4,+0.0514,+5.4
+RPP,NavFn,Linear accel RMS (m/s²),0.4556,0.0285,5,0.4176,0.0402,5,-0.0380,-8.3
+RPP,NavFn,Angular accel RMS (rad/s²),1.4476,0.9979,5,0.3116,0.0794,5,-1.1360,-78.5
+RPP,NavFn,Average speed (m/s),0.4334,0.0024,5,0.4730,0.0870,5,+0.0396,+9.1
+RPP,NavFn,Final distance to goal (m),0.1288,0.0039,5,0.0705,0.0293,4,-0.0582,-45.2
+Stanley,NavFn,CTE RMSE (m),nan,nan,0,0.0322,0.0111,3,+nan,+nan
+Stanley,NavFn,CTE max (m),nan,nan,0,0.0847,0.0408,3,+nan,+nan
+Stanley,NavFn,Mission time (s),nan,nan,0,26.4612,0.7951,3,+nan,+nan
+Stanley,NavFn,Path efficiency (driven / planned),nan,nan,0,0.9935,0.0109,3,+nan,+nan
+Stanley,NavFn,Linear accel RMS (m/s²),nan,nan,0,0.7964,0.0196,3,+nan,+nan
+Stanley,NavFn,Angular accel RMS (rad/s²),nan,nan,0,0.9454,0.0580,3,+nan,+nan
+Stanley,NavFn,Average speed (m/s),nan,nan,0,0.3978,0.0088,3,+nan,+nan
+Stanley,NavFn,Final distance to goal (m),nan,nan,0,0.0836,0.0100,3,+nan,+nan
+Vector Pursuit,NavFn,CTE RMSE (m),nan,nan,0,0.1435,0.0673,5,+nan,+nan
+Vector Pursuit,NavFn,CTE max (m),nan,nan,0,0.3266,0.1663,5,+nan,+nan
+Vector Pursuit,NavFn,Mission time (s),nan,nan,0,22.8316,3.3649,5,+nan,+nan
+Vector Pursuit,NavFn,Path efficiency (driven / planned),nan,nan,0,1.0453,0.0365,5,+nan,+nan
+Vector Pursuit,NavFn,Linear accel RMS (m/s²),nan,nan,0,0.6144,0.0777,5,+nan,+nan
+Vector Pursuit,NavFn,Angular accel RMS (rad/s²),nan,nan,0,1.2855,0.1961,5,+nan,+nan
+Vector Pursuit,NavFn,Average speed (m/s),nan,nan,0,0.4928,0.0625,5,+nan,+nan
+Vector Pursuit,NavFn,Final distance to goal (m),nan,nan,0,0.0813,0.0282,5,+nan,+nan

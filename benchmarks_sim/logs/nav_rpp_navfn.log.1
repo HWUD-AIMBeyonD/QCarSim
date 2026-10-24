@@ -1,0 +1,173 @@
+[INFO] [launch]: All log files can be found below /home/g16/.ros/log/2026-10-11-19-11-43-828825-G16-278127
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [direct_map_publisher-1]: process started with pid [278134]
+[INFO] [planner_server-2]: process started with pid [278135]
+[INFO] [rpp_controller_server-3]: process started with pid [278136]
+[INFO] [bt_navigator-4]: process started with pid [278137]
+[INFO] [lifecycle_manager-5]: process started with pid [278138]
+[lifecycle_manager-5] [INFO] [1791731504.032643690] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-5] [INFO] [1791731504.042605645] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[bt_navigator-4] [INFO] [1791731504.078577220] [bt_navigator]: 
+[bt_navigator-4] 	bt_navigator lifecycle node launched. 
+[bt_navigator-4] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-4] [INFO] [1791731504.083134261] [bt_navigator]: Creating
+[rpp_controller_server-3] [INFO] [1791731504.085991056] [controller_server]: Initializing RPP Controller Server...
+[planner_server-2] [INFO] [1791731504.087334404] [planner_server]: 
+[planner_server-2] 	planner_server lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791731504.091349504] [planner_server]: Creating
+[lifecycle_manager-5] [INFO] [1791731504.099401234] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1791731504.099485215] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-2] [INFO] [1791731504.473621447] [global_costmap.global_costmap]: 
+[planner_server-2] 	global_costmap lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-2] [INFO] [1791731504.474512873] [global_costmap.global_costmap]: Creating Costmap
+[rpp_controller_server-3] [INFO] [1791731504.481427832] [local_costmap.local_costmap]: 
+[rpp_controller_server-3] 	local_costmap lifecycle node launched. 
+[rpp_controller_server-3] 	Waiting on external lifecycle transitions to activate
+[rpp_controller_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[rpp_controller_server-3] [INFO] [1791731504.482101871] [local_costmap.local_costmap]: Creating Costmap
+[rpp_controller_server-3] [INFO] [1791731504.482656939] [local_costmap.local_costmap]: Configuring
+[rpp_controller_server-3] [INFO] [1791731504.487002485] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[rpp_controller_server-3] [INFO] [1791731504.492010137] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[rpp_controller_server-3] [INFO] [1791731504.495426036] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[rpp_controller_server-3] [INFO] [1791731504.495457738] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[rpp_controller_server-3] [INFO] [1791731504.495730252] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[rpp_controller_server-3] [ERROR] [1791731504.512412628] [local_costmap.local_costmap]: The configured inflation radius (0.100) is smaller than the computed inscribed radius (0.245) of your footprint, it is highly recommended to set inflation radius to be at least as big as the inscribed radius to avoid collisions
+[rpp_controller_server-3] [INFO] [1791731504.516032703] [local_costmap.local_costmap]: Activating
+[rpp_controller_server-3] [INFO] [1791731504.516067004] [local_costmap.local_costmap]: Checking transform
+[rpp_controller_server-3] [INFO] [1791731504.516174810] [local_costmap.local_costmap]: start
+[rpp_controller_server-3] [INFO] [1791731504.593514358] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser' at time 1207.500 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rpp_controller_server-3] [INFO] [1791731504.675312130] [controller_server]: Configuring Controller...
+[rpp_controller_server-3] [INFO] [1791731504.681936659] [controller_server]: Regulated Pure Pursuit controller configured: desired_vel=0.30, lookahead=0.60
+[rpp_controller_server-3] [INFO] [1791731504.681981102] [RegulatedPurePursuitController]: Activating controller
+[rpp_controller_server-3] [INFO] [1791731504.681986323] [controller_server]: RPP Controller Server Ready!
+[planner_server-2] [INFO] [1791731504.871536604] [planner_server]: Configuring
+[planner_server-2] [INFO] [1791731504.871628089] [global_costmap.global_costmap]: Configuring
+[planner_server-2] [INFO] [1791731504.889023174] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-2] [INFO] [1791731504.896392370] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-2] [INFO] [1791731504.898642889] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-2] [INFO] [1791731504.898673636] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791731504.899227727] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-2] [INFO] [1791731504.903396188] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-2] [INFO] [1791731504.903443411] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-2] [INFO] [1791731504.904152648] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-2] [ERROR] [1791731504.931231065] [global_costmap.global_costmap]: The configured inflation radius (0.100) is smaller than the computed inscribed radius (0.245) of your footprint, it is highly recommended to set inflation radius to be at least as big as the inscribed radius to avoid collisions
+[planner_server-2] [INFO] [1791731504.939980398] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-2] [INFO] [1791731504.940070015] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731504.940929825] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-5] [INFO] [1791731504.956883307] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791731504.957138354] [bt_navigator]: Configuring
+[bt_navigator-4] [INFO] [1791731504.967532753] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-4] [WARN] [1791731504.973754400] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-4] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[lifecycle_manager-5] [INFO] [1791731505.061588205] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-2] [INFO] [1791731505.061854386] [planner_server]: Activating
+[planner_server-2] [INFO] [1791731505.061905475] [global_costmap.global_costmap]: Activating
+[planner_server-2] [INFO] [1791731505.061913351] [global_costmap.global_costmap]: Checking transform
+[planner_server-2] [INFO] [1791731505.062057761] [global_costmap.global_costmap]: start
+[direct_map_publisher-1] [INFO] [1791731505.107529318] [map_server]: Loading map from /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/maps/new_map_grid.pgm
+[direct_map_publisher-1] [INFO] [1791731505.366045924] [map_server]: Map loaded: 230x380, resolution=0.05
+[planner_server-2] [INFO] [1791731505.366941058] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 230 X 380 at 0.050000 m/pix
+[direct_map_publisher-1] [INFO] [1791731505.366961190] [map_server]: Published map: 230x380
+[planner_server-2] [INFO] [1791731505.613125699] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731505.615607875] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791731505.722514022] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-5] [INFO] [1791731505.722577015] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-4] [INFO] [1791731505.722923670] [bt_navigator]: Activating
+[bt_navigator-4] [INFO] [1791731505.740689554] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1791731505.848260268] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-5] [INFO] [1791731505.848328962] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1791731505.848352385] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[rpp_controller_server-3] [WARN] [1791731513.316515188] [local_costmap.local_costmap]: Sensor origin at (0.41, 3.12) is out of map bounds (-1.45, -1.45) to (1.52, 1.52). The costmap cannot raytrace for it.
+[rpp_controller_server-3] [WARN] [1791731513.416507500] [local_costmap.local_costmap]: Sensor origin at (0.41, 3.12) is out of map bounds (-1.45, -1.45) to (1.52, 1.52). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791731519.227215242] [bt_navigator]: Begin navigating from current location (-0.00, 0.00) to (0.56, 2.64)
+[rpp_controller_server-3] [INFO] [1791731541.199306204] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791731541.227707035] [bt_navigator]: Goal succeeded
+[rpp_controller_server-3] [WARN] [1791731544.016508105] [local_costmap.local_costmap]: Sensor origin at (0.69, 2.65) is out of map bounds (-1.45, -1.45) to (1.52, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791731549.926369834] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[rpp_controller_server-3] [INFO] [1791731572.047832040] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791731572.076692736] [bt_navigator]: Goal succeeded
+[rpp_controller_server-3] [WARN] [1791731574.916502012] [local_costmap.local_costmap]: Sensor origin at (0.70, 2.66) is out of map bounds (-1.45, -1.45) to (1.52, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791731581.216559024] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[rpp_controller_server-3] [INFO] [1791731603.337943403] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791731603.367010443] [bt_navigator]: Goal succeeded
+[rpp_controller_server-3] [WARN] [1791731606.216497006] [local_costmap.local_costmap]: Sensor origin at (0.69, 2.65) is out of map bounds (-1.45, -1.45) to (1.52, 1.53). The costmap cannot raytrace for it.
+[rpp_controller_server-3] [WARN] [1791731606.316475245] [local_costmap.local_costmap]: Sensor origin at (0.69, 2.65) is out of map bounds (-1.45, -1.45) to (1.52, 1.53). The costmap cannot raytrace for it.
+[bt_navigator-4] [INFO] [1791731612.148111083] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[rpp_controller_server-3] [INFO] [1791731634.269340163] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791731634.298450689] [bt_navigator]: Goal succeeded
+[bt_navigator-4] [INFO] [1791731642.989647539] [bt_navigator]: Begin navigating from current location (0.00, -0.00) to (0.56, 2.64)
+[rpp_controller_server-3] [INFO] [1791731665.010977345] [controller_server]: Goal reached!
+[bt_navigator-4] [INFO] [1791731665.040017093] [bt_navigator]: Goal succeeded
+[planner_server-2] [INFO] [1791731667.717104198] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-2] [INFO] [1791731667.717163528] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[lifecycle_manager-5] [INFO] [1791731667.717114052] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[rpp_controller_server-3] [INFO] [1791731667.717107743] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791731667.717129807] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-4] [INFO] [1791731667.717215215] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[lifecycle_manager-5] [INFO] [1791731667.717272225] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-5] [INFO] [1791731667.717331628] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[planner_server-2] [INFO] [1791731667.717224452] [planner_server]: Deactivating
+[planner_server-2] [INFO] [1791731667.717254586] [global_costmap.global_costmap]: Deactivating
+[bt_navigator-4] [INFO] [1791731667.717310134] [bt_navigator]: Deactivating
+[bt_navigator-4] [INFO] [1791731667.717351886] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[rpp_controller_server-3] [INFO] [1791731667.721858019] [RegulatedPurePursuitController]: Deactivating controller
+[rpp_controller_server-3] [INFO] [1791731667.721888223] [RegulatedPurePursuitController]: Cleaning up controller
+[bt_navigator-4] [INFO] [1791731667.727740473] [bt_navigator]: Cleaning up
+[rpp_controller_server-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[rpp_controller_server-3]          at line 127 in ./src/class_loader.cpp
+[rpp_controller_server-3] terminate called without an active exception
+[lifecycle_manager-5] [INFO] [1791731667.748364058] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[bt_navigator-4] [INFO] [1791731667.765256525] [bt_navigator]: Completed Cleaning up
+[bt_navigator-4] [INFO] [1791731667.765341009] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-4] [INFO] [1791731667.774082809] [bt_navigator]: Destroying
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 136, in main
+[direct_map_publisher-1]     rclpy.spin(node)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[direct_map_publisher-1]     executor.spin_once()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 923, in spin_once
+[direct_map_publisher-1]     self._spin_once_impl(timeout_sec)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 904, in _spin_once_impl
+[direct_map_publisher-1]     handler, entity, node = self.wait_for_ready_callbacks(
+[direct_map_publisher-1]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 874, in wait_for_ready_callbacks
+[direct_map_publisher-1]     return next(self._cb_iter)
+[direct_map_publisher-1]            ^^^^^^^^^^^^^^^^^^^
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 754, in _wait_for_ready_callbacks
+[direct_map_publisher-1]     wait_set = _rclpy.WaitSet(
+[direct_map_publisher-1]                ^^^^^^^^^^^^^^^
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[direct_map_publisher-1] 
+[direct_map_publisher-1] During handling of the above exception, another exception occurred:
+[direct_map_publisher-1] 
+[direct_map_publisher-1] Traceback (most recent call last):
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 144, in <module>
+[direct_map_publisher-1]     main()
+[direct_map_publisher-1]   File "/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher", line 141, in main
+[direct_map_publisher-1]     rclpy.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[direct_map_publisher-1]     _shutdown(context=context)
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[direct_map_publisher-1]     context.shutdown()
+[direct_map_publisher-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[direct_map_publisher-1]     self.__context.shutdown()
+[direct_map_publisher-1] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [lifecycle_manager-5]: process has finished cleanly [pid 278138]
+[INFO] [bt_navigator-4]: process has finished cleanly [pid 278137]
+[ERROR] [direct_map_publisher-1]: process has died [pid 278134, exit code 1, cmd '/home/g16/Documents/qcarSim/install/qcar_nav2_bringup/lib/qcar_nav2_bringup/direct_map_publisher --ros-args -r __node:=map_server --params-file /tmp/launch_params_7f5vam1b --params-file /tmp/launch_params_q229grdm'].
+[planner_server-2] [INFO] [1791731668.062329982] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731668.062387848] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1791731668.072560947] [planner_server]: Cleaning up
+[planner_server-2] [INFO] [1791731668.082254056] [global_costmap.global_costmap]: Cleaning up
+[planner_server-2] [INFO] [1791731668.086093024] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731668.086415142] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[planner_server-2] [INFO] [1791731668.104470674] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1791731668.110199907] [global_costmap.global_costmap]: Destroying
+[planner_server-2] [INFO] [1791731668.120715782] [planner_server]: Destroying
+[INFO] [planner_server-2]: process has finished cleanly [pid 278135]
+[ERROR] [rpp_controller_server-3]: process has died [pid 278136, exit code -6, cmd '/home/g16/Documents/qcarSim/install/rpp_controller/lib/rpp_controller/rpp_controller_server --ros-args -r __node:=controller_server --params-file /home/g16/Documents/qcarSim/install/qcar_nav2_bringup/share/qcar_nav2_bringup/config/hw/nav2_params_rpp_navfn.yaml --params-file /tmp/launch_params_o02t09ju -r /tf:=tf -r /tf_static:=tf_static'].

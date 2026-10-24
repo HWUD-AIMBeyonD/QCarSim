@@ -14,11 +14,11 @@ AckermannSteering plugin expects on /cmd_vel_hw:
 AckermannSteering inverts w = v*tan(delta)/L with the same wheel_base (0.256),
 so the simulated steering angle equals the one the real car would be sent.
 
-throttle_to_speed maps PWM duty to m/s. The default (max_speed / 0.2 = 2.5)
-makes throttle an exact inverse of the hardware's v -> throttle mapping, i.e.
-the sim car drives at the commanded speed. The real motor's duty -> speed
-curve is not known here; calibrate it from OptiTrack runs and set this
-parameter to close that part of the sim-to-real gap.
+throttle_to_speed maps PWM duty to m/s. The node default (max_speed / 0.2 =
+2.5) makes throttle an exact inverse of the hardware's v -> throttle mapping,
+i.e. the sim car drives at the commanded speed. The real car drives 2.43x
+faster than commanded, so spawn_qcar.yaml passes the value calibrated from the
+OptiTrack runs (6.07, calibrate_speed_hw.py).
 """
 
 import math

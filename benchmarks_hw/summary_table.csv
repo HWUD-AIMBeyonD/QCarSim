@@ -1,0 +1,4 @@
+controller,planner,success,n_kpi,CTE RMSE (m),CTE max (m),Mission time (s),Path efficiency (driven / planned),Linear accel RMS (m/s²),Angular accel RMS (rad/s²)
+RPP,NavFn,5/5,5,0.071 ± 0.049 (n=4),0.140 ± 0.073 (n=4),23.266 ± 5.873,1.033 ± 0.017 (n=4),0.418 ± 0.040,0.312 ± 0.079
+Stanley,NavFn,3/3,3,0.026 ± 0.009,0.085 ± 0.041,26.460 ± 0.793,1.010 ± 0.006,0.796 ± 0.020,0.945 ± 0.058
+Vector Pursuit,NavFn,5/5,5,0.109 ± 0.056,0.327 ± 0.166,22.834 ± 3.364,1.068 ± 0.031,0.614 ± 0.078,1.285 ± 0.196

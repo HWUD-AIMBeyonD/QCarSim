@@ -1,0 +1,16 @@
+controller,planner,run,status,note,has_plan,start_x,start_y,final_x,final_y,final_dist_to_goal,source,bag
+rpp,navfn,1,REACHED,,True,-0.001,-0.062,0.544,2.589,0.053,rpp_navfn/rpp_navfn_run1,benchmarks_hw/rpp_navfn/rosbags/rpp_navfn_run1
+rpp,navfn,2,REACHED,,True,0.028,-0.090,0.568,2.610,0.031,rpp_navfn/rpp_navfn_run2,benchmarks_hw/rpp_navfn/rosbags/rpp_navfn_run2
+rpp,navfn,3,REACHED,,True,0.070,-0.020,0.596,2.736,0.103,rpp_navfn/rpp_navfn_run3,benchmarks_hw/rpp_navfn/rosbags/rpp_navfn_run3
+rpp,navfn,4,REACHED_NO_PLAN,/plan not recorded,False,0.082,-0.084,0.544,2.610,0.034,rpp_navfn/rpp_navfn_run4,benchmarks_hw/rpp_navfn/rosbags/rpp_navfn_run4
+rpp,navfn,5,REACHED,,True,0.057,-0.014,0.530,2.561,0.085,rpp_navfn/rpp_navfn_run5,benchmarks_hw/rpp_navfn/rosbags/rpp_navfn_run5
+stanley,navfn,1,EXCLUDED,car never commanded to move,False,0.568,2.715,0.568,2.715,0.075,stanley_navfn/rosbags_hw/rpp_navfn_run1,benchmarks_hw/stanley_navfn/rosbags/stanley_navfn_run1
+stanley,navfn,2,REACHED,,True,0.042,-0.098,0.595,2.711,0.079,stanley_navfn/rosbags_hw/rpp_navfn_run2,benchmarks_hw/stanley_navfn/rosbags/stanley_navfn_run2
+stanley,navfn,3,REACHED,,True,0.027,-0.093,0.621,2.715,0.097,stanley_navfn/rosbags_hw/rpp_navfn_run3,benchmarks_hw/stanley_navfn/rosbags/stanley_navfn_run3
+stanley,navfn,4,EXCLUDED,did not start at the start pose,False,2.578,-0.354,0.579,2.626,0.024,stanley_navfn/rosbags_hw/rpp_navfn_run4,benchmarks_hw/stanley_navfn/rosbags/stanley_navfn_run4
+stanley,navfn,5,REACHED,,True,0.041,-0.121,0.633,2.708,0.100,stanley_navfn/rosbags_hw/rpp_navfn_run5,benchmarks_hw/stanley_navfn/rosbags/stanley_navfn_run5
+vector,navfn,1,REACHED,,True,0.043,-0.120,0.656,2.646,0.096,vpp_navfn/rosbags_hw/vpp_navfn_run1,benchmarks_hw/vector_navfn/rosbags/vector_navfn_run1
+vector,navfn,2,REACHED,,True,-0.003,-0.043,0.683,2.641,0.123,vpp_navfn/rosbags_hw/vpp_navfn_run2,benchmarks_hw/vector_navfn/rosbags/vector_navfn_run2
+vector,navfn,3,REACHED,,True,0.020,-0.111,0.619,2.626,0.060,vpp_navfn/rosbags_hw/vpp_navfn_run3,benchmarks_hw/vector_navfn/rosbags/vector_navfn_run3
+vector,navfn,4,REACHED,,True,0.021,-0.080,0.538,2.685,0.050,vpp_navfn/rosbags_hw/vpp_navfn_run4,benchmarks_hw/vector_navfn/rosbags/vector_navfn_run4
+vector,navfn,5,REACHED,,True,0.015,-0.084,0.537,2.741,0.103,vpp_navfn/rosbags_hw/vpp_navfn_run5,benchmarks_hw/vector_navfn/rosbags/vector_navfn_run5
